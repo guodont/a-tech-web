@@ -1,0 +1,22 @@
+/*
+* @Author: yt975
+* @Date:   2016-04-19 17:14:40
+* @Last Modified by:   yt975
+* @Last Modified time: 2016-04-22 10:27:35
+*/
+.at-title {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	margin: auto;
+	font-size: 40px;
+}
+
+.at-content {
+	margin: 0 auto;
+	width: 300px;
+
+}
+
+.at-content label {
+	margin: 0 auto;
+}

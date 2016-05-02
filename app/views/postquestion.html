@@ -1,0 +1,66 @@
+<div class="column">
+  <form class="ui form" action="#/" method="get">
+    <h1 class="at-title"><center>请认真填写您所遇到的问题，我们将尽快指派专家给您回复</center></h1>
+    <div class="at-post-content">
+    <div class="field">
+      <label>问题标题</label>
+      <div class="ui left input at-signup-text">
+        <input type="text" placeholder="问题的简单概括，5-45字">
+      </div>
+    </div>
+    <div class="field">
+      <label>问题描述</label>
+      <div class="ui left input at-signup-text">
+        <textarea name="name" rows="8" cols="40"  placeholder="问题的详细描述，5-255字"></textarea>
+      </div>
+    </div>
+    <div class="field">
+      <label>问题分类</label>
+      <div class="ui left input at-signup-text">
+        <select class="ui search dropdown" name="category">
+            <option value="0">分类1</option>
+            <option value="1">分类2</option>
+            <option value="2">分类3</option>
+            <option value="3">分类4</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+        <div class="inline fields">
+          <label>您是否经营产业?</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="property">
+            <label>有</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="property" checked="checked">
+            <label>无</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>产业类型</label>
+      <div class="ui left icon input at-signup-text">
+        <input type="text">
+        <!-- <i class="lock icon"></i> -->
+      </div>
+    </div>
+    <div class="field">
+      <label>产业规模</label>
+      <div class="ui left icon input at-signup-text">
+        <input type="text">
+        <!-- <i class="lock icon"></i> -->
+      </div>
+    </div>
+    <center><input type="submit" class="fluid ui green submit button" value="提交"></center>
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+$('.ui.dropdown').dropdown();
+</script>

@@ -1,0 +1,240 @@
+body {
+  padding: 0;
+  background: #F9F9F9 !important;
+	color: #505050;
+}
+a {
+	color: #111;
+}
+
+h1 {
+	font-size: 20px !important;
+}
+
+.ui.green.buttons .button, .ui.green.button {
+  background-color: #009688;
+}
+
+.ui.green.button:hover {
+  background-color: #07756B;
+  color: #ffffff;
+  text-shadow: none;
+}
+.centered {
+	text-align: center;
+}
+.at-headbar {
+	width: 100%;
+	height: 30px;
+	background-color: #F1F1F1;
+	padding-top: 3px;
+}
+
+.at-headbar a{
+	color: #636363 !important;
+}
+
+.at-logo {
+	padding-top: 20px;
+	height: 100px;
+}
+
+.at-logo img {
+	max-width: 230px;
+}
+.at-search {
+	position: relative;
+	left: 240px;
+	top: 50px;
+}
+
+.at-fr {
+	float: right;
+	overflow: hidden;
+}
+
+.at-fl {
+	float: left;
+	overflow: hidden;
+}
+
+.at-nav {
+	padding-left: 110px;
+	background: #009688;
+	height: 42px;
+}
+
+.at-nav-button {
+	background: #009688;
+	width: 110px;
+	height: 42px;
+	font-size: 17px !important;
+	color: white !important;
+	font-family: 华为细软 !important;
+	border: none;
+}
+
+.bg-gray {
+	background-color: #ffffff;
+	height: 340px;
+}
+
+.at-home-article {
+	margin-top: 20px;
+}
+
+.at-wrap {
+	width: 100%;
+	max-height: 120px;
+	margin-top: 5px;
+}
+
+.at-notice .item, .list .item{
+	padding: 7px !important;
+	/*color: red;*/
+}
+
+.at-mod-title {
+	padding-bottom: 5px;
+	font-size: 16px;
+	border-bottom: 3px solid #27C391;
+}
+
+.at-mod-name {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.at-mod-name-color1 {
+	padding-left: 10px;
+	border-left: 4px solid #27C391;
+}
+
+.at-mod-name-color2 {
+	padding-left: 10px;
+	border-left: 4px solid #DB3928;
+}
+
+.at-mod-name-color3 {
+	padding-left: 10px;
+	border-left: 4px solid #58A7AB;
+}
+
+/*服务区高度*/
+.at-high-mod {
+	height: 440px;
+}
+
+/*视频区高度*/
+.at-high-mod2 {
+	height: 500px;
+}
+
+/*友情链接高度*/
+.at-low-mod {
+	height: 120px;
+}
+.at-expert {
+	padding: 10px;
+	text-align: center;
+}
+.at-expert-box {
+	position: relative;
+	top: 20px;
+}
+
+.at-expert-img {
+	position: relative;
+	border: 2px solid #eee;
+	width: 90px !important;
+	height: 90px !important;
+}
+
+.at-expert-name {
+	text-align: center;
+}
+.at-expert-name p {
+  font-size: 11px;
+  color: #807F7F;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.at-container {
+	width: 1127px !important;
+	margin: auto;
+}
+
+.at-ask {
+/*	margin-top: 115px !important;*//*提问按钮的位置*/
+	/*margin-left: 150px;*/
+	/*width: 300px;*/
+	/*height: 80px;*/
+}
+
+.at-ask-button {
+	width: 200px;
+	line-height: 11px !important;
+	font-size: 23px !important;
+}
+
+.at-need-button {
+	background: #009688 !important;
+	color: #ffffff !important;
+	width: 200px;
+	height: 35px;
+	font-size: 14px !important;
+}
+
+.at-video-box div{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.at-video {
+	/*height: 210px;*/
+	width: 100%;
+	height: 100%;
+}
+
+.at-video-cell {
+	height: 240px;
+}
+
+.at-video-name {
+	padding: 40px 30px;
+	font-size: 15px;
+	text-align: center;
+	z-index: 2 !important;
+	position: relative;
+	top: -170px;
+	color: white;
+}
+
+.at-video-black {
+	width: 260.75px;
+	height: 216.2px;
+	background-color: rgba(0,0,0,0.4) !important;
+	z-index: 1 !important;
+	position: relative;
+	top: -352px;
+}
+
+.at-friend {
+	margin-top: 30px !important;
+}
+
+.at-footer {
+	margin-top: 13px;
+	height: 120px;
+	width: 100%;
+	background-color: #009688;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.at-post-content {
+  margin: 0 auto;
+  width: 560px;
+}

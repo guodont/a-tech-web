@@ -1,0 +1,257 @@
+/*
+* @Author: yt975
+* @Date:   2016-04-11 13:12:39
+* @Last Modified by:   yt975
+* @Last Modified time: 2016-04-15 09:40:02
+*/
+/*00645b*/
+*{
+	margin: 0 auto;
+	font-family: 微软雅黑;
+	text-decoration: none;
+}
+#top-link{
+	height: 20px;
+	padding-left: 70%;
+	padding-top: 10px;
+	color: #009688;
+	white-space: nowrap;
+}
+/*日期*/
+#top-link span{
+	padding-right: 20px;
+}
+/*登陆注册*/
+#top-link a{
+	text-decoration: none;
+	color: #009688;
+	padding: 0 10px;
+}
+#top{
+	margin: 0 120px;
+}
+#top-link2{
+	height: 121px;
+	overflow: hidden;
+}
+/*logo*/
+#top-link2 img{
+	float: left;
+	padding-top: 20px;
+}
+/*搜索框*/
+#search{
+	float: right;
+	overflow: hidden;
+	height: 32px;
+	width: 235px;
+	background-color: #eee;
+	margin-top: 80px;
+	padding-left: 8px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+}
+#search-inp{
+	float: left;
+}
+#search-inp input{
+	background-color: #eee;
+	height: 32px;
+	border: 1px solid #eee;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	outline: none;/*取消input自带边框*/
+}
+#search-img{
+	float: right;
+}
+#search-img img{
+	margin-top: -58px;
+}
+/*导航栏*/
+#nav{
+	height: 45px;
+	margin-top: 8px;
+	padding-left: 80px;
+	background-color: #009688;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#nav li{
+	list-style: none;
+	float: left;
+	text-align: center;
+	background-color: #009688;
+}
+#nav li button{
+	background-color: #009688;
+	font-size: 25px;
+	height: 45px;
+	padding-top: -8px;
+}
+/*图片轮播其他特效*/
+.slider{
+	padding-top: 1px;
+}
+.slider-nav{
+	position: relative;
+	left: 300px;
+	top: -48px;
+	z-index: 2;
+}
+.slider-wrapper .slide strong{
+	font-size: 17px;
+	color: white;
+	font-family: 宋体;
+	position: relative;
+	left: 100px;
+	top: -35px;
+	z-index: 2;
+}
+.slider-wrapper .black-nav{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	top: -65px;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 1;
+}
+/*container*/
+#container{
+	margin: 1px 100px;
+}
+#row1{
+	overflow: hidden;
+	width: 1010px;
+}
+#row1 span{
+	display: inline-block;
+	width: 5px;
+	height: 30px;
+	background: red;
+}
+#row1 h2{
+	margin-left: 30px;
+	margin-top: -35px;
+	height: 45px;
+
+}
+#row1-line{
+	border-bottom: 2px solid #ddd;
+	height: 45px;
+}
+.main-content{
+	padding-top: 10px;
+	width: 250px;
+	height: 350px;
+	float: left;
+	border-bottom: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+}
+.main-content .active{
+	padding-left: 5px;
+	font-size: 25px;
+}
+.main-content .title{
+	width: 35;
+	border-bottom: 2px solid #ddd;
+}
+.main-content li{
+	list-style: none;
+	padding: 5px 0;
+	word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    margin-left: -35px;
+}
+#unit1{
+	height: 340px;
+	width: 250px;
+	float: left;
+	padding: 10px 0;
+	border-bottom: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+}
+#unit1 .active{
+	padding-left: 5px;
+	font-size: 25px;
+}
+#unit1 .title{
+	width: 35;
+	border-bottom: 2px solid #ddd;
+}
+#unit1 img{
+	padding: 10px 20px;
+	width: 200px;
+	height: 150px;
+}
+#unit1 li{
+	list-style: none;
+	padding: 5px 0;
+	word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    margin-left: -35px;
+}
+#unit2{
+	height: 340px;
+	width: 250px;
+	float: left;
+	padding: 10px 0;
+	border-bottom: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+}
+#unit2 .active{
+	padding-left: 5px;
+	font-size: 25px;
+}
+#unit2 .title{
+	width: 35;
+	border-bottom: 2px solid #ddd;
+}
+#unit2 img{
+	padding: 10px 20px;
+	width: 200px;
+	height: 150px;
+}
+#unit2 li{
+	list-style: none;
+	padding: 5px 0;
+	word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    margin-left: -35px;
+}
+#unit3{
+	height: 340px;
+	width: 250px;
+	float: left;
+	padding: 10px 0;
+	border-bottom: 2px solid #ddd;
+}
+#unit3 .active{
+	padding-left: 5px;
+	font-size: 25px;
+}
+#unit3 .title{
+	width: 35;
+	border-bottom: 2px solid #ddd;
+}
+#unit3 img{
+	padding: 10px 20px;
+	width: 200px;
+	height: 150px;
+}
+#unit3 li{
+	list-style: none;
+	padding: 5px 0;
+	word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+    margin-left: -35px;
+}

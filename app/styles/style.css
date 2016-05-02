@@ -1,0 +1,92 @@
+
+.slider {
+	margin: 0 auto -20px auto;
+	width: 1127px;
+}
+.slider img {
+	width: 100%;
+}
+.slider-container {
+	height: 425px;/*滚动区的高*/
+	width: 1127px;/*滚动区的宽*/
+	overflow: hidden;
+	position: relative;
+}
+.slider-container .slider-wrapper {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 5000em; /*Fix for prevent display errors*/
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+.slider-container .slide {
+	float: left;
+	height: 425px;
+	overflow: hidden;
+	position: relative;
+	width: 1127px;
+}
+.slider-nav {
+	text-align: center;
+	width: 1127px;
+}
+.slider-nav li {
+	display: inline;
+	padding: 3px;
+}
+.slider-nav .bullet {
+	background-color: rgba(158, 158, 158, 0.49);
+	border-radius: 50%;
+	display: inline-block;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width: 16px;
+}
+.slider-nav .active {
+	background-color: #DCDCDC
+}
+.slider-nav .prev, .slider-nav .next {
+	background: url('img/sprite.png') no-repeat;
+	/*display: inline-block;*/
+	display: none;
+	text-indent: -9000px;
+	overflow: hidden;
+	height: 16px;
+	width: 16px;
+}
+.slider-nav .next {
+	background-position: -15px top
+}
+/*图片轮播其他特效*/
+.slider{
+	padding-top: 1px;
+}
+.slider-nav{
+	position: relative;
+	left: 350px;
+	top: -43px;
+	z-index: 2;
+}
+.slider-wrapper .slide strong{
+	font-size: 17px;
+	color: white;
+	font-family: 宋体;
+	position: relative;
+	left: 100px;
+	top: -95px;
+	z-index: 2;
+}
+.slider-wrapper .black-nav{
+	width: 100%;
+	height: 66px;
+	position: relative;
+	top: -150px;
+	background: -webkit-gradient(linear,center top,center bottom,from(rgba(105, 105, 105, 0)), to(rgba(0, 0, 0, 0.6)));
+	background: -moz-linear-gradient( top,rgba(204, 204, 204, 0),RGBA(0, 0, 0, 0.57));
+	z-index: 1;
+}
