@@ -11,6 +11,26 @@ h1 {
 	font-size: 20px !important;
 }
 
+.fz-14 {
+  font-size: 14px !important;
+}
+
+.fz-16 {
+  font-size: 16px !important;
+}
+
+.label {
+  z-index: 999;
+}
+
+.ui.teal.ribbon.label {
+    border-color: #00827c !important;
+}
+
+.ui.teal.label {
+    background-color: #00b5ad !important;
+    color: #ffffff !important;
+}
 .ui.green.buttons .button, .ui.green.button {
   background-color: #009688;
 }
@@ -76,7 +96,8 @@ h1 {
 
 .bg-gray {
 	background-color: #ffffff;
-	height: 340px;
+	height: 360px;
+  margin-bottom: 10px;
 }
 
 .at-home-article {
