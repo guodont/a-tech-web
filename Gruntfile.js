@@ -49,7 +49,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
       compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass,css}'],
         tasks: ['compass:server', 'postcss:server']
       },
       gruntfile: {
@@ -220,11 +220,15 @@ module.exports = function (grunt) {
             }
           }
       },
+      css: {
+        src: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        ignorePath: /(\.\.\/){1,2}bower_components\//
+      },
       sass: {
-        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass,css}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -420,14 +424,25 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        },{
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/semantic-ui/dist', // change this for font-awesome
+            src: ['themes/default/assets/fonts/*.*'],
+            dest: 'dist/styles'
         }]
       },
-      styles: {
+      styles: [{
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },{
+        expand: true,
+        cwd: 'bower_components/semantic-ui/dist',
+        src: '{,*/}*.css',
+        dest: '.tmp/styles/'
+      }]
     },
 
     // Run some tasks in parallel to speed up the build process
