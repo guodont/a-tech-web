@@ -25,10 +25,11 @@ Running `grunt test` will run the unit tests with karma.
   http://ruby.sdutlinux.org
   # 请确保只有 ruby.sdutlinux.org
   ```
+
 ### 步骤
 
-  1. npm install
-  2. npm install -g grunt-cli
-  3. npm install -g bower
-  4. bower install
-  5. grunt serve --force
+1. npm install
+2. npm install -g grunt-cli
+3. npm install -g bower
+4. bower install
+5. grunt serve --force
