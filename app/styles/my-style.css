@@ -5,10 +5,19 @@ body {
 }
 a {
 	color: #111;
+	/*font-family: "Microsoft YaHei" ! important;*/
 }
 
 h1 {
 	font-size: 20px !important;
+}
+
+h1,h2,h3,h4 {
+	font-weight: 400;
+}
+* {
+
+	font-family: Tahoma,Arial,Helvetica,"微软雅黑","Microsoft YaHei" ! important;
 }
 
 .fz-14 {
@@ -90,7 +99,7 @@ h1 {
 	height: 42px;
 	font-size: 17px !important;
 	color: white !important;
-	font-family: 华为细软 !important;
+	/*font-family: "Microsoft YaHei" ! important;*/
 	border: none;
 }
 
