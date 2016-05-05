@@ -49,6 +49,36 @@ angular
         controller: 'PostquestionCtrl',
         controllerAs: 'postQuestion'
       })
+      .when('/usercenter/profile', {
+        templateUrl: 'views/usercenter/profile.html',
+        controller: 'UsercenterProfileCtrl',
+        controllerAs: 'usercenter/profile'
+      })
+      .when('/usercenter/changepassword', {
+        templateUrl: 'views/usercenter/changepassword.html',
+        controller: 'UsercenterChangepasswordCtrl',
+        controllerAs: 'usercenter/changepassword'
+      })
+      .when('/usercenter/myquestion', {
+        templateUrl: 'views/usercenter/myquestion.html',
+        controller: 'UsercenterMyquestionCtrl',
+        controllerAs: 'usercenter/myquestion'
+      })
+      .when('/usercenter/mytrade', {
+        templateUrl: 'views/usercenter/mytrade.html',
+        controller: 'UsercenterMytradeCtrl',
+        controllerAs: 'usercenter/mytrade'
+      })
+      .when('/usercenter/message', {
+        templateUrl: 'views/usercenter/message.html',
+        controller: 'UsercenterMessageCtrl',
+        controllerAs: 'usercenter/message'
+      })
+      .when('/usercenter/index', {
+        templateUrl: 'views/usercenter/index.html',
+        controller: 'UsercenterIndexCtrl',
+        controllerAs: 'usercenter/index'
+      })
       .otherwise({
         redirectTo: '/'
       });
