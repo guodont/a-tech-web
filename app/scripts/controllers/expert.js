@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name aTechClientApp.controller:PostquestionCtrl
+ * @name aTechClientApp.controller:ExpertCtrl
  * @description
- * # PostquestionCtrl
+ * # ExpertCtrl
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('PostquestionCtrl', function () {
+  .controller('ExpertCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

@@ -1,23 +1,23 @@
 'use strict';
 
-describe('Controller: PostquestionCtrl', function () {
+describe('Controller: UsercenterAssignedquestionCtrl', function () {
 
   // load the controller's module
   beforeEach(module('aTechClientApp'));
 
-  var PostquestionCtrl,
+  var UsercenterAssignedquestionCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    PostquestionCtrl = $controller('PostquestionCtrl', {
+    UsercenterAssignedquestionCtrl = $controller('UsercenterAssignedquestionCtrl', {
       $scope: scope
       // place here mocked dependencies
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(PostquestionCtrl.awesomeThings.length).toBe(3);
+    expect(UsercenterAssignedquestionCtrl.awesomeThings.length).toBe(3);
   });
 });
