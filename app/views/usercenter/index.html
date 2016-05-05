@@ -1,2 +1,26 @@
-<div ng-include="'../views/include/usernav.html'"></div>
-<p>This is the usercenter/index view.</p>
+<div class="ui grid">
+	<div class="four wide column usercenter-nav">
+		<div ng-include="'../views/include/usernav.html'"></div>
+	</div>
+	<div class="twelve wid usercenter-right">
+		<!-- <p>This is the usercenter/index view.</p> -->
+		<div class="ui top attached tabular menu">
+		  <a class="item active" data-tab="first">消息提醒</a>
+		  <a class="item" data-tab="second">上次登录信息</a>
+		</div>
+		<div class="ui bottom attached tab segment active" data-tab="first">
+			<div class="ui list">
+				<div class="item">xxx回复了你的问题</div>
+				<div class="item">xxx赞了你的问题</div>
+			</div>
+		</div>
+		<div class="ui bottom attached tab segment" data-tab="second">
+			<p>上次登录时间：2016年5月5日</p>
+		</div>
+	</div>
+</div>
+<script>
+	$('.menu .item')
+  .tab()
+;
+</script>
