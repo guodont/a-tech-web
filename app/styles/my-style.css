@@ -15,7 +15,7 @@ h1 {
 h1,h2,h3,h4 {
 	font-weight: 400;
 }
-h1,h2,h3,h4,p,a,table,strong,input,span,button {
+h1,h2,h3,h4,p,a,table,strong,input,span {
 
 	font-family: Tahoma,Arial,Helvetica,"微软雅黑","Microsoft YaHei" ! important;
 }
