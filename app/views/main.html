@@ -824,11 +824,11 @@
  </div>
   <div class="ui grid bg-gray at-high-mod2">
     <div class="ui grid at-video-box">
-      <a class="four wide column at-video-cell" href="#/" id="123">
+      <div class="four wide column at-video-cell" href="#/">
         <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
         <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
         <div class="at-video-black"></div>
-      </a>
+      </div>
       <div class="four wide column at-video-cell">
         <img class="ui image at-video" src="images/20110707161625906705.jpg">
         <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
@@ -872,7 +872,7 @@
 </div>
 <!-- 视频弹出 -->
 <script type="text/javascript">
-  $("#123").click(function() {
+  $(".at-video-cell").click(function() {
     $('.ui.basic.modal')
   .modal('show');
     })
@@ -886,9 +886,8 @@
     });
 </script>
 <link href="http://vjs.zencdn.net/vjs-version/video-js.css" rel="stylesheet">
-
-  <!-- If you'd like to support IE8 -->
-  <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+<!-- If you'd like to support IE8 -->
+<script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
 <script src="http://vjs.zencdn.net/vjs-version/video.js"></script>
 
 

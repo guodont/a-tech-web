@@ -1,2 +1,52 @@
-<div ng-include="'../views/include/usernav.html'"></div>
-<p>用户资料设置</p>
+<div class="ui grid">
+	<div class="four wide column usercenter-nav">
+		<div ng-include="'../views/include/usernav.html'"></div>
+	</div>
+	<div class="twelve wid usercenter-right">
+		<!-- <p>用户资料设置</p> -->
+		<form class="ui form">、
+			<div class="field">
+		      <label>用户名</label>
+		      <div class="ui left icon input at-signup-text">
+		        <input type="text" placeholder="用户名">
+		        <i class="user icon"></i>
+		      </div>
+		    </div>
+			<div class="field">
+				<label class="at-fl">头像设置</label>
+				<img src="http://semantic-ui.com/images/avatar/small/matt.jpg" class="profile-userhead">
+		  	</div>
+			<div class="field">
+		      <label>真实姓名</label>
+		      <div class="ui left icon input at-signup-text">
+		        <input type="text" placeholder="真实姓名">
+		        <i class="user icon"></i>
+		      </div>
+		    </div>
+		    <div class="field">
+		      <label>地址</label>
+		      <div class="ui left icon input at-signup-text">
+		        <input type="text" placeholder="地址">
+		        <i class="home icon"></i>
+		      </div>
+		    </div>
+		    <div class="field">
+		      <label>产业类型</label>
+		      <div class="ui left icon input at-signup-text">
+		        <input type="text">
+		      </div>
+		    </div>
+		    <div class="field">
+		      <label>产业规模</label>
+		      <div class="ui left icon input at-signup-text">
+		        <input type="text">
+		      </div>
+		    </div>
+		    <div class="field">
+		      <label>手机号（不可更改）：186-8888-8888</label>
+		    </div>
+		    <center><div class="ui green submit button">保存</div></center>
+		    </div>
+		</form>
+	</div>
+</div>

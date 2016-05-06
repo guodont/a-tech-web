@@ -165,6 +165,12 @@ h1,h2,h3,h4,p,a,table,strong,input,span,button {
 .at-low-mod {
 	height: 120px;
 }
+
+/*视频列表高度*/
+.at-high-mod3 {
+	height: auto;
+}
+
 .at-expert {
 	padding: 10px;
 	text-align: center;
