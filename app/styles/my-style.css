@@ -96,7 +96,7 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
 .at-nav-button {
 	letter-spacing: 1px;
 	background: #009688;
-	width: 122px;
+	width: 115px;
 	height: 42px;
 	font-size: 17px !important;
 	color: white !important;
@@ -199,7 +199,7 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
 
 .at-container {
 	width: 1127px !important;
-	margin: auto;
+	margin: auto !important;
 }
 
 .at-ask {

@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html ng-app="aTechClientApp" ng-controller="PageCtrl">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>{{ Page.title() }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
@@ -71,7 +71,7 @@
     </div>
     <div class="ui at-nav">
       <!-- 导航 -->
-      <div class="ui list">
+      <div class="ui at-container  list">
         <a href="#"><button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"onmouseout="this.style.backgroundColor='';" >首页</button></a>
         <a href="#"><button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"onmouseout="this.style.backgroundColor='';" >农业要闻</button></a>
         <a href="#"><button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"onmouseout="this.style.backgroundColor='';" >专家在线</button></a>
@@ -166,6 +166,8 @@
         <script src="scripts/controllers/usercenter/myresult.js"></script>
         <script src="scripts/controllers/usercenter/mytrend.js"></script>
         <script src="scripts/controllers/usercenter/expertprofile.js"></script>
+        <script src="scripts/controllers/page.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
