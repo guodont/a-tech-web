@@ -42,3 +42,25 @@
 .at-expert-top{
 	margin-top: 15px !important;
 }
+
+
+/*专家相册*/
+.expert-album-img1 {
+	width: 30px;
+	position: relative;
+	top: 20px;
+	left: -67px;
+}
+
+.cd-container {
+	border-left: 2px solid #ddd;
+	padding-left: 50px;
+}
+
+.expert-album-time {
+	margin-left: 0px;
+}
+
+.expert-album-box {
+	height: auto;
+}
