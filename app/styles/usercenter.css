@@ -3,14 +3,22 @@
 }
 
 .usercenter-right {
-	margin: 50px 0;
+	margin: 50px 0 50px -40px;
 	width: 75%;
 }
 
 .profile-userhead {
-	padding-left: 200px;
+	padding-left: 100px;
 }
 
-.profile-input {
-	width: 
+.usercenter-input1 {
+	width: 200px !important;
+}
+
+.usercenter-input2 {
+	width: 300px !important;
+}
+
+.usercenter-trend-button {
+	margin-left: 615px !important;
 }

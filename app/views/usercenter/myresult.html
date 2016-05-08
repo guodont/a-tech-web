@@ -1,1 +1,38 @@
-<p>This is the usercenter/myresult view.</p>
+<div class="ui grid">
+	<div class="four wide column usercenter-nav">
+		<div ng-include="'../views/include/usernav.html'"></div>
+	</div>
+	<div class="twelve wid usercenter-right">
+		<div class="ui top attached tabular menu">
+		  <a class="item active" data-tab="first">已通过审核</a>
+		  <a class="item" data-tab="second">未通过审核</a>
+		  <a class="item" data-tab="third">待审核</a>
+		</div>
+		<div class="ui bottom attached tab segment active" data-tab="first">
+			<div class="ui list">
+				<div class="item">获得xxx奖</div>
+				<div class="item">杰出人物</div>
+				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
+			</div>
+		</div>
+		<div class="ui bottom attached tab segment" data-tab="second">
+			<div class="ui list">
+				<div class="item">获得xxx奖</div>
+				<div class="item">杰出人物</div>
+				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
+			</div>
+		</div>
+		<div class="ui bottom attached tab segment" data-tab="third">
+			<div class="ui list">
+				<div class="item">获得xxx奖</div>
+				<div class="item">杰出人物</div>
+				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('.menu .item')
+  .tab()
+;
+</script>

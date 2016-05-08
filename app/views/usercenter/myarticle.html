@@ -1,1 +1,26 @@
-<p>This is the usercenter/myarticle view.</p>
+<div class="ui grid">
+	<div class="four wide column usercenter-nav">
+		<div ng-include="'../views/include/usernav.html'"></div>
+	</div>
+	<div class="twelve wid usercenter-right">
+		<div class="ui top attached tabular menu">
+		  <a class="item active" data-tab="first">发布文章</a>
+		  <a class="item" data-tab="second">文章列表</a>
+		</div>
+		<div class="ui bottom attached tab segment active" data-tab="first">
+			<div ng-include="'../views/usercenter/postarticle.html'"></div>
+		</div>
+		<div class="ui bottom attached tab segment" data-tab="second">
+			<div class="ui list">
+				<div class="item">小尾寒羊疾病的综合防治</div>
+				<div class="item">饲养奶牛有新招</div>
+				<div class="item">葡萄树养殖</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('.menu .item')
+  .tab()
+;
+</script>
