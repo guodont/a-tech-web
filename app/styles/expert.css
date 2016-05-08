@@ -1,0 +1,44 @@
+
+/**
+*expert 主页 css
+*/
+.at-expert-nav{
+	text-align:center;
+	margin-left:auto; 
+	margin-right:auto;
+}
+.at-expert-tag{
+	text-align:right;
+	margin-top: 10px;
+	margin-right:auto;
+}
+.at-article-item {
+	padding:15px !important;
+}
+.at-expert-question{
+	padding:15px !important;
+}
+#at-model-reply{
+	padding: 25px;
+}
+#at-expert-img-head{
+	margin-top:20px; 
+	width: 100px;
+    height: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+.at-expert-info .info{
+	text-indent:2em;
+	margin-right: 100px;
+	margin-left: 100px;
+
+}
+.at-expert-info .name{
+	margin-top: 20px;
+	text-align: center;
+}
+.at-expert-top{
+	margin-top: 15px !important;
+}

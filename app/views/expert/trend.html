@@ -1,1 +1,26 @@
-<p>This is the expert/trend view.</p>
+	<button id="at-button-reply">client</button>
+	<script type="text/javascript">
+	 $("#at-button-reply").click(function() {
+    	$('.ui.modal')
+  .modal('show');
+    })();
+  </script>
+  <style type="text/css">
+	#at-model-reply{
+		padding: 25px;
+	}
+  </style>
+	<div class="ui modal "id="at-model-reply"> <i class="close icon"></i>
+		<div class="header">回复</div>
+		<form class="ui reply form">
+			<div class="field">
+				<textarea></textarea>
+			</div>
+			<div class="actions">
+				<div class="ui red deny button">取消</div>
+				<div class="ui positive right labeled icon button">
+					确认 <i class="checkmark icon"></i>
+				</div>
+			</div>
+		</form>
+	</div>

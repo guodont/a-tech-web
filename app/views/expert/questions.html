@@ -1,1 +1,212 @@
-<p>This is the expert/questions view.</p>
+<div class="ui">
+	<div ng-include="'../views/include/experthead.html'"></div>
+	<div class="ui four column grid">
+		<div class="row" style="margin-top:15px;">
+			<div class="ten wide column ">
+				<div class="at-expert-question ui segment">
+					<div class="ui comments ">
+						<div class="comment">
+							<a class="avatar">
+								<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+							<div class="content">
+								<a class="author">Elliot Fu</a>
+								<div class="metadata">
+									<span class="date">昨天上午12:30</span>
+								</div>
+								<div class="text">
+									<p>This has been very useful for my research. Thanks as well!</p>
+								</div>
+								<div class="actions">
+									<a class="reply">Reply</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="comments">
+							<div class="comment">
+								<a class="avatar">
+									<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+								<div class="content">
+									<a class="author">Jenny Hess</a>
+									<div class="metadata">
+										<span class="date">刚刚</span>
+									</div>
+									<div class="text">Elliot you are always so right :)</div>
+									<div class="actions">
+										<a class="reply">Reply</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="comment">
+							<a class="avatar">
+								<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+							<div class="content">
+								<a class="author">Elliot Fu</a>
+								<div class="metadata">
+									<span class="date">昨天上午12:30</span>
+								</div>
+								<div class="text">
+									<p>This has been very useful for my research. Thanks as well!</p>
+								</div>
+								<div class="actions">
+									<a class="reply">Reply</a>
+								</div>
+							</div>
+
+							<div class="comments">
+								<div class="comment">
+									<a class="avatar">
+										<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+									<div class="content">
+										<a class="author">Jenny Hess</a>
+										<div class="metadata">
+											<span class="date">刚刚</span>
+										</div>
+										<div class="text">Elliot you are always so right :)</div>
+										<div class="actions">
+											<a class="reply">Reply</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui blue labeled submit icon button" id="at-button-reply"> <i class="icon edit"></i>
+							Add Reply
+						</div>
+<script type="text/javascript">
+	 $("#at-button-reply").click(function() {
+    	$('.ui.modal').modal('show');
+    	});
+  </script>
+
+						<div class="ui modal "id="at-model-reply"> <i class="close icon"></i>
+							<div class="header">回复</div>
+							<form class="ui reply form">
+								<div class="field">
+									<textarea></textarea>
+								</div>
+								<div class="actions">
+									<div class="ui red deny button">取消</div>
+									<div class="ui positive right labeled icon button">
+										确认
+										<i class="checkmark icon"></i>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="six wide column">
+				<div class="ui segment feed">
+					<div class="event">
+						<div class="label">
+							<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>
+						<div class="content">
+							<div class="summary">
+								<a class="user">Elliot Fu</a>
+								added you as a friend
+								<div class="date">1 小时前</div>
+							</div>
+							<div class="meta">
+								<a class="like">
+									<i class="like icon"></i>
+									4 Likes
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="label">
+							<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>
+						<div class="content">
+							<div class="summary">
+								<a>Helen Troy</a>
+								增加
+								<a>2 新的 illustrations</a>
+								<div class="date">4 天前</div>
+							</div>
+							<div class="extra images">
+								<a>
+									<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+								<a>
+									<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+							</div>
+							<div class="meta">
+								<a class="like">
+									<i class="like icon"></i>
+									1 Like
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="label">
+							<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>
+						<div class="content">
+							<div class="summary">
+								<a class="user">Jenny Hess</a>
+								将你加为好友
+								<div class="date">2 天前</div>
+							</div>
+							<div class="meta">
+								<a class="like">
+									<i class="like icon"></i>
+									8 Likes
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="label">
+							<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>
+						<div class="content">
+							<div class="summary">
+								<a>Joe Henderson</a>
+								posted on his page
+								<div class="date">3 天前</div>
+							</div>
+							<div class="extra text">
+								Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+							</div>
+							<div class="meta">
+								<a class="like">
+									<i class="like icon"></i>
+									5 Likes
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="label">
+							<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>
+						<div class="content">
+							<div class="summary">
+								<a>Justen Kitsune</a>
+								上传
+								<a>2 张关于你的照片</a>
+								<div class="date">4 天前</div>
+							</div>
+							<div class="extra images">
+								<a>
+									<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+								<a>
+									<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+							</div>
+							<div class="meta">
+								<a class="like">
+									<i class="like icon"></i>
+									41 Likes
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
