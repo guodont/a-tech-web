@@ -275,3 +275,146 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
   margin: 0 auto;
   width: 560px;
 }
+
+.at-expert-card {
+	width: 100% !important;
+}
+.ui.breadcrumb .section{
+	margin-top: 15px !important;
+	font-size: 1.2em;
+	color: gray;
+}
+/**
+*trade
+*/
+.at-info-main img{
+	margin: 20px !important;
+	width: 70px !important;
+	height: 70px !important;
+}
+.at-info-content .description{
+	color: green !important;
+	margin-top: 10px !important;
+	
+}
+.at-info-cont .description p{
+	color: black !important;
+	margin-top: 10px !important;
+	width: 850px;
+}
+#at-info-title{
+	font-size: 1.2em !important;
+}
+.at-info-date{
+	float: right;
+	overflow: hidden;
+	margin-top: -145px;
+	margin-right: 5px;
+	color: #878686;
+	font-size: 14px;
+}
+.at-info-date span{
+	margin-left: 20px;
+}
+.at-info-icon{
+	float: right;
+	overflow: hidden;
+	margin-top: -40px !important;
+}
+/**
+*问题专区
+*/
+.at-question-cont .description p{
+	color: black !important;
+	margin-top: 10px !important;
+	width: 850px;
+}
+.at-question-from{
+	margin-bottom:8px; 
+	color: gray !important;
+}
+.at-question-title{
+	margin-bottom:8px; 
+	color: #009688 !important;
+	font-size: 1.2em;
+}
+.at-question-name{
+	font-weight: bold;
+}
+.at-question-cont a{
+	line-height: 1.4;
+}
+.at-question-date{
+	float: right;
+	overflow: hidden;
+	margin-top: -145px;
+	margin-right: 5px;
+	color: #878686;
+	font-size: 14px;
+}
+#at-question-label-ok{
+	float: right;
+	margin-top: -130px;
+}
+#at-question-label-from{
+	float: right;
+	margin-right:-50px; 
+}
+#at-question-cui{
+	float: right;
+	margin-top:-40px; 
+	margin-right: 50px;
+}
+#at-question-label-nook{
+	float: right;
+	margin-top: -130px;
+}
+#at-article-title{
+	font-weight: bold;
+	font-size:1.5em; 
+}
+.at-cont-segment{
+    line-height: 1.4285em;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+}
+.recommend{
+	border-width: 2px 0px;
+	width: 1120px;
+	height: 35px; 
+}
+.recommend span{
+	margin-left:15px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.recommend a{
+	padding: 30px;
+}
+.at-article-comment span{
+	margin-left:15px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+/**
+*问题详情
+*/
+#at-question-info-img{
+	margin: 20px !important;
+	width: 70px !important;
+	height: 70px !important;
+}
+#at-question-info-cont{
+	margin-top: 15px;
+}
+.at-question-answer-title{
+	margin: 15px;
+	font-size: 1.5em;
+/*	font-weight: bold;*/
+}
+.at-question-info-all{
+	min-height:400px; //（解决ie8.9.ff.chrome）
+	*+height:100%;  //（解决ie7）
+	_height:400px; //（解决ie6） ie6超出自动溢出
+}
