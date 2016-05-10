@@ -22,3 +22,9 @@
 .usercenter-trend-button {
 	margin-left: 615px !important;
 }
+
+.center-profile-button1 {
+	position: relative;
+	top: -15px;
+	left: 30px;
+}
