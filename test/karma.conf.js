@@ -30,6 +30,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/semantic-ui/dist/semantic.js',
       'bower_components/video.js/dist/video.js',
+      'bower_components/ng-notify/src/scripts/ng-notify.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
