@@ -1,7 +1,141 @@
-<!doctype html> <html ng-app="aTechClientApp" ng-controller="PageCtrl"> <head> <meta charset="utf-8"> <title>{{ Page.title() }}</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.07516b1d.css"> <link rel="stylesheet" href="styles/bower.d41d8cd9.css"> <link rel="stylesheet" href="styles/main.725f79ca.css"> <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet"> </head> <body ng-app="aTechClientApp"> <!--[if lte IE 8]>
+<!doctype html>
+<html ng-app="aTechClientApp" ng-controller="PageCtrl">
+<head>
+    <meta charset="utf-8">
+    <title>{{ Page.title() }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ng-notify/src/styles/ng-notify.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/bower.css -->
+    <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css">
+    <link rel="stylesheet" href="bower_components/video.js/dist/video-js.css">
+
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/semantic.scss">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/my-style.css">
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/usermore.css">
+    <link rel="stylesheet" href="styles/usercenter.css">
+    <link rel="stylesheet" href="styles/expert.css">
+
+    <!-- endbuild -->
+
+    <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet">
+</head>
+<body ng-app="aTechClientApp">
+<!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
-<![endif]--> <!-- Add your site or application content here --> <div class="at-headbar"> <div class="ui at-container"> <div class="ui horizontal bulleted list at-fr"> <a class="item">2016年4月15日 星期五</a> <a class="item" href="#/registerFirstStep">注册</a> <a class="item" href="#/login">登录</a> <a class="item" href="#/usercenter/index">个人中心</a> </div> </div> </div> <div class="ui at-container"> <!-- logo --> <div class="ui grid"> <div class="four column row"> <div class="left floated column"> <div class="ui at-container at-logo"> <a href="#/"><img src="images/logo1.44e44ede.png"></a> </div> </div> <div class="right floated column"> <div class="ui search at-search"> <div class="ui icon input"> <input class="prompt" type="text" placeholder="搜本站"> <i class="search icon"></i> </div> <div class="results"></div> </div> </div> </div> </div> </div> <div class="ui at-nav"> <!-- 导航 --> <div class="ui at-container list"> <a href="#/"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">首页 </button> </a> <a href="#/article"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">农业要闻 </button> </a> <a href="#/expert"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">专家在线 </button> </a> <a href="#/question"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">技术咨询 </button> </a> <a href="#/trade"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">供需信息 </button> </a> <a href="#/video"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">视频专区 </button> </a> <a href="http://www.kphn.com.cn/kphn/index.asp" target="_blank"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">科普惠农 </button> </a> <a href="#/article"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">科学生活 </button> </a> <a href="#/article"> <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b'" onmouseout="this.style.backgroundColor=''">关于我们 </button> </a> </div> </div> <div class="ui at-container"> <div ng-view=""></div> </div> <div class="at-footer"> <span>主办：xxxxxx 承办：xxxxxxxxxxxxxxx 技术支持电话：xxxxxxxxxxxxxx</span> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <!-- <script>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="at-headbar">
+    <div class="ui at-container">
+        <div class="ui horizontal bulleted list at-fr">
+            <a class="item">2016年4月15日 星期五</a>
+            <a class="item" href="#/registerFirstStep">注册</a>
+            <a class="item" href="#/login">登录</a>
+            <a class="item" href="#/usercenter/index">个人中心</a>
+        </div>
+    </div>
+</div>
+<div class="ui at-container">
+    <!-- logo -->
+    <div class="ui grid">
+        <div class="four column row">
+            <div class="left floated column">
+                <div class="ui at-container at-logo">
+                    <a href="#/"><img src="images/logo1.png"></a>
+                </div>
+            </div>
+            <div class="right floated column">
+                <div class="ui search at-search">
+                    <div class="ui icon input">
+                        <input class="prompt" type="text" placeholder="搜本站">
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui at-nav">
+    <!-- 导航 -->
+    <div class="ui at-container  list">
+        <a href="#/">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">首页
+            </button>
+        </a>
+        <a href="#/article">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">农业要闻
+            </button>
+        </a>
+        <a href="#/expert">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">专家在线
+            </button>
+        </a>
+        <a href="#/question">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">技术咨询
+            </button>
+        </a>
+        <a href="#/trade">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">供需信息
+            </button>
+        </a>
+        <a href="#/video">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">视频专区
+            </button>
+        </a>
+        <a href="http://www.kphn.com.cn/kphn/index.asp" target="_blank">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">科普惠农
+            </button>
+        </a>
+        <a href="#/article">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">科学生活
+            </button>
+        </a>
+        <a href="#/article">
+            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
+                    onmouseout="this.style.backgroundColor='';">关于我们
+            </button>
+        </a>
+
+    </div>
+</div>
+
+<div class="ui at-container">
+    <div ng-view=""></div>
+
+</div>
+<div class="at-footer">
+    <span>主办：xxxxxx 承办：xxxxxxxxxxxxxxx 技术支持电话：xxxxxxxxxxxxxx</span>
+</div>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<!-- <script>
   !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
   r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
@@ -9,4 +143,69 @@
 
   ga('create', 'UA-XXXXX-X');
   ga('send', 'pageview');
-</script> --> <script src="scripts/vendor.757c9d09.js"></script> <script src="scripts/scripts.0502c4dc.js"></script> <script src="styles/style.js"></script> </body> </html>
+</script> -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/semantic-ui/dist/semantic.js"></script>
+<script src="bower_components/video.js/dist/video.js"></script>
+<script src="bower_components/ng-notify/src/scripts/ng-notify.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/page.js"></script>
+
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/registerfirststep.js"></script>
+<script src="scripts/controllers/registersecondstep.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) styles/style.js -->
+<script src="styles/slider.min.js"></script>
+<script src="scripts/controllers/usercenter/profile.js"></script>
+<script src="scripts/controllers/usercenter/changepassword.js"></script>
+<script src="scripts/controllers/usercenter/myquestion.js"></script>
+<script src="scripts/controllers/usercenter/mytrade.js"></script>
+<script src="scripts/controllers/usercenter/message.js"></script>
+<script src="scripts/controllers/usercenter/index.js"></script>
+<script src="scripts/controllers/trade.js"></script>
+<script src="scripts/controllers/trade/post.js"></script>
+<script src="scripts/controllers/trade/info.js"></script>
+<script src="scripts/controllers/question.js"></script>
+<script src="scripts/controllers/question/post.js"></script>
+<script src="scripts/controllers/question/info.js"></script>
+<script src="scripts/controllers/video.js"></script>
+<script src="scripts/controllers/article.js"></script>
+<script src="scripts/controllers/article/info.js"></script>
+<script src="scripts/controllers/expert.js"></script>
+<script src="scripts/controllers/expert/articles.js"></script>
+<script src="scripts/controllers/expert/questions.js"></script>
+<script src="scripts/controllers/expert/results.js"></script>
+<script src="scripts/controllers/expert/album.js"></script>
+<script src="scripts/controllers/expert/trend.js"></script>
+<script src="scripts/controllers/findpassword.js"></script>
+<script src="scripts/controllers/setnewpassword.js"></script>
+<script src="scripts/controllers/usercenter/assignedquestion.js"></script>
+<script src="scripts/controllers/usercenter/album.js"></script>
+<script src="scripts/controllers/usercenter/uploadpic.js"></script>
+<script src="scripts/controllers/usercenter/myarticle.js"></script>
+<script src="scripts/controllers/usercenter/postarticle.js"></script>
+<script src="scripts/controllers/usercenter/myresult.js"></script>
+<script src="scripts/controllers/usercenter/mytrend.js"></script>
+<script src="scripts/controllers/usercenter/expertprofile.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
