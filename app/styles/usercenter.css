@@ -8,7 +8,21 @@
 }
 
 .profile-userhead {
-	padding-left: 100px;
+
+	border-radius: 500rem;
+	height: 70px;
+}
+
+.profile-userheadset h4 {
+	margin-top: 20px !important;
+}
+
+.profile-userhead-upbutton {
+	
+}
+
+.profile-userhead-upimg {
+	
 }
 
 .usercenter-input1 {

@@ -22,13 +22,22 @@
             </div>
         </div>
     </div>
-    <script src="styles/slider.js"></script>
-    <script type="text/javascript">
-        $("#at-expert-card").click(function () {
-            $('.ui.modal').modal('show');
+</div>
+<script src="styles/slider.js"></script>
+<script type="text/javascript">
+    $("#at-expert-card").click(function () {
+        $('.ui.modal').modal('show');
+    });
+</script>
+<script type="text/javascript">
+    (function () {
+        Slider.init({
+            target: $('.slider'),
+            time: 5000
         });
-    </script>
-    <!-- slider结束 -->
+    })();
+</script>
+<!-- slider结束 -->
 </div>
 <!-- 资讯 -->
 <div class="ui at-home-article">

@@ -1,4 +1,15 @@
 <div class="ui grid">
+<style>
+    .cropArea {
+      background: #E4E4E4;
+      overflow: hidden;
+      width:348px;
+      height:200px;
+    }
+</style>
+<script type="text/javascript">
+	$
+</script>
 	<div class="four wide column usercenter-nav">
 		<div ng-include="'../include/usernav.html'"></div>
 	</div>
@@ -12,10 +23,24 @@
 		        <i class="user icon"></i>
 		      </div>
 		    </div>
-			<div class="field">
+			<div class="field profile-userheadset">
 				<label class="at-fl">头像设置</label>
-				<img src="http://semantic-ui.com/images/avatar/small/matt.jpg" class="profile-userhead">
-				<button class="ui button center-profile-button1">上传头像</button>
+				<div class="ui grid">
+				<div class="three column row">
+				    <div class="column">
+				    	<h4>当前头像</h4>
+				    	<img ng-src="{{myCroppedImage}}" class="profile-userhead" src="../image/elliot.jpg" />
+				    </div>
+				    <div class="column">
+				    	<h4>设置新头像</h4>
+				    	<input type="file"  ng-model="newFile" id="fileInput" class="ui button profile-userhead-upbutton" />
+						<div id="imgInput" ng-hide="hasNewFile" class="cropArea profile-userhead-upimg">
+						    <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+						</div>
+						<div class="ui button">保存头像</div>
+				    </div>
+				</div>
+				</div>
 		  	</div>
 			<div class="field">
 		      <label>真实姓名</label>

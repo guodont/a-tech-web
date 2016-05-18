@@ -13,3 +13,4 @@ angular.module('aTechClientApp')
 
         $scope.isLogin = $cookieStore.get("isLoggedIn") == 1 ? true : false;
     });
+
