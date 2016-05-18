@@ -8,6 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('PageCtrl', function ($scope, Page) {
+  .controller('PageCtrl',function ($scope, Page, ngNotify) {
     $scope.Page = Page;
+    // ngNotify.set("test",'error');
   });
