@@ -1,42 +1,42 @@
 <div class="column">
-<div class="ui form">
-  <h1 class="at-title"><center>注册成为农科110会员</center></h1>
-  <div class="at-content">
-  <form class="" action="#/registerSecondStep" method="get">
-
-  <div class="field">
-    <label>手机号</label>
-    <div class="ui left icon input at-signup-text">
-      <input type="text" placeholder="手机号码">
-      <i class="phone icon"></i>
+    <div class="ui form">
+        <h1 class="at-title">
+            <center>注册成为农科110会员</center>
+        </h1>
+        <div class="at-content">
+            <form class="" ng-submit="signup()" method="post">
+                <div class="field">
+                    <label>手机号</label>
+                    <div class="ui left icon input at-signup-text">
+                        <input type="text" placeholder="手机号码" ng-model="phone">
+                        <i class="phone icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>用户名</label>
+                    <div class="ui left icon input at-signup-text">
+                        <input type="text" placeholder="用户名" ng-model="name">
+                        <i class="user icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>密码</label>
+                    <div class="ui left icon input at-signup-text">
+                        <input type="password" placeholder="请输入密码" ng-model="password">
+                        <i class="lock icon"></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>确认密码</label>
+                    <div class="ui left icon input at-signup-text">
+                        <input type="password" placeholder="请重复上次密码">
+                        <i class="lock icon"></i>
+                    </div>
+                </div>
+                <center>
+                    <input class="ui green submit button" type="submit" value="立即注册">
+                </center>
+            </form>
+        </div>
     </div>
-  </div>
-  <div class="field">
-    <label>用户名</label>
-    <div class="ui left icon input at-signup-text">
-      <input type="text" placeholder="用户名">
-      <i class="user icon"></i>
-    </div>
-  </div>
-  <div class="field">
-    <label>密码</label>
-    <div class="ui left icon input at-signup-text">
-      <input type="password">
-      <i class="lock icon"></i>
-    </div>
-  </div>
-  <div class="field">
-    <label>确认密码</label>
-    <div class="ui left icon input at-signup-text">
-      <input type="password">
-      <i class="lock icon"></i>
-    </div>
-  </div>
-  <center>
-    <input  class="ui green submit button" type="submit" value="立即注册">
-  </center>
-  </div>
-</form>
-
-</div>
 </div>

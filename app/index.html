@@ -46,9 +46,10 @@
     <div class="ui at-container">
         <div class="ui horizontal bulleted list at-fr">
             <a class="item">2016年4月15日 星期五</a>
-            <a class="item" href="#/registerFirstStep">注册</a>
-            <a class="item" href="#/login">登录</a>
-            <a class="item" href="#/usercenter/index">个人中心</a>
+            <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
+            <a class="item" ng-show="!isLogin" href="#/login">登录</a>
+            <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
+            <a class="item" ng-show="isLogin" ng-click="logout()" >退出当前帐号</a>
         </div>
     </div>
 </div>

@@ -422,3 +422,7 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
 	*+height:100%;  //（解决ie7）
 	_height:400px; //（解决ie6） ie6超出自动溢出
 }
+
+.fz-18 {
+	font-size: 18px !important;
+}

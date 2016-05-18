@@ -8,10 +8,25 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('LoginCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('LoginCtrl', function ($scope, $http, $cookieStore, $location, ngNotify, apiUrl) {
+
+        $scope.login2 = function () {
+
+            var loginData = {
+                password: $scope.password,
+                phone: $scope.phone
+            };
+
+            $http.post(apiUrl + '/login', loginData)
+                .error(function (data) {
+                    ngNotify.set("登录失败,请重试" + data);
+                })
+                .success(function (data) {
+                    ngNotify.set("登录成功");
+                    $cookieStore.put('isLoggedIn', 1);
+                    $cookieStore.put('authToken', data.authToken);
+                    $location.path('#/usercenter/index');
+                });
+        };
+
+    });
