@@ -9,7 +9,7 @@
  */
 angular.module('aTechClientApp')
     .controller('RegistersecondstepCtrl', function ($scope, $http, $cookieStore, $location, ngNotify, apiUrl) {
-        
+
         $scope.saveProfile = function () {
 
             var signupSecondStepData = {
@@ -19,12 +19,20 @@ angular.module('aTechClientApp')
                 scale: $scope.scale
             };
 
-            $http.post(apiUrl + '/signup/two', signupSecondStepData)
-                .error(function (data) {
+
+            $http({
+                method: 'POST',
+                url: apiUrl + '/signup/two',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")},
+                data: signupSecondStepData
+            })
+                .then(function (res) {
+                    Loading.setLoading(false);
+                    ngNotify.set("成功");
+                    $location.path('#/usercenter/index');
+                }, function (res) {
                     ngNotify.set("信息保存失败,请重试" + data);
-                }).success(function (data) {
-                ngNotify.set("成功");
-                $location.path('#/registerSecondStep');
-            });
+                });
+           
         };
     });

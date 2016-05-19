@@ -20,12 +20,13 @@ angular.module('aTechClientApp')
 
             $http.post(apiUrl + '/signup/one', signupFirstStepData)
                 .error(function (data) {
-                    ngNotify.set("注册失败,请重试"+data);
-                }).success(function (data) {
-                ngNotify.set("注册成功");
-                $cookieStore.put('isLoggedIn', 1);
-                $cookieStore.put('authToken', data.authToken);
-                $location.path('#/registerSecondStep');
-            });
+                    ngNotify.set("注册失败,请重试" + data);
+                })
+                .success(function (data) {
+                    ngNotify.set("注册成功");
+                    $cookieStore.put('isLoggedIn', 1);
+                    $cookieStore.put('authToken', data.authToken);
+                    $location.path('#/registerSecondStep');
+                });
         };
     });

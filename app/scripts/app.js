@@ -19,7 +19,9 @@ angular
         'ngNotify'
     ])
     .constant('apiUrl', 'http://sxnk110.workerhub.cn:9000/api/v1')
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
+        // $locationProvider.html5Mode(true);
+
         $routeProvider
             .when('/', {    //  首页
                 templateUrl: 'views/main.html',
@@ -213,6 +215,17 @@ angular
             },
             setTitle: function (newTitle) {
                 title = newTitle;
+            }
+        };
+    })
+    .factory('Loading', function () {
+        var isLoading = false;
+        return {
+            isLoading: function () {
+                return isLoading;
+            },
+            setLoading: function (loading) {
+                isLoading = loading;
             }
         };
     })

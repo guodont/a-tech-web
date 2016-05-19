@@ -128,11 +128,15 @@
 </div>
 
 <div class="ui at-container">
+    <div class="ui active  inverted dimmer" ng-hide="!loading.isLoading()">
+        <div class="ui large text  loader" ng-hide="!loading.isLoading()">加载中...</div>
+    </div>
+
     <div ng-view=""></div>
 
 </div>
 <div class="at-footer">
-    <span>主办：xxxxxx 承办：xxxxxxxxxxxxxxx 技术支持电话：xxxxxxxxxxxxxx</span>
+    <span>山西科技报刊总社版权所有 晋ICP备08000801号</span>
 </div>
 
 
@@ -172,10 +176,6 @@
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/controllers/registerfirststep.js"></script>
 <script src="scripts/controllers/registersecondstep.js"></script>
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) styles/style.js -->
-<script src="styles/slider.min.js"></script>
 <script src="scripts/controllers/usercenter/profile.js"></script>
 <script src="scripts/controllers/usercenter/changepassword.js"></script>
 <script src="scripts/controllers/usercenter/myquestion.js"></script>
@@ -207,6 +207,11 @@
 <script src="scripts/controllers/usercenter/myresult.js"></script>
 <script src="scripts/controllers/usercenter/mytrend.js"></script>
 <script src="scripts/controllers/usercenter/expertprofile.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) styles/style.js -->
+<script src="styles/slider.min.js"></script>
+
 
 <!-- endbuild -->
 </body>
