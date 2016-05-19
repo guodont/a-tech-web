@@ -1,879 +1,905 @@
 <!-- 轮播图片 -->
 <div class="ui at-container">
-  <div class="slider">
-    <div class="slider-container">
-      <div class="slider-wrapper">
-      <!-- 需要上传xxx*xxx格式的图片 -->
-        <div class="slide"><a href=""><img src="images/img1.jpg" alt=""></a> <a href=""><strong>中国发布种植业结构调整五年规划</strong></a> <div class="black-nav"></div></div>
-        <div class="slide"><a href=""><img src="images/img2.jpg" alt=""></a> <a href=""><strong>山西省农资商会招募农资生产厂家</strong></a> <div class="black-nav"></div></div>
-        <div class="slide"><a href=""><img src="images/img3.jpg" alt=""></a> <a href=""><strong>第二届山西科普惠农平价农资供应 “319”行动开始啦！</strong></a> <div class="black-nav"></div></div>
-        <div class="slide"><a href=""><img src="images/img4.jpg" alt=""></a> <a href=""><strong>2015年科普惠农绿色通道工程服务站考核办法</strong></a> <div class="black-nav"></div></div>
-      </div>
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <!-- 需要上传xxx*xxx格式的图片 -->
+                <div class="slide"><a href=""><img src="images/img1.jpg" alt=""></a> <a
+                        href=""><strong>中国发布种植业结构调整五年规划</strong></a>
+                    <div class="black-nav"></div>
+                </div>
+                <div class="slide"><a href=""><img src="images/img2.jpg" alt=""></a> <a
+                        href=""><strong>山西省农资商会招募农资生产厂家</strong></a>
+                    <div class="black-nav"></div>
+                </div>
+                <div class="slide"><a href=""><img src="images/img3.jpg" alt=""></a> <a href=""><strong>第二届山西科普惠农平价农资供应
+                    “319”行动开始啦！</strong></a>
+                    <div class="black-nav"></div>
+                </div>
+                <div class="slide"><a href=""><img src="images/img4.jpg" alt=""></a> <a href=""><strong>2015年科普惠农绿色通道工程服务站考核办法</strong></a>
+                    <div class="black-nav"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="styles/slider.js"></script>
+</div>
+<script src="styles/slider.js"></script>
 <script type="text/javascript">
-   $("#at-expert-card").click(function() {
-      $('.ui.modal').modal('show');
-      });
+    $("#at-expert-card").click(function () {
+        $('.ui.modal').modal('show');
+    });
 </script>
-  <!-- slider结束 -->
+<script type="text/javascript">
+    (function () {
+        Slider.init({
+            target: $('.slider'),
+            time: 5000
+        });
+    })();
+</script>
+<!-- slider结束 -->
 </div>
 <!-- 资讯 -->
 <div class="ui at-home-article">
-  <a class="ui teal ribbon label fz-14">农业要闻</a>
-  <div class="ui grid">
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">通知公告 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-        <div class="ui list at-notice">
-          <div class="item">
-            <a href="#">山西省农资商会招募农资生产厂家</a>
-          </div>
-          <div class="item">
-            <a href="#">第二届山西科普惠农平价农资供应 “319”行动开始啦！</a>
-          </div>
-          <div class="item">
-            <a href="#">山西省科普惠农绿色通道工程服务站建设及运营管理规范</a>
-          </div>
-          <div class="item">
-            <a href="#">2015年科普惠农绿色通道工程服务站考核办法</a>
-          </div>
-          <div class="item">
-            <a href="#">2015年科普惠农绿色通道工程示范基地考核办法</a>
-          </div>
-          <div class="item">
-            <a href="#">中科云媒站点管理制度</a>
-          </div>
+    <a class="ui teal ribbon label fz-18">农业要闻</a>
+    <div class="ui grid">
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">通知公告 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <div class="ui list at-notice">
+                <div class="item">
+                    <a href="#">山西省农资商会招募农资生产厂家</a>
+                </div>
+                <div class="item">
+                    <a href="#">第二届山西科普惠农平价农资供应 “319”行动开始啦！</a>
+                </div>
+                <div class="item">
+                    <a href="#">山西省科普惠农绿色通道工程服务站建设及运营管理规范</a>
+                </div>
+                <div class="item">
+                    <a href="#">2015年科普惠农绿色通道工程服务站考核办法</a>
+                </div>
+                <div class="item">
+                    <a href="#">2015年科普惠农绿色通道工程示范基地考核办法</a>
+                </div>
+                <div class="item">
+                    <a href="#">中科云媒站点管理制度</a>
+                </div>
 
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">现代农业 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">泰国——开发出少水型稻米新品种</a>
+                </div>
+                <div class="item">
+                    <a href="#">澳大利亚推出新品种苹果Bravo</a>
+                </div>
+                <div class="item">
+                    <a href="#">基因技术可延长香蕉保鲜期</a>
+                </div>
+                <div class="item">
+                    <a href="#">英国“地下生长”蔬菜将上市</a>
+                </div>
+                <div class="item">
+                    <a href="#">日研究称天然植物激素可防治虫害</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">二级分类 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">二级分类 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">现代农业 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">泰国——开发出少水型稻米新品种</a>
-          </div>
-          <div class="item">
-            <a href="#">澳大利亚推出新品种苹果Bravo</a>
-          </div>
-          <div class="item">
-            <a href="#">基因技术可延长香蕉保鲜期</a>
-          </div>
-          <div class="item">
-            <a href="#">英国“地下生长”蔬菜将上市</a>
-          </div>
-          <div class="item">
-            <a href="#">日研究称天然植物激素可防治虫害</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">二级分类 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">二级分类 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 <!-- 服务 -->
 <div class="ui at-home-article">
-  <a class="ui olive ribbon label fz-14">技术咨询</a>
-  <div class="ui grid bg-gray at-high-mod">
-    <div class="eight wide column">
-      <div class="ui">
-        <div class="ui secondary pointing menu">
-          <a class="item active" style="border-color:#009688">热点问题 </a>
-          <div class="right menu">
-            <a class="ui item">更多 </a>
-          </div>
+    <a class="ui olive ribbon label fz-18">技术咨询</a>
+    <div class="ui grid bg-gray at-high-mod">
+        <div class="eight wide column">
+            <div class="ui">
+                <div class="ui secondary pointing menu">
+                    <a class="item active" style="border-color:#009688">热点问题 </a>
+                    <div class="right menu">
+                        <a class="ui item">更多 </a>
+                    </div>
+                </div>
+                <div class="ui list at-notice">
+                    <div class="item">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">lixx</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">尖椒苗10天都没有出土是咋回事？</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">don</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">葡萄树上喷石硫合剂，怎么配浓度？</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Long</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">打什么药能使公梨变母梨？</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">李某某</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">西红柿得了病毒病怎么治</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="ui comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">张三</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">牛鼻子褪毛怎么治？</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 提问按钮 -->
+            <div class=" ui centered at-ask">
+                <a class="ui inverted green button at-ask-button" href="#/question/post">我要提问</a>
+            </div>
         </div>
-        <div class="ui list at-notice">
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">lixx</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">尖椒苗10天都没有出土是咋回事？ </div>
+        <div class="eight wide column">
+            <div class="ui tiny images at-expert-box">
+                <div class="ui three column grid">
+                    <div class="column">
+                        <div class="ui at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui  at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui  at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">don</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">葡萄树上喷石硫合剂，怎么配浓度？ </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Long</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">打什么药能使公梨变母梨？</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">李某某</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">西红柿得了病毒病怎么治</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">张三</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">牛鼻子褪毛怎么治？</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 提问按钮 -->
-      <div class=" ui centered at-ask">
-        <a class="ui inverted green button at-ask-button" href="#/question/post">我要提问</a>
-      </div>
-    </div>
-    <div class="eight wide column">
-      <div class="ui tiny images at-expert-box">
-        <div class="ui three column grid">
-          <div class="column">
-            <div class="ui at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui  at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui  at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="ui tiny images at-expert-box">
-        <div class="ui three column grid">
-          <div class="column">
-            <div class="ui  at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui  at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui  at-expert">
-              <img class="ui centered medium circular image at-expert-img" src="./images/201192091258.jpg">
-              <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
-            </div>
-          </div>
+            <div class="ui tiny images at-expert-box">
+                <div class="ui three column grid">
+                    <div class="column">
+                        <div class="ui  at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui  at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui  at-expert">
+                            <img class="ui centered medium circular image at-expert-img"
+                                 src="./images/201192091258.jpg">
+                            <h4 class="at-expert-name">专家名<p>xxx领域专家，xx博士</p></h4>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 <!-- 养殖技术 -->
 <div class="ui at-home-article">
-  <a class="ui red ribbon label fz-14">养殖技术</a>
-  <div class="ui grid">
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">畜禽养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
+    <a class="ui red ribbon label fz-18">养殖技术</a>
+    <div class="ui grid">
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">畜禽养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">小尾寒羊疾病的综合防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">饲养奶牛有新招</a>
+                </div>
+                <div class="item">
+                    <a href="#">种公猪的日常管理“五要”</a>
+                </div>
+                <div class="item">
+                    <a href="#">春季应该加强猪痢疾的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">如何防治羊传染性结膜炎</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">小尾寒羊疾病的综合防治</a>
-          </div>
-          <div class="item">
-            <a href="#">饲养奶牛有新招</a>
-          </div>
-          <div class="item">
-            <a href="#">种公猪的日常管理“五要”</a>
-          </div>
-          <div class="item">
-            <a href="#">春季应该加强猪痢疾的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">如何防治羊传染性结膜炎</a>
-          </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">特种养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">鸽子常见病的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">肉驴饲养实用问答</a>
+                </div>
+                <div class="item">
+                    <a href="#">养殖肉驴品种及催肥方法</a>
+                </div>
+                <div class="item">
+                    <a href="#">黄粉虫用途广饲喂管理要跟上</a>
+                </div>
+                <div class="item">
+                    <a href="#">庭院养狍技术</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">水产养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">其他养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">特种养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">鸽子常见病的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">肉驴饲养实用问答</a>
-          </div>
-          <div class="item">
-            <a href="#">养殖肉驴品种及催肥方法</a>
-          </div>
-          <div class="item">
-            <a href="#">黄粉虫用途广饲喂管理要跟上</a>
-          </div>
-          <div class="item">
-            <a href="#">庭院养狍技术</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">水产养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">其他养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 <!-- 养殖技术 -->
 <div class="ui at-home-article">
-  <a class="ui green ribbon label fz-14">科普惠农</a>
-  <div class="ui grid">
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">畜禽养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
+    <a class="ui green ribbon label fz-18">科普惠农</a>
+    <div class="ui grid">
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">畜禽养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">小尾寒羊疾病的综合防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">饲养奶牛有新招</a>
+                </div>
+                <div class="item">
+                    <a href="#">种公猪的日常管理“五要”</a>
+                </div>
+                <div class="item">
+                    <a href="#">春季应该加强猪痢疾的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">如何防治羊传染性结膜炎</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">小尾寒羊疾病的综合防治</a>
-          </div>
-          <div class="item">
-            <a href="#">饲养奶牛有新招</a>
-          </div>
-          <div class="item">
-            <a href="#">种公猪的日常管理“五要”</a>
-          </div>
-          <div class="item">
-            <a href="#">春季应该加强猪痢疾的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">如何防治羊传染性结膜炎</a>
-          </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">特种养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">鸽子常见病的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">肉驴饲养实用问答</a>
+                </div>
+                <div class="item">
+                    <a href="#">养殖肉驴品种及催肥方法</a>
+                </div>
+                <div class="item">
+                    <a href="#">黄粉虫用途广饲喂管理要跟上</a>
+                </div>
+                <div class="item">
+                    <a href="#">庭院养狍技术</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">水产养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">其他养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">特种养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">鸽子常见病的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">肉驴饲养实用问答</a>
-          </div>
-          <div class="item">
-            <a href="#">养殖肉驴品种及催肥方法</a>
-          </div>
-          <div class="item">
-            <a href="#">黄粉虫用途广饲喂管理要跟上</a>
-          </div>
-          <div class="item">
-            <a href="#">庭院养狍技术</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">水产养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">其他养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 <!-- 养殖技术 -->
 <div class="ui at-home-article">
-  <a class="ui blue ribbon label fz-14">科学信息</a>
-  <div class="ui grid">
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">畜禽养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
+    <a class="ui blue ribbon label fz-18">科学信息</a>
+    <div class="ui grid">
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">畜禽养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">小尾寒羊疾病的综合防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">饲养奶牛有新招</a>
+                </div>
+                <div class="item">
+                    <a href="#">种公猪的日常管理“五要”</a>
+                </div>
+                <div class="item">
+                    <a href="#">春季应该加强猪痢疾的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">如何防治羊传染性结膜炎</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">小尾寒羊疾病的综合防治</a>
-          </div>
-          <div class="item">
-            <a href="#">饲养奶牛有新招</a>
-          </div>
-          <div class="item">
-            <a href="#">种公猪的日常管理“五要”</a>
-          </div>
-          <div class="item">
-            <a href="#">春季应该加强猪痢疾的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">如何防治羊传染性结膜炎</a>
-          </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">特种养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">鸽子常见病的防治</a>
+                </div>
+                <div class="item">
+                    <a href="#">肉驴饲养实用问答</a>
+                </div>
+                <div class="item">
+                    <a href="#">养殖肉驴品种及催肥方法</a>
+                </div>
+                <div class="item">
+                    <a href="#">黄粉虫用途广饲喂管理要跟上</a>
+                </div>
+                <div class="item">
+                    <a href="#">庭院养狍技术</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">水产养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
+        </div>
+        <div class="four wide column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">其他养殖 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
+            <div class="ui list">
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+                <div class="item">
+                    <a href="#">测试文章001</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">特种养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">鸽子常见病的防治</a>
-          </div>
-          <div class="item">
-            <a href="#">肉驴饲养实用问答</a>
-          </div>
-          <div class="item">
-            <a href="#">养殖肉驴品种及催肥方法</a>
-          </div>
-          <div class="item">
-            <a href="#">黄粉虫用途广饲喂管理要跟上</a>
-          </div>
-          <div class="item">
-            <a href="#">庭院养狍技术</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">水产养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-    <div class="four wide column bg-gray">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">其他养殖 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
-        </div>
-      </div>
-      <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-      <div class="ui list">
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-          <div class="item">
-            <a href="#">测试文章001</a>
-          </div>
-        </div>
-    </div>
-  </div>
 </div>
 <!-- 供需 -->
 <div class="ui at-home-article">
-  <div class="ui grid">
-    <div class="eight wide column">
-    </div>
-    <div class="eight wide column">
-      <div class="">
-        <button class=" ui button at-fr green">发布供需</button>
-      </div>
-    </div>
-  </div>
-  <a class="ui orange ribbon label fz-14">供需信息</a>
-  <div class="ui grid bg-gray">
-    <div class="eight wide column">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">供应 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
+    <div class="ui grid">
+        <div class="eight wide column">
         </div>
-      </div>
-        <div class="ui list at-notice">
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">优质有机芽苗菜</div>
-                </div>
-              </div>
+        <div class="eight wide column">
+            <div class="">
+                <button class=" ui button at-fr green">发布供需</button>
             </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">枣子膨果水溶肥</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">［供应］保花保果素</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">木耳菜用大量元素水溶肥 </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">四季豆施用有机水溶肥  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
     </div>
-    <div class="eight wide column">
-      <div class="ui secondary pointing menu">
-        <a class="item active" style="border-color:#009688">需求 </a>
-        <div class="right menu">
-          <a class="ui item">更多 </a>
+    <a class="ui orange ribbon label fz-18">供需信息</a>
+    <div class="ui grid bg-gray">
+        <div class="eight wide column">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">供应 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
+                </div>
+            </div>
+            <div class="ui list at-notice">
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">优质有机芽苗菜</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">枣子膨果水溶肥</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">［供应］保花保果素</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">木耳菜用大量元素水溶肥</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">四季豆施用有机水溶肥</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-        <div class="ui list at-notice">
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">【求购】杨树膨化肥 </div>
+        <div class="eight wide column">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">需求 </a>
+                <div class="right menu">
+                    <a class="ui item">更多 </a>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">【求购】求优质农资产品 </div>
+            <div class="ui list at-notice">
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">【求购】杨树膨化肥</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">求购玉米 高粱 棉粕 大米 小麦等 </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">【求购】求优质农资产品</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text"> 求购：糯米玉米大米 </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">求购玉米 高粱 棉粕 大米 小麦等</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                </a>
-                <div class="content">
-                  <a class="author">Matt</a>
-                  <div class="metadata">
-                    <span class="date">今天下午 5:42</span>
-                  </div>
-                  <div class="text">收购槐角 </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text"> 求购：糯米玉米大米</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="item">
+                    <div class="ui comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">今天下午 5:42</span>
+                                </div>
+                                <div class="text">收购槐角</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
     </div>
-  </div>
 </div>
 <!-- 视频 -->
 <div class="ui at-home-article">
-  <a class="ui blue ribbon label fz-14">视频专区</a>
-  <div class="ui secondary pointing menu">
-    <a class="item active" style="border-color:#009688">分类1 </a>
-    <a class="item" >分类2 </a>
-    <a class="item" >分类3 </a>
-    <a class="item" >分类4 </a>
-    <a class="item" >分类5 </a>
-    <div class="right menu">
-      <a class="ui item">更多 </a>
+    <a class="ui blue ribbon label fz-18">视频专区</a>
+    <div class="ui secondary pointing menu">
+        <a class="item active" style="border-color:#009688">分类1 </a>
+        <a class="item">分类2 </a>
+        <a class="item">分类3 </a>
+        <a class="item">分类4 </a>
+        <a class="item">分类5 </a>
+        <div class="right menu">
+            <a class="ui item">更多 </a>
+        </div>
     </div>
- </div>
-  <div class="ui grid bg-gray at-high-mod2">
-    <div class="ui grid at-video-box">
-      <div class="four wide column at-video-cell" href="#/">
-        <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110707161625906705.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110923142436890893.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110701141315093461.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-    </div>
-    <div class="ui grid at-video-box">
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110707161625906705.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110923142436890893.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-      <div class="four wide column at-video-cell">
-        <img class="ui image at-video" src="images/20110701141315093461.jpg">
-        <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-        <div class="at-video-black"></div>
-      </div>
-    </div>
+    <div class="ui grid bg-gray at-high-mod2">
+        <div class="ui grid at-video-box">
+            <div class="four wide column at-video-cell" href="#/">
+                <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110707161625906705.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110923142436890893.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110701141315093461.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+        </div>
+        <div class="ui grid at-video-box">
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110707161625906705.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110923142436890893.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+            <div class="four wide column at-video-cell">
+                <img class="ui image at-video" src="images/20110701141315093461.jpg">
+                <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
+                <div class="at-video-black"></div>
+            </div>
+        </div>
 
-  </div>
+    </div>
 </div>
 <!-- 视频弹出 -->
 <script type="text/javascript">
-  $(".at-video-cell").click(function() {
-    $('.ui.basic.modal')
-  .modal('show');
+    $(".at-video-cell").click(function () {
+        $('.ui.basic.modal')
+                .modal('show');
     })
-;
+    ;
 </script>
 <script type="text/javascript">
     // var myPlayer = videojs('my-video');
@@ -889,40 +915,40 @@
 
 
 <div class="ui basic modal">
-  <i class="close icon"></i>
-  <div class="image content">
+    <i class="close icon"></i>
+    <div class="image content">
 
-    <div>
-     <video id="my-video" class="video-js" controls preload="auto" width="800" height="400"
-  poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-    <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
-    <source src="MY_VIDEO.webm" type='video/webm'>
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
-  </div>
+        <div>
+            <video id="my-video" class="video-js" controls preload="auto" width="800" height="400"
+                   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+                <source src="MY_VIDEO.webm" type='video/webm'>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
 
-  </div>
+    </div>
 </div>
 
 <!-- 友情链接 -->
 <div class="ui at-home-article">
-  <a class="ui purple ribbon label fz-14">友情链接</a>
-  <div class="ui grid bg-gray at-low-mod">
-    <div class="row">
-      <div class="two wide column"></div>
-      <div class="fourteen wide column">
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-        <button class="ui button at-friend">山西科协网</button>
-      </div>
-      <div class="two wide column"></div>
+    <a class="ui purple ribbon label fz-18">友情链接</a>
+    <div class="ui grid bg-gray at-low-mod">
+        <div class="row">
+            <div class="two wide column"></div>
+            <div class="fourteen wide column">
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+                <button class="ui button at-friend">山西科协网</button>
+            </div>
+            <div class="two wide column"></div>
+        </div>
     </div>
-  </div>
 </div>

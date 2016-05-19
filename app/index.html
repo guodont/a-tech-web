@@ -17,7 +17,7 @@
     <!-- build:css styles/bower.css -->
     <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css">
     <link rel="stylesheet" href="bower_components/video.js/dist/video-js.css">
-
+    <link rel="stylesheet" href="bower_components/ng-img-crop/compile/unminified/ng-img-crop.css">
     <!-- endbuild -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -30,10 +30,11 @@
     <link rel="stylesheet" href="styles/usermore.css">
     <link rel="stylesheet" href="styles/usercenter.css">
     <link rel="stylesheet" href="styles/expert.css">
-
+    
     <!-- endbuild -->
 
     <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet">
+
 </head>
 <body ng-app="aTechClientApp">
 <!--[if lte IE 8]>
@@ -46,9 +47,10 @@
     <div class="ui at-container">
         <div class="ui horizontal bulleted list at-fr">
             <a class="item">2016年4月15日 星期五</a>
-            <a class="item" href="#/registerFirstStep">注册</a>
-            <a class="item" href="#/login">登录</a>
-            <a class="item" href="#/usercenter/index">个人中心</a>
+            <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
+            <a class="item" ng-show="!isLogin" href="#/login">登录</a>
+            <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
+            <a class="item" ng-show="isLogin" ng-click="logout()" >退出当前帐号</a>
         </div>
     </div>
 </div>

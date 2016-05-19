@@ -369,9 +369,13 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
 	float: right;
 	margin-top: -130px;
 }
-#at-article-title{
+.at-article-title{
 	font-weight: bold;
 	font-size:1.5em; 
+}
+
+.at-article-item .content {
+	line-height: 29px;
 }
 .at-cont-segment{
     line-height: 1.4285em;
@@ -417,4 +421,8 @@ h1,h2,h3,h4,p,a,table,strong,input,span {
 	min-height:400px; //（解决ie8.9.ff.chrome）
 	*+height:100%;  //（解决ie7）
 	_height:400px; //（解决ie6） ie6超出自动溢出
+}
+
+.fz-18 {
+	font-size: 18px !important;
 }
