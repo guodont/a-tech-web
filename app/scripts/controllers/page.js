@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('PageCtrl', function ($scope, Page, Loading, $cookieStore, ngNotify) {
+    .controller('PageCtrl', function ($scope, Page, Loading, $cookieStore, ngNotify, $location, $http, apiUrl) {
         $scope.Page = Page;
 
         $scope.isLogin = $cookieStore.get("isLoggedIn") == 1 ? true : false;
@@ -24,6 +24,22 @@ angular.module('aTechClientApp')
             button: true,
             html: false
         });
+
+        $scope.logout = function () {
+
+            $http({
+                method: 'GET',
+                url: apiUrl + '/logout',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
+                    ngNotify.set("成功退出帐号");
+                    $cookieStore.removeAll();
+                    $location.path('#/');
+                }, function (res) {
+
+                });
+        };
     })
     .directive('observe', function () {
         return {
@@ -38,7 +54,7 @@ angular.module('aTechClientApp')
                 $scope.itemsPerpage = 0;
                 // 一个多少页
                 $scope.totalPages = 0;
-                
+
                 // $scope.currentPage = $location.search().currentPage ? $location.search().currentPage : 0;
                 $scope.currentPage = 0;
 
@@ -46,8 +62,8 @@ angular.module('aTechClientApp')
                     $scope.totalPages = Math.ceil($scope.totalItems / $scope.itemsPerpage);
 
                     resetPageList();
-                    if ($scope.page[ $location.search().currentPage]) {
-                        $scope.page[ $location.search().currentPage].active = true;
+                    if ($scope.page[$location.search().currentPage]) {
+                        $scope.page[$location.search().currentPage].active = true;
                     }
                 });
 

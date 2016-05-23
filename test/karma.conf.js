@@ -31,6 +31,10 @@ module.exports = function(config) {
       'bower_components/semantic-ui/dist/semantic.js',
       'bower_components/video.js/dist/video.js',
       'bower_components/ng-notify/src/scripts/ng-notify.js',
+      'bower_components/simple-module/lib/module.js',
+      'bower_components/simple-hotkeys/lib/hotkeys.js',
+      'bower_components/simple-uploader/lib/uploader.js',
+      'bower_components/simditor/lib/simditor.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
