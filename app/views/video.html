@@ -17,7 +17,12 @@
     <div class="four wide column at-video-cell">
       <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
       <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-      <div class="at-video-black"></div>
+      <div class="at-video-black">
+        <video id="videotest" width="1000" height="562"
+          controls="controls" preload="auto" src="http://vjs.zencdn.net/v/oceans.mp4" poster="images/Fl201512241629035405.jpg">
+        </video>
+
+      </div>
     </div>
     <div class="four wide column at-video-cell">
       <img class="ui image at-video" src="images/20110707161625906705.jpg">
@@ -104,9 +109,15 @@
 </div>
 </div>
 <!-- 视频弹出 -->
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">  
+<script src="http://vjs.zencdn.net/c/video.js"></script>  
+ 
+    <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>   
+
 <script type="text/javascript">
   $(".at-video-cell").click(function() {
-window.location.href="http://vjs.zencdn.net/v/oceans.mp4"
+        $('.ui.basic.modal')
+                 .modal('show');
     })
 ;
 </script>

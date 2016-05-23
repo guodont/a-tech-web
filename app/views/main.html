@@ -38,7 +38,7 @@
     })();
 </script>
 <!-- slider结束 -->
-</div>
+
 <!-- 资讯 -->
 <div class="ui at-home-article">
     <a class="ui teal ribbon label fz-18">农业要闻</a>
@@ -872,7 +872,9 @@
             <div class="four wide column at-video-cell">
                 <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
                 <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
-                <div class="at-video-black"></div>
+                <div class="at-video-black">
+
+                </div>
             </div>
             <div class="four wide column at-video-cell">
                 <img class="ui image at-video" src="images/20110707161625906705.jpg">
@@ -893,13 +895,43 @@
 
     </div>
 </div>
+ <script src="//api.html5media.info/1.1.8/html5media.min.js"></script> 
 <!-- 视频弹出 -->
-<script type="text/javascript">
-    $(".at-video-cell").click(function () {
-window.location.href="http://vjs.zencdn.net/v/oceans.mp4"
-    })
-    ;
-</script>
+
+  <script type="text/javascript">
+    $(".at-video-cell").click(function() {
+     $('.ui.basic.modal')
+        .modal('show')
+        ;
+      })
+  ;
+  </script>
+    <script type="text/javascript">
+    var myVideo = document.getElementsByTagName('video')[0];
+    $(".ui.basic.modal").click(function(event){    
+    event=event||window.event;    
+    event.stopPropagation();    
+});    
+    
+//点击层外，隐藏这个层。由于层内的事件停止了冒泡，所以不会触发这个事件    
+$(document).click(function(e){                         
+    
+   myVideo.pause();
+   
+    
+});  
+      </script>
+    <script type="text/javascript">
+//    $(document).click(function(e){ 
+//         e = window.event || e; // 兼容IE7
+//         obj = $(e.srcElement || e.target);
+//           if ($(obj).is("800,400")) { 
+//            // alert('内部区域'); 
+//         } else {
+//                 alert('你的点击不在目标区域');
+//         } 
+// });
+  </script>
 <script type="text/javascript">
     // var myPlayer = videojs('my-video');
     // videojs("my-video").ready(function(){
