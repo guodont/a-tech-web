@@ -104,6 +104,10 @@ h1,h2,h3,h4,p,a,table,strong,input {
 	border: none;
 }
 
+.at-nav-button:focus {
+	outline: 0;
+}
+
 .bg-gray {
 	background-color: #ffffff;
 	height: 360px;
