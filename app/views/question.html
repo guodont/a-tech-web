@@ -9,39 +9,40 @@
     <a class="item">类型四</a>
     <a class="item">类型五</a>
 </div>
-<div ng-repeat="question in questions">
-    <div class="at-info-main">
-        <div class="ui list">
-            <div class="item">
-                <img class="ui avatar image" src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg"/>
-                <div class="content at-question-cont">
-                    <div>
-                        <a class="ui teal tag label " id="at-question-label-from">{{ question.category.name }}</a>
-                    </div>
+<div ng-repeat="question in questions ">
+    <div class="at-info-main ">
+        <div class="ui list  ">
+            
+                <div class="ui segment item ">
+                    <img class="ui avatar image" src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg"/>
+                    <div class="content at-question-cont ">
+                        <div>
+                            <a class="ui teal tag label " id="at-question-label-from">{{ question.category.name }}</a>
+                        </div>
 
-                    <div class="at-question-name">
-                        <a>{{ question.user.name }}</a>
-                    </div>
+                        <div class="at-question-name">
+                            <a>{{ question.user.name }}</a>
+                        </div>
 
-                    <div>
-                        <a class="at-question-title">{{ question.title }}</a>
-                    </div>
+                        <div>
+                            <a class="at-question-title">{{ question.title }}</a>
+                        </div>
 
-                    <div class="description">
-                        <p>
-                            {{ question.content }}
-                        </p>
+                        <div class="description">
+                            <p>{{ question.content }}</p>
+                        </div>
+
                     </div>
 
                 </div>
+
+            </div>
+            <div> <i class="heart red large   icon at-info-icon"></i>
+                <i class="pointing up icon " id="at-question-cui"></i>
+            </div>
+            <div>
+                <a class="ui red tag label" id="at-question-label-ok">未解决</a>
             </div>
         </div>
-        <div><i class="heart red large   icon at-info-icon"></i>
-            <i class="pointing up icon " id="at-question-cui"></i>
-        </div>
-        <div>
-            <a class="ui red tag label" id="at-question-label-ok">未解决</a>
-        </div>
-    </div>
 
-</div>
+    </div>
