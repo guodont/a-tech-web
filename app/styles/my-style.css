@@ -358,11 +358,12 @@ h1,h2,h3,h4,p,a,table,strong,input {
 }
 #at-question-label-ok{
 	float: right;
-	margin-top: -130px;
+	margin-top: -132px;
+	margin-right: 15px;
 }
 #at-question-label-from{
 	float: right;
-	margin-right:-50px; 
+	margin-right:-35px; 
 }
 #at-question-cui{
 	float: right;
