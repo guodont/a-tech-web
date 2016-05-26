@@ -17,6 +17,17 @@
                 </div>
             </div>
             <div class="field">
+                <ul ng-repeat="image in images">
+                    <li>{{ image }}</li>
+                </ul>
+            </div>
+             <div class="field">
+                <label>配图</label>
+                <div class="ui left input at-signup-text upload-container" id="upload-container">
+                    <input type="file" id="pickfiles" name="image">
+                </div>
+            </div>
+            <div class="field">
                 <label>问题分类</label>
                 <input type="hiden" ng-hide="true" ng-model="categoryId" id="categoryId">
                 <div class="ui left input at-signup-text">
