@@ -8,10 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('UsercenterUploadpicCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('UsercenterUploadpicCtrl', function () {
+
+        // $scope.curMenu = "postarticle";
+
+    });

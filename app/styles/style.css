@@ -92,3 +92,6 @@
 	_background: -moz-linear-gradient( top,rgba(204, 204, 204, 0),RGBA(0, 0, 0, 0.57));
 	z-index: 1;
 }
+.ui .custom img{
+	height: 152px;
+}

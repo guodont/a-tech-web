@@ -14,10 +14,11 @@ angular.module('aTechClientApp')
 
         $scope.images = [];
         $scope.imageData = '';
+        $scope.categories = null;
 
         $('.ui.dropdown')
             .dropdown({
-                action: 'hide',
+                // action: 'hide',
                 onChange: function (value, text, $selectedItem) {
                     console.log(value);
                     $('#categoryId').attr("value",value);
@@ -25,6 +26,21 @@ angular.module('aTechClientApp')
                 }
             })
         ;
+
+        // 加载问题分类数据
+        $scope.loadQueitionCategories = function () {
+            $http.get(apiUrl + '/categories')
+                .error(function (data, status) {
+                    ngNotify.set("网络加载失败",'error');
+                })
+                .success(function (data) {
+                    console.log(data);
+                    $scope.categories = data;
+                });
+        };
+        
+        $scope.loadQueitionCategories();
+        
         $scope.createQuestion = function () {
 
             Loading.setLoading(true);
@@ -59,7 +75,8 @@ angular.module('aTechClientApp')
             // 在初始化时，uptoken, uptoken_url, uptoken_func 三个参数中必须有一个被设置
             // 切如果提供了多个，其优先级为 uptoken > uptoken_url > uptoken_func
             // 其中 uptoken 是直接提供上传凭证，uptoken_url 是提供了获取上传凭证的地址，如果需要定制获取 uptoken 的过程则可以设置 uptoken_func
-            uptoken : 'K8eqr1qikcsa2OXUkg_gMxIX16cCPR9U8yULRKDr:YG0EzHLFK0jNIsaHjJy7FlF6PG8=:eyJzY29wZSI6Im5rMTEwLWltYWdlcyIsImRlYWRsaW5lIjoxNDY0MjU2MzU4LCJzYXZlS2V5IjoicWluaXVfY2xvdWRfc3RvcmFnZV8xNDY0MjUyNzU4IiwibWltZUxpbWl0IjoiaW1hZ2VcLyoifQ==', // uptoken 是上传凭证，由其他程序生成
+            uptoken : 'K8eqr1qikcsa2OXUkg_gMxIX16cCPR9U8yULRKDr:0lRtm6OOLj5aapBeYC1r4E8enO4=:eyJzY29wZSI6Im5rMTEwLWltYWdlcyIsImRlYWRsaW5lIjoxNDY0MjY3NjU1LCJzYXZlS2V5IjoicWluaXVfY2xvdWRfc3RvcmFnZV8xNDY0MjY0MDU1IiwibWltZUxpbWl0IjoiaW1hZ2VcLyoifQ==', // uptoken 是上传凭证，由其他程序生成
+            // TODO
             // uptoken_url: 'http://cloud.workerhub.cn//api/quick_start/simple_image_example_token.php',         // Ajax 请求 uptoken 的 Url，**强烈建议设置**（服务端提供）
             // uptoken_func: function(file){    // 在需要获取 uptoken 时，该方法会被调用
             //    do something
@@ -79,19 +96,6 @@ angular.module('aTechClientApp')
             drop_element: 'container',          // 拖曳上传区域元素的 ID，拖曳文件或文件夹后可触发上传
             chunk_size: '4mb',                  // 分块上传时，每块的体积
             auto_start: true,                   // 选择文件后自动上传，若关闭需要自己绑定事件触发上传,
-            //x_vars : {
-            //    自定义变量，参考http://developer.qiniu.com/docs/v6/api/overview/up/response/vars.html
-            //    'time' : function(up,file) {
-            //        var time = (new Date()).getTime();
-            // do something with 'time'
-            //        return time;
-            //    },
-            //    'size' : function(up,file) {
-            //        var size = file.size;
-            // do something with 'size'
-            //        return size;
-            //    }
-            //},
             init: {
                 'FilesAdded': function(up, files) {
                     plupload.each(files, function(file) {
@@ -108,24 +112,11 @@ angular.module('aTechClientApp')
                 },
                 'FileUploaded': function(up, file, info) {
                     console.log(info);
-
-                    // 每个文件上传成功后,处理相关的事情
-                    // 其中 info 是文件上传成功后，服务端返回的json，形式如
-                    // {
-                    //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
-                    //    "key": "gogopher.jpg"
-                    //  }
-                    // 参考http://developer.qiniu.com/docs/v6/api/overview/up/response/simple-response.html
-
                     var domain = up.getOption('domain');
                     var res = JSON.parse(info);
                     var sourceLink = domain +  res.key; //获取上传成功后的文件的Url
                     $scope.images.push(sourceLink);
-
                     $scope.imageData += res.key + ',';
-
-                    console.log($scope.imageData);
-
                     $scope.$apply();
                 },
                 'Error': function(up, err, errTip) {
@@ -138,7 +129,6 @@ angular.module('aTechClientApp')
                 'Key': function(up, file) {
                     // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
                     // 该配置必须要在 unique_names: false , save_key: false 时才生效
-
                     var key = "";
                     // do something with key here
                     return key

@@ -16,7 +16,8 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'ngNotify'
+        'ngNotify',
+        'ngImgCrop'
     ])
     .constant('apiUrl', 'http://sxnk110.workerhub.cn:9000/api/v1')
     .config(function ($routeProvider, $locationProvider) {
