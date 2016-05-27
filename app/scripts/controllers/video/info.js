@@ -22,6 +22,10 @@ angular.module('aTechClientApp')
                 .success(function (data) {
                     console.log(data);
                     $scope.video = data;
+                    $scope.resourceUrl = "http://storage.workerhub.cn/" + $scope.video.path;
+
+                    console.log($scope.resourceUrl);
+                    $('#video-source').attr("src",$scope.resourceUrl);
                     Loading.setLoading(false);
 
                 });

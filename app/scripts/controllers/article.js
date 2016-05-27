@@ -12,13 +12,14 @@ angular.module('aTechClientApp')
 
         $scope.curCategoryId = $location.search().category;
 
+        $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
 
         // 设置标题
         Page.setTitle('文章专区|农科110');
         
         // 加载文章
         $scope.loadArticles = function () {
-            $http.get(apiUrl + '/articles')
+            $http.get(apiUrl + '/articles' + '?pageSize=15&page=' + $scope.curPage )
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败");
                 })

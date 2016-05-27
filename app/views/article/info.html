@@ -4,18 +4,25 @@
 </div>
 
 <div class="ui segment">
+
     <h2 class="ui header centered">{{ article.title }}</h2>
     <hr id="deshed ">
-    <div class="sub header at-cont-author centered">日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;作者:{{
+    <div class="sub header at-cont-author centered">
+        日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;作者:{{
         article.admin.name }}&nbsp;&nbsp;&nbsp;文章来源:农产品交易网
+        <div class="function-box">
+            <a href="javascript:void(0);" ng-click="upFontSize()" title="调大字体" id="jia"><i class="large add square icon"></i></a>
+            <a href="javascript:void(0);" ng-click="downFontSize()" title="调小字体" id="jian"><i class="large minus square icon"></i></a>
+            |
+            <a href="http://http://localhost:9000/#/article/16#" onclick="javascript:window.print()" title="print"
+               id="print"><i class="large print icon"></i></a>
+
+        </div>
     </div>
 
-    <div class="ui basic segment at-cont-segment">
-        <p>
-            {{ article.content }}
-        </p>
+    <div class="ui basic segment at-cont-segment" style="font-size: {{ fontSize }}px;">
+        {{ article.content }}
     </div>
-
     <div class="recommend">
         <div class="at-cont-icon"></div>
         <span>推荐文章:</span>
@@ -57,9 +64,3 @@
     </div>
 
 </div>
-
-<script type="text/javascript">
-    $("#at-button-reply").click(function () {
-        $('.ui.modal').modal('show');
-    });
-</script>

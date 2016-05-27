@@ -7,13 +7,14 @@
     <h2 class="ui header centered">{{ video.name }}</h2>
     <hr id="deshed ">
     <div class="sub header at-cont-author centered">发布日期:{{ video.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;发布者:{{
-        video.admin.name }}
+        video.admin.name }}&nbsp;&nbsp;&nbsp;播放数:
+        {{ video.clickCount }}
     </div>
 
     <div class="center" style="margin: auto">
         <video id="my-video" class="video-js" style="margin: auto" controls preload="auto" width="800" height="400"
                poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-            <source src="http://storage.workerhub.cn/qiniu_cloud_storage_1464234101" type='video/mp4'>
+            <source src="" id="video-source" type='video/mp4'>
             <source src="MY_VIDEO.webm" type='video/webm'>
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -22,4 +23,7 @@
         </video>
     </div>
 
+    <div class="ui basic segment at-cont-segment">
+        <p>{{ video.description }}</p>
+    </div>
 </div>

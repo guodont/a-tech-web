@@ -9,9 +9,9 @@ a {
     /*font-family: "Microsoft YaHei" ! important;*/
 }
 
-a:hover {
-    color: #009688 !important;
-}
+/*a:hover {*/
+    /*color: #009688 !important;*/
+/*}*/
 
 hr {
     border: 1px dashed #ccc;
@@ -142,7 +142,6 @@ h1, h2, h3, h4, p, a, table, strong, input {
 }
 
 .at-nav {
-    padding-left: 110px;
     background: #009688;
     height: 42px;
 }
@@ -397,6 +396,12 @@ h1, h2, h3, h4, p, a, table, strong, input {
     float: right;
     overflow: hidden;
     margin-top: -40px !important;
+    cursor: pointer;
+    color: rgba(211, 211, 211, 0.97);
+}
+
+.at-info-icon:hover {
+    color: #eb4f38;
 }
 
 /**
@@ -478,7 +483,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
 }
 
 .at-cont-segment {
-    line-height: 1.4285em;
+    line-height: 1.7285em;
     font-size: 16px;
     letter-spacing: 1px;
     text-indent: 2em;
@@ -539,5 +544,32 @@ h1, h2, h3, h4, p, a, table, strong, input {
 }
 
 .fz-18 {
-    font-size: 18px !important;
+	font-size: 18px !important;
+}
+/* move top */
+.at-fb-post {
+    z-index: 999;
+	text-align:center;
+	margin-left:auto; 
+	margin-right:auto;
+	width: 140px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21px;
+    font-weight: 400;
+    color: white;
+    background-color: #eb4f38;
+    position: fixed;
+    _position: absolute;
+    right: 54px;
+    bottom: 10%;
+    border-radius: 40px;
+    box-shadow: 0 0 2px #6E6E6E;
+}
+
+.at-fb-post:hover {
+    color: white !important;
+}
+.function-box{
+	float: right;
 }

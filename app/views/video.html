@@ -21,6 +21,7 @@
                 <div class="meta">
                     <span class="price">发布者: {{ video.admin.name }}</span>
                     <span class="stay">发布时间: {{ video.whenCreated | date:'yyyy-MM-dd HH:mm' }}</span>
+                    <span class="ui mini label">{{ video.category.name }}</span>
                 </div>
                 <div class="description">
                     <p>
@@ -28,6 +29,7 @@
                     </p>
                 </div>
             </div>
+
         </a>
     </div>
 </div>

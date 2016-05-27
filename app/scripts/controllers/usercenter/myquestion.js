@@ -34,12 +34,12 @@ angular.module('aTechClientApp')
                     console.log(data);
                     $scope.questions = data;
 
-                    Loading.setLoading(false);
+                    // Loading.setLoading(false);
 
                 });
         };
 
-        Loading.setLoading(true);
+        // Loading.setLoading(true);
 
         $scope.loadQueitions();
     });
