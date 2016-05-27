@@ -3,11 +3,9 @@
     <a class="section">问题专区</a>
 </div>
 <div class="ui secondary pointing menu">
-    <a class="item active">类型一</a>
-    <a class="item">类型二</a>
-    <a class="item">类型三</a>
-    <a class="item">类型四</a>
-    <a class="item">类型五</a>
+    <div  ng-repeat="category in categories">
+        <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/question?category={{ category.id }}">{{ category.name }}</a>
+    </div>
 </div>
 <div ng-repeat="question in questions ">
     <div class="at-info-main ">

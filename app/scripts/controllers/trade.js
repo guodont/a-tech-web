@@ -10,6 +10,8 @@
 angular.module('aTechClientApp')
     .controller('TradeCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
 
+        $scope.curCategoryId = $location.search().category;
+
         // 设置标题
         Page.setTitle('信息专区|农科110');
 
@@ -36,7 +38,21 @@ angular.module('aTechClientApp')
                 });
         };
 
+        // 加载分类
+        $scope.loadCategories = function () {
+            $http.get(apiUrl + '/categories?' + 'parentId=1')
+                .error(function (data, status) {
+                    // ngNotify.set("网络加载失败");
+                })
+                .success(function (data) {
+                    console.log(data);
+                    $scope.categories = data;
+                });
+        };
+
         Loading.setLoading(true);
 
+        $scope.loadCategories();
+        
         $scope.loadTrades();
     });

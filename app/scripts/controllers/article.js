@@ -8,10 +8,14 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('ArticleCtrl', function ($http, $scope, $location, apiUrl, ngNotify, Loading) {
+    .controller('ArticleCtrl', function ($http, $scope, $location, apiUrl, ngNotify, Loading, Page) {
 
         $scope.curCategoryId = $location.search().category;
 
+
+        // 设置标题
+        Page.setTitle('文章专区|农科110');
+        
         // 加载文章
         $scope.loadArticles = function () {
             $http.get(apiUrl + '/articles')

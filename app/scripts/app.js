@@ -204,6 +204,11 @@ angular
                 controller: 'UsercenterExpertprofileCtrl',
                 controllerAs: 'usercenter/expertProfile'
             })
+            .when('/video/:id', {
+              templateUrl: 'views/video/info.html',
+              controller: 'VideoInfoCtrl',
+              controllerAs: 'video/info'
+            })
             .otherwise({
                 redirectTo: '/'
             });

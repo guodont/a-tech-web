@@ -9,6 +9,13 @@ a {
     /*font-family: "Microsoft YaHei" ! important;*/
 }
 
+a:hover {
+    color: #009688 !important;
+}
+
+hr {
+    border: 1px dashed #ccc;
+}
 h1 {
     font-size: 20px !important;
 }
@@ -50,6 +57,29 @@ h1, h2, h3, h4, p, a, table, strong, input {
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border: none;
+}
+
+.ui.items > .item-video {
+    background: #fff;
+    -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 15px;
+    height: 154px;
+}
+
+.ui.comments {
+    max-width: 100% !important;
 }
 
 .ui.teal.ribbon.label {
@@ -414,13 +444,17 @@ h1, h2, h3, h4, p, a, table, strong, input {
     margin-top: -130px;
 }
 
-#at-question-label-from {
-    float: right;
-    margin-right: -50px;
-}
-
 .at-question-label-from {
     float: right;
+}
+#at-question-label-ok{
+	float: right;
+	margin-top: -132px;
+	margin-right: 15px;
+}
+#at-question-label-from{
+	float: right;
+	margin-right:-35px;
 }
 
 #at-question-cui {
@@ -450,6 +484,9 @@ h1, h2, h3, h4, p, a, table, strong, input {
     text-indent: 2em;
 }
 
+.at-cont-segment p {
+    line-height: 24px;
+}
 .recommend {
     border-width: 2px 0px;
     width: 1120px;
@@ -466,8 +503,11 @@ h1, h2, h3, h4, p, a, table, strong, input {
     padding: 30px;
 }
 
+.at-article-comment {
+    margin-bottom: 10px;
+}
+
 .at-article-comment span {
-    margin-left: 15px;
     font-size: 1.3em;
     font-weight: bold;
 }

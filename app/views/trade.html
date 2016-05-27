@@ -9,10 +9,9 @@
     <a ng-class="{true:'item active',false:'item'}[curType == 'SUPPLY']"
        href="#/trade?type=SUPPLY">需求</a>
     <div class="right menu">
-        <a class="ui item">分类一 </a>
-        <a class="ui item">分类二 </a>
-        <a class="ui item">分类三 </a>
-        <a class="ui item">分类四 </a>
+        <div  ng-repeat="category in categories">
+            <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/trade?category={{ category.id }}">{{ category.name }}</a>
+        </div>
     </div>
 </div>
 <div class="at-info-main ui segment"  ng-repeat="trade in trades">
