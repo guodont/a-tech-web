@@ -8,10 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('UsercenterMessageCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('UsercenterMessageCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
+        
+        $scope.curMenu = "message";
+
+    });

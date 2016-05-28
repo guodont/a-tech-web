@@ -16,32 +16,27 @@
                     <textarea name="name" rows="8" cols="40" ng-model="content" placeholder="问题的详细描述，5-255字"></textarea>
                 </div>
             </div>
-<div class="ui custom images">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-  <img src="/images/201056145415.jpg">
-</div>
-
-
- 
-    
-</div>
+            <div class="ui custom images">
+                <img ng-repeat="image in images" src="{{ image }}">
+            </div>
+            <div class="field">
+                <label>选择上传图片</label>
+                <div class="upload-container" id="upload-container">
+                    <input type="file" id="pickfiles" name="image">
+                </div>
+            </div>
             <div class="field">
                 <label>问题分类</label>
                 <input type="hiden" ng-hide="true" ng-model="categoryId" id="categoryId">
-                <div class="ui left input at-signup-text">
-                    <select class="ui search dropdown" name="category" >
-                        <option value="0">分类1</option>
-                        <option value="1">分类2</option>
-                        <option value="2">分类3</option>
-                        <option value="3">分类4</option>
-                    </select>
+                <div class="ui search selection dropdown">
+                    <input type="hidden" name="category">
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div ng-repeat="category in categories" class="item" data-value="{{ category.id }}">
+                            {{ category.name }}
+                        </div>
+                    </div>
+                    <div class="default text">选择分类</div>
                 </div>
             </div>
             <div class="field" style="display: none">
@@ -61,14 +56,14 @@
                     </div>
                 </div>
             </div>
-            <div class="field"  style="display: none">
+            <div class="field" style="display: none">
                 <label>产业类型</label>
                 <div class="ui left icon input at-signup-text">
                     <input type="text">
                     <!-- <i class="lock icon"></i> -->
                 </div>
             </div>
-            <div class="field"  style="display: none">
+            <div class="field" style="display: none">
                 <label>产业规模</label>
                 <div class="ui left icon input at-signup-text">
                     <input type="text">

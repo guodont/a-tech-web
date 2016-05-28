@@ -1,125 +1,37 @@
 <div class="ui grid">
-	<div class="four wide column usercenter-nav">
-		<div ng-include="'../include/usernav.html'"></div>
-	</div>
-	<div class="twelve wid usercenter-right">
-		<!-- <p>This is the usercenter/myquestion view.</p>
-	-->
-	<div class="ui top attached tabular menu">
-		<a class="item active" data-tab="first">已回答</a>
-		<a class="item" data-tab="second">待回答</a>
-	</div>
-	<div class="ui bottom attached tab segment active" data-tab="first">
-		<div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div class="four wide column usercenter-nav">
+        <div ng-include="'../include/usernav.html'"></div>
+    </div>
+    <div class="twelve wid usercenter-right">
 
-	</div>
-	<div class="ui bottom attached tab segment" data-tab="second">
-		<div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div><div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div><div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div><div class="ui list">
-			<div class="item">
-				<div class="content at-question-cont">
-					<div>
-						<a class="ui teal tag label " id="at-myquestion-label-from">养殖</a>
-					</div>
-					<div >
-						<a class="at-question-title">母猪的产后护理</a>
-					</div>
-					<div class="description">
-						<p>对于一二年生苗木，可在杂草萌发前使用。</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="ui secondary pointing menu">
+            <a ng-class="{true:'item active',false:'item'}[curStatus == 'RESOLVED']"
+               href="#/usercenter/myquestion?status=RESOLVED">已解决</a>
+            <a ng-class="{true:'item active',false:'item'}[curStatus == 'UNRESOLV']"
+               href="#/usercenter/myquestion?status=UNRESOLV">待解决</a>
+        </div>
+        <div class="at-info-main">
+            <div class="ui list">
+                <div class="item ui segment"  ng-repeat="question in questions">
+                    <div class="content at-question-cont">
+                        <div>
+                            <a class="ui teal tag label at-question-label-from">{{ question.category.name }}</a>
+                        </div>
+                        <div>
+                            <a class="at-question-title">{{ question.title }}</a>
+                        </div>
+
+                        <div class="description">
+                            <p>
+                                {{ question.content }}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
-</div>
-<script>
-	$('.menu .item')
-  .tab()
-;
-</script>

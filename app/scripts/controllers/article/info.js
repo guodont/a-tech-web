@@ -10,6 +10,15 @@
 angular.module('aTechClientApp')
     .controller('ArticleInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore) {
 
+        $scope.fontSize = 14;
+
+        $scope.upFontSize = function () {
+            $scope.fontSize += 1;
+        };
+
+        $scope.downFontSize = function () {
+            $scope.fontSize -= 1;
+        };
 
         // 加载文章详细信息
         $scope.loadArticle = function() {

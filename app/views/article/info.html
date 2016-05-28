@@ -2,63 +2,65 @@
     <a class="section">首页</a> <i class="right angle icon divider"></i>
     <a class="section">文章详情</a>
 </div>
-<h2 class="ui header centered">{{ article.title }}</h2>
-<hr id="deshed ">
-<div class="sub header at-cont-author centered">
-    日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;作者:{{
-    article.admin.name }}&nbsp;&nbsp;&nbsp;文章来源:农产品交易网
-</div>
-<div class="function-box">
-    <a href="javascript:ts(&#39;zoom&#39;,1)" title="调大字体" id="jia"><i class="large add square icon"></i></a>
-    <a href="javascript:ts(&#39;zoom&#39;,-1)" title="调小字体" id="jian"><i class="large minus square icon"></i></a>
-    |
-    <a href="http://http://localhost:9000/#/article/16#" onclick="javascript:window.print()" title="print" id="print"><i class="large print icon"></i></a>
 
-</div>
-<div class="ui basic segment at-cont-segment">
-    <p>{{ article.content }}</p>
-</div>
-<div class="recommend">
-    <div class="at-cont-icon"></div>
-    <span>推荐文章:</span>
-    <a href="">山东青岛打造光伏农业科技</a>
-    <a href="">山东青岛打造光伏农业科技</a>
-    <a href="">山东青岛打造光伏农业科技</a> <i class="caret right link icon"></i>
-</div>
-<div class="ui secondary pointing menu at-article-trun">
-    <div class="right menu">
-        <a class="active item">上一篇</a>
-        <a class="item">下一篇</a>
+<div class="ui segment">
+
+    <h2 class="ui header centered">{{ article.title }}</h2>
+    <hr id="deshed ">
+    <div class="sub header at-cont-author centered">
+        日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;作者:{{
+        article.admin.name }}&nbsp;&nbsp;&nbsp;文章来源:农产品交易网
+        <div class="function-box">
+            <a href="javascript:void(0);" ng-click="upFontSize()" title="调大字体" id="jia"><i class="large add square icon"></i></a>
+            <a href="javascript:void(0);" ng-click="downFontSize()" title="调小字体" id="jian"><i class="large minus square icon"></i></a>
+            |
+            <a href="http://http://localhost:9000/#/article/16#" onclick="javascript:window.print()" title="print"
+               id="print"><i class="large print icon"></i></a>
+
+        </div>
     </div>
-</div>
-<div class="at-article-comment">
-    <span>评论:</span>
-</div>
-<form class="ui reply form" ng-submit="addComment()">
-    <div class="field">
-        <textarea name="comment" ng-model="comment"></textarea>
+
+    <div class="ui basic segment at-cont-segment" style="font-size: {{ fontSize }}px;">
+        {{ article.content }}
     </div>
-    <button class="ui basic button" type="submit" >发送</button>
-</form>
-<div class="ui comments" ng-repeat="comment in comments">
-    <div class="comment">
-        <a class="avatar">
-            <img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
-        <div class="content">
-            <a class="author">{{ comment.user.name }}</a>
-            <div class="metadata">
-                <span class="date">{{ comment.whenCreated | date:'yyyy-MM-dd HH:mm' }}</span>
-            </div>
-            <div class="text">
-                <p>{{ comment.content }}</p>
+    <div class="recommend">
+        <div class="at-cont-icon"></div>
+        <span>推荐文章:</span>
+        <a href="">山东青岛打造光伏农业科技</a>
+        <a href="">山东青岛打造光伏农业科技</a>
+        <a href="">山东青岛打造光伏农业科技</a> <i class="caret right link icon"></i>
+    </div>
+    <div class="ui secondary pointing menu at-article-trun">
+        <div class="right menu">
+            <a class="active item">上一篇</a>
+            <a class="item">下一篇</a>
+        </div>
+    </div>
+    <div class="at-article-comment">
+        <span>评论:</span>
+    </div>
+    <form class="ui reply form" ng-submit="addComment()">
+        <div class="field">
+            <textarea name="comment" ng-model="comment"></textarea>
+        </div>
+        <button class="ui basic button" type="submit">
+            我来说几句
+        </button>
+    </form>
+    <div class="ui comments" ng-repeat="comment in comments">
+        <div class="comment">
+            <a class="avatar">
+                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>
+            <div class="content">
+                <a class="author">{{ comment.user.name }}</a>
+                <div class="metadata">
+                    <span class="date">{{ comment.whenCreated | date:'yyyy-MM-dd HH:mm' }}</span>
+                </div>
+                <div class="text">
+                    <p>{{ comment.content }}</p>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
-
-<script type="text/javascript">
-    $("#at-button-reply").click(function () {
-        $('.ui.modal').modal('show');
-    });
-</script>
-

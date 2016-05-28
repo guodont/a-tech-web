@@ -8,10 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('UsercenterExpertprofileCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('UsercenterExpertprofileCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
+      
+        $scope.curMenu = "expertProfile";
+
+    });

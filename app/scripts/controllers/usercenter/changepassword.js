@@ -8,10 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('UsercenterChangepasswordCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('UsercenterChangepasswordCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
+
+        $scope.curMenu = "changepassword";
+
+    });

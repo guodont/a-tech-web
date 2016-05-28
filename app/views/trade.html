@@ -1,55 +1,39 @@
 <div class="ui breadcrumb at-location">
-		  <a class="section">当前位置</a>
-		  <i class="right angle icon divider"></i>
-		  <a class="section">信息专区</a>
+    <a class="section">当前位置</a>
+    <i class="right angle icon divider"></i>
+    <a class="section">信息专区</a>
 </div>
 <div class="ui secondary pointing menu">
-  <a class="item active">供应 </a>
-  <a class="item">需求 </a>
-  <div class="right menu">
-    <a class="ui item">分类一 </a>
-    <a class="ui item">分类二 </a>
-    <a class="ui item">分类三 </a>
-    <a class="ui item">分类四 </a>
-  </div>
+    <a ng-class="{true:'item active',false:'item'}[curType == 'DEMAND']"
+       href="#/trade?type=DEMAND">供应</a>
+    <a ng-class="{true:'item active',false:'item'}[curType == 'SUPPLY']"
+       href="#/trade?type=SUPPLY">需求</a>
+    <div class="right menu">
+        <div  ng-repeat="category in categories">
+            <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/trade?category={{ category.id }}">{{ category.name }}</a>
+        </div>
+    </div>
 </div>
-<div class="at-info-main ui segment">
-				<div class="ui list">
-				  <div class="item">
-				    <img class="ui avatar image" src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg">
-				    <div class="content at-info-cont">
-				      <a class="header">Rachel</a>
-				      <div class="description">
-				      	<p id="at-info-title">收购苹果两万斤</p>
-				      <p>对于一二年生苗木，可在杂草萌发前使用。
-				      对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用</p></div>
-				    </div>
-				  </div>
-				</div>
-				<div class="at-info-date">
-					2016-05-09
-					<span><i class="marker icon"></i>山西农业大学</span>
-				</div>
-				<i class="heart red large   icon at-info-icon"></i>
+<div class="at-info-main ui segment"  ng-repeat="trade in trades">
+    <div class="ui list">
+        <div class="item">
+            <img class="ui avatar image" src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg">
+            <div class="content at-info-cont">
+                <a class="">{{ trade.user.name }}</a>
+                <div class="description">
+                    <p id="at-info-title">{{ trade.title }}</p>
+                    <p>
+                        {{ trade.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="at-info-date">
+        {{ trade.whenCreated | date:'yyyy-MM-dd HH:mm' }}
+        <span><i class="marker icon"></i>山西农业大学</span>
+    </div>
+    <i class="heart large icon at-info-icon"></i>
 </div>
-<div class="at-info-main  ui segment">
-				<div class="ui list">
-				  <div class="item">
-				    <img class="ui avatar image" src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg">
-				    <div class="content at-info-cont">
-				      <a class="header">Rachel</a>
-				      <div class="description">
-				      	<p id="at-info-title">收购苹果两万斤</p>
-				      <p>对于一二年生苗木，可在杂草萌发前使用。
-				      对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用对于一二年生苗木，可在杂草萌发前使用。对于一二年生苗木，可在杂草萌发前使用</p></div>
-				    </div>
-				  </div>
-				</div>
-				<div class="at-info-date">
-					2016-05-09
-					<span><i class="marker icon"></i>山西农业大学</span>
-				</div>
-				<i class="empty heart red large   icon at-info-icon"></i>
-</div>
-<a href="#/question/post" id="toTop" style="display: block;"> 我要提问</a>
 
+<a href="#/trade/post" class="at-fb-post" style="display: block;">发布交易</a>

@@ -8,10 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-  .controller('UsercenterAlbumCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('UsercenterAlbumCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
+
+        $scope.curMenu = "album";
+
+    });
