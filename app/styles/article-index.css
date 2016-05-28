@@ -1,0 +1,21 @@
+.ui.header:first-child{
+	margin-top: 3% !important;
+}
+#activity-name{
+border-bottom: 1px solid #e7e7eb
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+#post-date{
+	line-height: 20px;
+	color: #8c8c8c;
+}
+/* In site.variables */
+@tabletBreakpoint : 768px;
+@scrollbarWidth : 17px; /* This is a constant */
+ /* In container.variables */
+@tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
+@tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
