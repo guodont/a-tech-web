@@ -12,10 +12,10 @@
     </div>
 
     <div class="center" style="margin: auto">
-        <video id="my-video" class="video-js" style="margin: auto" controls preload="auto" width="800" height="400"
-               poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
-            <source src="" id="video-source" type='video/mp4'>
-            <source src="MY_VIDEO.webm" type='video/webm'>
+        <video id="my-video"  src="{{resourceUrl | trustUrl}}"   class="video-js" style="margin: auto" controls preload="auto" width="800" height="400"
+               poster="MY_VIDEO_POSTER.jpg" data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'>
+            <source src="{{resourceUrl | trustUrl}}" id="video-source" type='video/mp4'>
+            <!--<source src="MY_VIDEO.webm" type='video/webm'>-->
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a web browser that
                 <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
