@@ -19,8 +19,8 @@ angular
         'ngNotify',
         'ngImgCrop'
     ])
-    // .constant('apiUrl', 'http://sxnk110.workerhub.cn:9000/api/v1')
-    .constant('apiUrl', 'http://localhost:9000/api/v1')
+    .constant('apiUrl', 'http://sxnk110.workerhub.cn:9000/api/v1')
+    // .constant('apiUrl', 'http://localhost:9000/api/v1')
     .constant('cloudUrl', 'http://storage.workerhub.cn/')
     .filter("trustUrl", ['$sce', function ($sce) {
         return function (recordingUrl) {
@@ -29,7 +29,6 @@ angular
     }])
     .config(function ($routeProvider, $locationProvider) {
         // $locationProvider.html5Mode(true);
-
         $routeProvider
             .when('/', {    //  首页
                 templateUrl: 'views/main.html',
