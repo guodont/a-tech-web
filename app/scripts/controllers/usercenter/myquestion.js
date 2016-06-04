@@ -26,20 +26,20 @@ angular.module('aTechClientApp')
 
         // 加载问题数据
         $scope.loadQueitions = function () {
-            $http.get(apiUrl + '/questions')
-                .error(function (data, status) {
-                    ngNotify.set("网络加载失败",'error');
-                })
-                .success(function (data) {
+            $http({
+                method: 'GET',
+                url: apiUrl + '/user/questions',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
                     console.log(data);
                     $scope.questions = data;
-
-                    // Loading.setLoading(false);
-
+                }, function (res) {
+                    ngNotify.set("网络加载失败",'error');
                 });
+
         };
 
-        // Loading.setLoading(true);
 
         $scope.loadQueitions();
     });

@@ -22,19 +22,25 @@ angular.module('aTechClientApp')
 
         $scope.curType = $location.search().type ? $location.search().type : 'DEMAND';
 
+        $scope.trades = [];
 
         // 加载问题数据
         $scope.loadTrades = function () {
-            $http.get(apiUrl + '/trades')
-                .error(function (data, status) {
-                    ngNotify.set("网络加载失败",'error');
-                })
-                .success(function (data) {
-                    console.log(data);
-                    $scope.trades = data;
+            $http({
+                method: 'GET',
+                url: apiUrl + '/trades',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
+                    angular.forEach(res.data, function (item, index) {
+                        console.log(index);
+                        $scope.trades[item.id] = item;
+                    })
+                    console.log($scope.trades);
 
                     Loading.setLoading(false);
-
+                }, function (res) {
+                    ngNotify.set("网络加载失败", 'error');
                 });
         };
 
@@ -47,12 +53,53 @@ angular.module('aTechClientApp')
                 .success(function (data) {
                     console.log(data);
                     $scope.categories = data;
+
                 });
         };
 
         Loading.setLoading(true);
 
         $scope.loadCategories();
-        
+
         $scope.loadTrades();
+
+        $scope.fav = function (trade) {
+            if ($scope.trades[trade.id].fav == true) {
+                $scope.trades[trade.id].fav = false;
+                $scope.unFavTrade(trade.id);
+            } else {
+                $scope.trades[trade.id].fav = true;
+                $scope.favTrade(trade.id);
+            }
+        };
+
+        // 收藏交易
+        $scope.favTrade = function (tradeId) {
+            $http({
+                method: 'PUT',
+                url: apiUrl + '/trade/' + tradeId + '/fav',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
+                    console.log(res);
+                }, function (res) {
+                    ngNotify.set("收藏失败", 'error');
+                });
+
+        };
+
+        // 取消收藏交易
+        $scope.unFavTrade = function (tradeId) {
+            $http({
+                method: 'PUT',
+                url: apiUrl + '/trade/' + tradeId + '/unFav',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
+                    console.log(res);
+                }, function (res) {
+                    ngNotify.set("收藏失败", 'error');
+                });
+        };
+
     });

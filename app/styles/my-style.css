@@ -394,13 +394,17 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 .at-info-icon {
     float: right;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-top: -40px !important;
     cursor: pointer;
     color: rgba(211, 211, 211, 0.97);
 }
 
 .at-info-icon:hover {
+    color: #eb4f38;
+}
+
+.at-info-icon-faved {
     color: #eb4f38;
 }
 

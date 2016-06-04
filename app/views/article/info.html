@@ -21,7 +21,7 @@
     </div>
 
     <div class="ui basic segment at-cont-segment" style="font-size: {{ fontSize }}px;">
-        {{ article.content }}
+        <div data-ng-bind-html="article.content"></div>
     </div>
     <div class="recommend">
         <div class="at-cont-icon"></div>
