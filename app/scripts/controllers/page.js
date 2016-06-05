@@ -27,6 +27,8 @@ angular.module('aTechClientApp')
 
         $scope.logout = function () {
 
+            console.log("退出登录操作");
+
             $http({
                 method: 'GET',
                 url: apiUrl + '/logout',
@@ -34,10 +36,11 @@ angular.module('aTechClientApp')
             })
                 .then(function (res) {
                     ngNotify.set("成功退出帐号");
+                    console.log("成功退出帐号");
                     $cookieStore.removeAll();
-                    $location.path('#/');
+                    $location.path('/');
                 }, function (res) {
-
+                    console.log("退出帐号失败");
                 });
         };
     })

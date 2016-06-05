@@ -36,8 +36,8 @@
             </div>
 
         </div>
-        <div><i class="heart red large   icon at-info-icon"></i>
-            <i class="pointing up icon " id="at-question-cui"></i>
+        <div>
+            <i ng-click="fav(question)"  id="at-question-cui" ng-class="{true:'heart large icon at-info-icon  at-info-icon-faved',false:'heart large icon at-info-icon '}[question.fav == true]"></i>
         </div>
         <div>
             <a class="ui red tag label" id="at-question-label-ok">未解决</a>

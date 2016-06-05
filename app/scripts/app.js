@@ -20,9 +20,15 @@ angular
         'ngImgCrop'
     ])
     .constant('apiUrl', 'http://sxnk110.workerhub.cn:9000/api/v1')
+    // .constant('apiUrl', 'http://localhost:9000/api/v1')
+    .constant('cloudUrl', 'http://storage.workerhub.cn/')
+    .filter("trustUrl", ['$sce', function ($sce) {
+        return function (recordingUrl) {
+            return $sce.trustAsResourceUrl(recordingUrl);
+        };
+    }])
     .config(function ($routeProvider, $locationProvider) {
         // $locationProvider.html5Mode(true);
-
         $routeProvider
             .when('/', {    //  首页
                 templateUrl: 'views/main.html',
@@ -205,9 +211,9 @@ angular
                 controllerAs: 'usercenter/expertProfile'
             })
             .when('/video/:id', {
-              templateUrl: 'views/video/info.html',
-              controller: 'VideoInfoCtrl',
-              controllerAs: 'video/info'
+                templateUrl: 'views/video/info.html',
+                controller: 'VideoInfoCtrl',
+                controllerAs: 'video/info'
             })
             .otherwise({
                 redirectTo: '/'
@@ -234,6 +240,22 @@ angular
                 isLoading = loading;
             }
         };
+    })
+    .filter('trustHtml', function ($sce) {
+
+        return function (input) {
+
+            return $sce.trustAsHtml(input);
+
+        }
+
+    })
+    .filter('replaceHtml', function () {
+
+        return function (input) {
+            return input.replace(/<\/?[^>]*>/g, "").substr(0,255)+"...";
+        }
+
     })
     .run(runBlock);
 ;

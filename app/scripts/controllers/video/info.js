@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('VideoInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore) {
+    .controller('VideoInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore, $sce, cloudUrl) {
         // 加载视频详细信息
         $scope.loadVideo = function () {
 
@@ -22,14 +22,16 @@ angular.module('aTechClientApp')
                 .success(function (data) {
                     console.log(data);
                     $scope.video = data;
-                    $scope.resourceUrl = "http://storage.workerhub.cn/" + $scope.video.path;
-
+                    $scope.resourceUrl = cloudUrl + $scope.video.path;
                     console.log($scope.resourceUrl);
-                    $('#video-source').attr("src",$scope.resourceUrl);
                     Loading.setLoading(false);
 
                 });
         };
+
+        $scope.trustSrc = function(url){
+            return $sce.trustSrc(url);
+        }
 
         $scope.loadVideo();
     });
