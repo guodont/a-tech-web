@@ -321,8 +321,8 @@ h1, h2, h3, h4, p, a, table, strong, input {
     height: 216.2px;
     background-color: rgba(0, 0, 0, 0.4) !important;
     z-index: 1 !important;
-    position: relative;
-    top: -352px;
+    position:absolute;  
+    bottom:11px;
 }
 
 .at-friend {
