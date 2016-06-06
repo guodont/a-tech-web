@@ -135,27 +135,27 @@ angular
                 controller: 'ExpertCtrl',
                 controllerAs: 'expert'
             })
-            .when('/expert/articles', {   //  专家主页－文章
+            .when('/expert/:expertId/articles', {   //  专家主页－文章
                 templateUrl: 'views/expert/articles.html',
                 controller: 'ExpertArticlesCtrl',
                 controllerAs: 'expert/articles'
             })
-            .when('/expert/questions', {  //  专家主页－回答的问题
+            .when('/expert/:expertId/questions', {  //  专家主页－回答的问题
                 templateUrl: 'views/expert/questions.html',
                 controller: 'ExpertQuestionsCtrl',
                 controllerAs: 'expert/questions'
             })
-            .when('/expert/results', {  //  专家主页－成果
+            .when('/expert/:expertId/results', {  //  专家主页－成果
                 templateUrl: 'views/expert/results.html',
                 controller: 'ExpertResultsCtrl',
                 controllerAs: 'expert/results'
             })
-            .when('/expert/album', {    //  专家主页－相册
+            .when('/expert/:expertId/album', {    //  专家主页－相册
                 templateUrl: 'views/expert/album.html',
                 controller: 'ExpertAlbumCtrl',
                 controllerAs: 'expert/album'
             })
-            .when('/expert/trend', {    //  专家主页－动态列表
+            .when('/expert/:expertId/trend', {    //  专家主页－动态列表
                 templateUrl: 'views/expert/trend.html',
                 controller: 'ExpertTrendCtrl',
                 controllerAs: 'expert/trend'
@@ -253,7 +253,17 @@ angular
     .filter('replaceHtml', function () {
 
         return function (input) {
-            return input.replace(/<\/?[^>]*>/g, "").substr(0,255)+"...";
+            return input.replace(/<\/?[^>]*>/g, "").substr(0, 255) + "...";
+        }
+
+    })
+    .filter('showAvatar', function (cloudUrl) {
+
+        return function (input) {
+            if (input !== null)
+                return cloudUrl + input;
+            else
+                return cloudUrl + 'default_avatar.png';
         }
 
     })

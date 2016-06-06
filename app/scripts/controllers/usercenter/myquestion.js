@@ -28,12 +28,12 @@ angular.module('aTechClientApp')
         $scope.loadQueitions = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/user/questions',
+                url: apiUrl + '/my/questions',
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {
-                    console.log(data);
-                    $scope.questions = data;
+                    console.log(res.data);
+                    $scope.questions = res.data;
                 }, function (res) {
                     ngNotify.set("网络加载失败",'error');
                 });

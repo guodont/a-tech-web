@@ -37,8 +37,13 @@ angular.module('aTechClientApp')
                 .then(function (res) {
                     ngNotify.set("成功退出帐号");
                     console.log("成功退出帐号");
-                    $cookieStore.removeAll();
+                    $cookieStore.remove("authToken");
+                    $cookieStore.remove("isLogin");
                     $location.path('/');
+                    $scope.isLogin = false;
+                    $scope.$apply();
+                    // $location.location.reload()
+
                 }, function (res) {
                     console.log("退出帐号失败");
                 });
@@ -58,7 +63,7 @@ angular.module('aTechClientApp')
                 // // 一个多少页
                 // $scope.totalPages = 0;
 
-                $scope.currentPage = $location.search().currentPage ? parseInt($location.search().currentPage) : 0;
+                $scope.currentPage = $location.search().currentPage ? parseInt($location.search().currentPage) : 1;
                 // $scope.currentPage = 0;
 
                 // $scope.$watch('totalItems', function () {
@@ -116,7 +121,7 @@ angular.module('aTechClientApp')
                     // $scope.$emit('pagechage', $scope.currentPage);
                 };
                 $scope.getCurPage = function () {
-                    return $scope.currentPage + 1;
+                    return $scope.currentPage;
                 };
                 $scope.next = function () {
                     if ($scope.isLast()) {
@@ -129,13 +134,13 @@ angular.module('aTechClientApp')
                     $scope.selectPage($scope.currentPage - 1);
                 }
                 $scope.first = function () {
-                    $scope.selectPage(0);
+                    $scope.selectPage(1);
                 }
                 $scope.last = function () {
                     $scope.selectPage($scope.totalPages - 1);
                 }
                 $scope.isFirst = function () {
-                    return $scope.currentPage <= 0;
+                    return $scope.currentPage <= 1;
                 };
                 $scope.isLast = function () {
                     return $scope.currentPage >= $scope.totalPages - 1;
@@ -164,6 +169,8 @@ angular.module('aTechClientApp')
             'last': '尾页',
         }
     }
+
+
 );
 ;
 

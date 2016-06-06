@@ -9,9 +9,10 @@
  */
 angular.module('aTechClientApp')
     .controller('QuestionCtrl', function ($http, $scope, apiUrl, ngNotify, Loading, $location, Page, $cookieStore) {
-
+        
+        $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
         $scope.curCategoryId = $location.search().category;
-        $scope.questions = [];
+        // $scope.questions = [];
 
         // 设置标题
         Page.setTitle('问答专区|农科110');
@@ -20,16 +21,17 @@ angular.module('aTechClientApp')
         $scope.loadQueitions = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/questions',
+                url: apiUrl + '/questions' + '?pageSize=10&page=' + $scope.curPage,
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {
-                    angular.forEach(res.data, function (item, index) {
-                        console.log(index);
-                        $scope.questions[item.id] = item;
-                    })
+                    // angular.forEach(res.data, function (item, index) {
+                    //     console.log(index);
+                    //     $scope.questions[item.id] = item;
+                    // })
+                    $scope.questions = res.data;
                     console.log($scope.questions);
-                    Loading.setLoading(false);
+                    // Loading.setLoading(false);
                 }, function (res) {
                     ngNotify.set("网络加载失败", 'error');
                 });
@@ -48,18 +50,18 @@ angular.module('aTechClientApp')
         };
 
 
-        Loading.setLoading(true);
+        // Loading.setLoading(true);
 
         $scope.loadCategories();
 
         $scope.loadQueitions();
 
-        $scope.fav = function (question) {
-            if ($scope.questions[question.id].fav == true) {
-                $scope.questions[question.id].fav = false;
+        $scope.fav = function (question,position) {
+            if ($scope.questions[position].fav == true) {
+                $scope.questions[position].fav = false;
                 $scope.unFavQuestion(question.id);
             } else {
-                $scope.questions[question.id].fav = true;
+                $scope.questions[position].fav = true;
                 $scope.favQuestion(question.id);
             }
         };

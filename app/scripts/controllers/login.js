@@ -25,6 +25,8 @@ angular.module('aTechClientApp')
                     ngNotify.set("登录成功");
                     $cookieStore.put('isLoggedIn', 1);
                     $cookieStore.put('authToken', data.authToken);
+                    $scope.isLogin = false;
+                    // $scope.$apply();
                     $location.path('#/usercenter/index');
                 });
         };

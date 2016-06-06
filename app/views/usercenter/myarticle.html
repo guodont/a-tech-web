@@ -3,74 +3,26 @@
         <div ng-include="'../include/usernav.html'"></div>
     </div>
     <div class="twelve wid usercenter-right">
-        <div class="ui items segment at-article-item ">
-            <div class="content">
-                <a class="header" id="at-article-title">标题1</a>
-                <div class="time">
-                    <span>2016.05.08</span>
-                </div>
-                <div class="description">
-                    <p>
-                        花木兰（412年-502年），花木兰的事迹流传至今，中国古代巾帼英雄，忠孝节义，代父从军击败入侵民族而流传千古，唐代皇帝追封为“孝烈将军”。
-                    </p>
-                </div>
-                <div class="at-article-img">
-                    <img src="/images/yeoman.png"/>
-                </div>
-                <div class="at-expert-tag">
-                    <a class="ui red label">Red</a>
-                    <a class="ui orange label">Orange</a>
-                    <a class="ui yellow label">Yellow</a>
+        <div class="ui items " ng-repeat="article in articles" >
+            <div class="ui items segment at-article-item ">
+                <div class="content">
+                    <a class="header at-article-title" href="#/article/{{ article.id }}">{{ article.title }}</a>
+                    <div class="time">
+                        <span>{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }}</span>
+                    </div>
+                    <div class="description">
+                        <p style="max-height: 181px;overflow: hidden; line-height: 25px;">
+                            {{ article.content | replaceHtml}}
+                        </p>
+                    </div>
+                    <div class="at-expert-tag">
+                        <a class="ui red label">{{ article.category.name }}</a>
+                        <a class="ui orange label">{{ article.tag }}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="ui items segment at-article-item ">
-            <div class="content">
-                <a class="header" id="at-article-title">标题1</a>
-                <div class="time">
-                    <span>2016.05.08</span>
-                </div>
-                <div class="description">
-                    <p>
-                        花木兰（412年-502年），花木兰的事迹流传至今，中国古代巾帼英雄，忠孝节义，代父从军击败入侵民族而流传千古，唐代皇帝追封为“孝烈将军”。
-                    </p>
-                </div>
-                <div class="at-article-img">
-                    <img src="/images/yeoman.png"/>
-                </div>
-                <div class="at-expert-tag">
-                    <a class="ui red label">Red</a>
-                    <a class="ui orange label">Orange</a>
-                    <a class="ui yellow label">Yellow</a>
-                </div>
-            </div>
-        </div>
-        <div class="ui items segment at-article-item ">
-            <div class="content">
-                <a class="header" id="at-article-title">标题1</a>
-                <div class="time">
-                    <span>2016.05.08</span>
-                </div>
-                <div class="description">
-                    <p>
-                        花木兰（412年-502年），花木兰的事迹流传至今，中国古代巾帼英雄，忠孝节义，代父从军击败入侵民族而流传千古，唐代皇帝追封为“孝烈将军”。
-                    </p>
-                </div>
-                <div class="at-article-img">
-                    <img src="/images/yeoman.png"/>
-                </div>
-                <div class="at-expert-tag">
-                    <a class="ui red label">Red</a>
-                    <a class="ui orange label">Orange</a>
-                    <a class="ui yellow label">Yellow</a>
-                </div>
-            </div>
-        </div>
 
+        </div>
+        <observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
     </div>
 </div>
-<script>
-    $('.menu .item')
-            .tab()
-    ;
-</script>
