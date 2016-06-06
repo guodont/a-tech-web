@@ -29,7 +29,7 @@ angular.module('aTechClientApp')
 
         // 加载问题分类数据
         $scope.loadQueitionCategories = function () {
-            $http.get(apiUrl + '/categories')
+            $http.get(apiUrl + '/categories?categoryType=QUESTION&parentId=')
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败",'error');
                 })
