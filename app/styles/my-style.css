@@ -577,3 +577,6 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .function-box{
 	float: right;
 }
+.at-home-article .at-notice li{
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
