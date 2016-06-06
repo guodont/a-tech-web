@@ -765,6 +765,8 @@
                 <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
                 <div class="at-video-black"></div>
             </div>
+        </div>
+        <div class="ui grid at-video-box">
             <div class="four wide column at-video-cell">
                 <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
                 <p class="at-video-name">棉花工厂化育苗和机械化移栽技术</p>
@@ -791,6 +793,75 @@
 
     </div>
 </div>
+ <script src="//api.html5media.info/1.1.8/html5media.min.js"></script> 
+<!-- 视频弹出 -->
+
+  <script type="text/javascript">
+    $(".at-video-cell").click(function() {
+     $('.ui.basic.modal')
+        .modal('show')
+        ;
+      })
+  ;
+  </script>
+    <script type="text/javascript">
+    var myVideo = document.getElementsByTagName('video')[0];
+    $(".ui.basic.modal").click(function(event){    
+    event=event||window.event;    
+    event.stopPropagation();    
+});    
+    
+//点击层外，隐藏这个层。由于层内的事件停止了冒泡，所以不会触发这个事件    
+$(document).click(function(e){                         
+    
+   myVideo.pause();
+   
+    
+});  
+      </script>
+    <script type="text/javascript">
+//    $(document).click(function(e){ 
+//         e = window.event || e; // 兼容IE7
+//         obj = $(e.srcElement || e.target);
+//           if ($(obj).is("800,400")) { 
+//            // alert('内部区域'); 
+//         } else {
+//                 alert('你的点击不在目标区域');
+//         } 
+// });
+  </script>
+<script type="text/javascript">
+    // var myPlayer = videojs('my-video');
+    // videojs("my-video").ready(function(){
+    //     var myPlayer = this;
+    //     myPlayer.play();
+    // });
+</script>
+<!-- <link href="http://vjs.zencdn.net/vjs-version/video-js.css" rel="stylesheet"> -->
+<!-- If you'd like to support IE8 -->
+<!-- <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script> -->
+<!-- <script src="http://vjs.zencdn.net/vjs-version/video.js"></script> -->
+
+
+<div class="ui basic modal">
+    <i class="close icon"></i>
+    <div class="image content">
+
+        <div>
+            <video id="my-video" class="video-js" controls preload="auto" width="800" height="400"
+                   poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+                <source src="MY_VIDEO.webm" type='video/webm'>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+
+    </div>
+</div>
+
 <!-- 友情链接 -->
 <div class="ui at-home-article">
     <a class="ui purple ribbon label fz-18">友情链接</a>
