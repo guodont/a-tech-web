@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>{{ Page.title() }}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{{ Page.seo() }}">
     <meta name="viewport" content="width=device-width">
-
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -47,8 +46,8 @@
 <!-- Add your site or application content here -->
 <div class="at-headbar">
     <div class="ui at-container">
-        <div class="ui horizontal bulleted list at-fr">
-            <a class="item">2016年4月15日 星期五</a>
+        <div class="ui horizontal list right floated">
+            <a class="item" href="#">2016年4月15日 星期五</a>
             <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
             <a class="item" ng-show="!isLogin" href="#/login">登录</a>
             <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
@@ -68,7 +67,7 @@
             <div class="right floated column">
                 <div class="ui search at-search">
                     <div class="ui icon input">
-                        <input class="prompt" type="text" placeholder="搜本站">
+                        <input class="prompt" type="text" placeholder="搜索您想要的">
                         <i class="search icon"></i>
                     </div>
                     <div class="results"></div>
@@ -77,55 +76,19 @@
         </div>
     </div>
 </div>
-<div class="ui at-nav">
+<div class="ui at-nav-container">
     <!-- 导航 -->
-    <div class="ui at-container  list">
-        <a href="#/">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">首页
-            </button>
-        </a>
-        <a href="#/article">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">农业要闻
-            </button>
-        </a>
-        <a href="#/expert">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">专家在线
-            </button>
-        </a>
-        <a href="#/question">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">技术咨询
-            </button>
-        </a>
-        <a href="#/trade">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">供需信息
-            </button>
-        </a>
-        <a href="#/video">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">视频专区
-            </button>
-        </a>
-        <a href="http://www.sxjk365.com/" target="_blank">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">健康365
-            </button>
-        </a>
-        <a href="#/article">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">科学生活
-            </button>
-        </a>
-        <a href="#/article">
-            <button class="at-nav-button" onmouseover="this.style.backgroundColor='#00645b';"
-                    onmouseout="this.style.backgroundColor='';">关于我们
-            </button>
-        </a>
-
+    <div class="ui at-container">
+        <ul class="at-nav">
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']"><a href="#/">首页</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']"><a href="#/article">农业要闻</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']"><a href="#/expert">专家在线</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']"><a href="#/question" >技术咨询</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']"><a href="#/trade">供需信息</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']"><a href="#/video">视频专区</a></li>
+            <li><a href="http://www.sxjk365.com/" target="_blank">健康365</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']"><a href="#/article">关于我们</a></li>
+        </ul>
     </div>
 </div>
 
@@ -133,25 +96,11 @@
     <div class="ui active  inverted dimmer" ng-hide="!loading.isLoading()">
         <div class="ui large text  loader" ng-hide="!loading.isLoading()">加载中...</div>
     </div>
-
     <div ng-view=""></div>
-
 </div>
 <div class="at-footer">
     <span>山西科技报刊总社版权所有 晋ICP备08000801号</span>
 </div>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<!-- <script>
-  !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-  (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-  r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-  }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');
-</script> -->
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
@@ -221,6 +170,7 @@
 <script src="scripts/controllers/usercenter/mytrend.js"></script>
 <script src="scripts/controllers/usercenter/expertprofile.js"></script>
 <script src="scripts/controllers/video/info.js"></script>
+<script src="scripts/controllers/expert/commonexpert.js"></script>
 <!-- endbuild -->
 
 

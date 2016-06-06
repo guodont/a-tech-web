@@ -1,20 +1,27 @@
-	<div class="ui segment at-expert-top">
-	<button class="ui red right floated button"><i class="question icon"></i> 向他提问 </button>
-		<img class="ui centered medium circular image" id="at-expert-img-head"src="/images/img5.jpg">
+<div ng-controller="CommonExpertCtrl">
+    <div class="ui segment at-expert-top">
+        <button class="ui red floated button"><i class="question icon"></i> 向他提问</button>
+        <img class="ui centered medium circular image" id="at-expert-img-head" src="{{ curExpert.user.avatar | showAvatar }}">
 
-		<div class="at-expert-info">
-		<h3 class="name">高海龙</h3>
-		<h4 class="job centered">职务:山西农业大学校长  | 单位:山西农业大学</h4>
+        <div class="at-expert-info">
+            <h3 class="name">{{ curExpert.user.realName }}</h3>
+            <h4 class="job centered">职务: {{ curExpert.duty }} | 单位: {{ curExpert.company }} | 职称: {{ curExpert.professional }}</h4>
 
-		<p class="info">高海龙，男，汉族，1967年10月出生，河南遂平人，1991年10月参加工作，1996年12月加入中国共产党，大学学历（1991年7月毕业于新疆师范大学政教系哲学专业），哲学学士。</p>
-		</div>
-	</div>
-	<div class="at-expert-nav">
-		<div class="ui secondary pointing four  menu">
-			<a href="#/expert/articles" class="active item">文章列表</a>
-			<a href="#/expert/questions" class="item">问题列表</a>
-			<a href="#/expert/results" class="item">成果</a>
-			<a href="#/expert/album" class="item">相册</a>
+            <p class="info">
+                服务项目: {{ curExpert.service }}
+            </p>
 
-		</div>
-	</div>
+            <p class="info">
+                简介: {{ curExpert.introduction }}
+            </p>
+        </div>
+    </div>
+    <div class="at-expert-nav">
+        <div class="ui secondary pointing four  menu">
+            <a href="#/expert/{{curExpertId}}/articles" class="active item">TA的文章</a>
+            <a href="#/expert/{{curExpertId}}/questions" class="item">TA的问题</a>
+            <a href="#/expert/{{curExpertId}}/results" class="item">TA的成果</a>
+            <a href="#/expert/{{curExpertId}}/album" class="item">TA的相册</a>
+        </div>
+    </div>
+</div>

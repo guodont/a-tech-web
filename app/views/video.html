@@ -6,6 +6,7 @@
         <a class="section">视频专区</a>
     </div>
     <div class="ui secondary pointing menu">
+        <a href="#/video?category=" ng-class="{true:'item active',false:'item'}[curCategoryId=='']">全部</a>
         <div ng-repeat="category in categories">
             <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]"
                href="#/video?category={{ category.id }}">{{ category.name }}</a>

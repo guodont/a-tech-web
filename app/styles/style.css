@@ -5,6 +5,7 @@
 }
 .slider img {
 	width: 100%;
+	/*max-height: 425px;*/
 }
 .slider-container {
 	height: 425px;/*滚动区的高*/

@@ -11,11 +11,12 @@ angular.module('aTechClientApp')
     .controller('TradeCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading) {
        
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
-        $scope.curCategoryId = $location.search().category;
 
         // 设置标题
         Page.setTitle('信息专区|农科110');
-
+        Page.setSeo('信息专区|农科110');
+        Page.setNav('trade');
+        
         // 设置url query 参数
         if ($location.search().type == false) {
             $location.search('type', 'DEMAND');

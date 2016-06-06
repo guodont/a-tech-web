@@ -12,11 +12,12 @@ angular.module('aTechClientApp')
 
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
 
-        $scope.curCategoryId = $location.search().category;
+        $scope.curCategoryId = $location.search().category ? $location.search().category : '';
 
         // 设置标题
         Page.setTitle('专家在线|农科110');
-
+        Page.setSeo('专家在线|农科110');
+        Page.setNav('expert');
         // 加载专家数据
         $scope.loadExperts = function () {
             $http({

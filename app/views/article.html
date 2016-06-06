@@ -3,6 +3,7 @@
 	<a class="section">文章列表</a>
 </div>
 <div class="ui secondary pointing menu">
+	<a href="#/article?category=" ng-class="{true:'item active',false:'item'}[curCategoryId=='']">全部</a>
 	<div  ng-repeat="category in categories">
 		<a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/article?category={{ category.id }}">{{ category.name }}</a>
 	</div>

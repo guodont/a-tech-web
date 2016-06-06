@@ -9,19 +9,21 @@
  */
 angular.module('aTechClientApp')
     .controller('QuestionCtrl', function ($http, $scope, apiUrl, ngNotify, Loading, $location, Page, $cookieStore) {
-        
+
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
-        $scope.curCategoryId = $location.search().category;
+        $scope.curCategoryId = $location.search().category ? $location.search().category : '';
         // $scope.questions = [];
 
         // 设置标题
         Page.setTitle('问答专区|农科110');
+        Page.setSeo('问答专区|农科110');
+        Page.setNav('question');
 
         // 加载问题数据
         $scope.loadQueitions = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/questions' + '?pageSize=10&page=' + $scope.curPage,
+                url: apiUrl + '/questions' + '?pageSize=10&page=' + $scope.curPage + '&category=' + $scope.curCategoryId,
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {
@@ -39,7 +41,7 @@ angular.module('aTechClientApp')
 
         // 加载分类
         $scope.loadCategories = function () {
-            $http.get(apiUrl + '/categories?' + 'parentId=1')
+            $http.get(apiUrl + '/categories?categoryType=QUESTION&parentId=')
                 .error(function (data, status) {
                     // ngNotify.set("网络加载失败");
                 })
@@ -56,7 +58,7 @@ angular.module('aTechClientApp')
 
         $scope.loadQueitions();
 
-        $scope.fav = function (question,position) {
+        $scope.fav = function (question, position) {
             if ($scope.questions[position].fav == true) {
                 $scope.questions[position].fav = false;
                 $scope.unFavQuestion(question.id);

@@ -3,6 +3,8 @@
     <a class="section">专家列表</a>
 </div>
 <div class="ui secondary pointing menu">
+    <a href="#/expert?category=" ng-class="{true:'item active',false:'item'}[curCategoryId=='']">全部</a>
+
     <div ng-repeat="category in categories">
         <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]"
            href="#/expert?category={{ category.id }}">{{ category.name }}</a>

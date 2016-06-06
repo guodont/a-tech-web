@@ -28,13 +28,7 @@ angular.module('aTechClientApp')
                 });
             };
             reader.readAsDataURL(file);
-            // console.log($scope.myCroppedImage);
             $scope.newAvatar = $scope.myCroppedImage;
-            // console.log($scope.newAvatar);
-            // $('#pickfiles').attr("value",$scope.myCroppedImage);
-            // $scope.uploader.addFile($scope.myCroppedImage,'test');
-            // $scope.uploader.start();
-            // console.log($scope.uploader);
         };
         angular.element(document.querySelector('#fileInput')).on('change', handleFileSelect);
 
@@ -121,6 +115,7 @@ angular.module('aTechClientApp')
                     $scope.realName = userProfile.realName;
                     $scope.avatar = userProfile.avatar;
                     $scope.newAvatar = userProfile.avatar;
+                    $scope.address = userProfile.address;
                     $scope.industry = userProfile.industry;
                     $scope.scale = userProfile.scale;
                 }, function (res) {
@@ -132,8 +127,6 @@ angular.module('aTechClientApp')
 
         // 保存资料
         $scope.saveProfile = function () {
-
-            Loading.setLoading(true);
 
             var userInfoData = {
                 realName: $scope.realName,

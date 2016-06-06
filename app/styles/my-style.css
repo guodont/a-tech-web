@@ -108,8 +108,9 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .at-headbar {
     width: 100%;
     height: 30px;
-    background-color: #F1F1F1;
-    padding-top: 3px;
+    line-height: 30px;
+    /*background-color: #F1F1F1;*/
+    border-bottom: 1px solid #F1F1F1;
 }
 
 .at-headbar a {
@@ -141,7 +142,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
     overflow: hidden;
 }
 
-.at-nav {
+.at-nav-container {
     background: #009688;
     height: 42px;
 }
@@ -576,4 +577,35 @@ h1, h2, h3, h4, p, a, table, strong, input {
 }
 .function-box{
 	float: right;
+}
+
+.at-nav {
+    list-style: none;
+
+}
+
+.at-nav li{
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+
+.at-nav li:hover {
+    background-color: #07756B;
+}
+
+.at-nav .activity {
+    background-color: #07756B;
+}
+
+.at-nav a{
+    color: white;
+    font-weight:600;
+    font-size: 16px;
+    line-height: 42px;
+    height: 40px;
+    padding: 12px 30px;
 }

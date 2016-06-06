@@ -3,10 +3,9 @@
     <a class="section">问题专区</a>
 </div>
 <div class="ui secondary pointing menu">
-    <div ng-repeat="category in categories">
-        <a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]"
-           href="#/question?category={{ category.id }}">{{ category.name }}</a>
-    </div>
+    <a href="#/question?category=" ng-class="{true:'item active',false:'item'}[curCategoryId=='']">全部</a>
+    <a ng-repeat="category in categories" ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]"
+       href="#/question?category={{ category.id }}">{{ category.name }}</a>
 </div>
 <div ng-repeat="question in questions track by $index">
     <div class="at-info-main ">
@@ -17,29 +16,22 @@
                     <div>
                         <a class="ui teal tag label " id="at-question-label-from">{{ question.category.name }}</a>
                     </div>
-
                     <div class="at-question-name">
-                        <a>{{ question.user.name }}</a>
+                        <a>{{ question.user.name }},</a>提问于{{ question.whenCreated | date:'yyyy-MM-dd HH:mm'  }}
                     </div>
-
-                    <div>
-                        <a class="at-question-title">{{ question.title }}</a>
+                    <div style="margin-top: 5px;">
+                        <a class="at-question-title" href="#/question/{{question.id}}">{{ question.title }}</a>
                     </div>
-
                     <div class="description">
-                        <p>{{ question.content }}</p>
+                        <p>{{ question.content | replaceHtml }}</p>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div>
-                <i ng-click="fav(question,$index)" id="at-question-cui"
-                   ng-class="{true:'heart large icon at-info-icon  at-info-icon-faved',false:'heart large icon at-info-icon '}[question.fav == true]"></i>
+                <div><i ng-click="fav(question,$index)"
+                        ng-class="{true:'heart large icon at-info-icon  at-info-icon-faved',false:'heart large icon at-info-icon '}[question.fav == true]"></i>
+                </div>
             </div>
             <div>
-                <a class="ui red tag label" id="at-question-label-ok">未解决</a>
+                <a class="ui red tag label" id="at-question-label-ok">{{ question.questionResolveState | showStatus}}</a>
             </div>
         </div>
 
@@ -48,4 +40,3 @@
 <observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
 
 <a href="#/question/post" class="at-fb-post" style="display: block;"> 我要提问</a>
-

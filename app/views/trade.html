@@ -21,9 +21,9 @@
             <div class="content at-info-cont">
                 <a class="">{{ trade.user.name }}</a>
                 <div class="description">
-                    <p id="at-info-title">{{ trade.title }}</p>
+                    <a id="at-info-title" href="#/trade/{{trade.id}}">{{ trade.title }}</a>
                     <p>
-                        {{ trade.description }}
+                        {{ trade.description  | replaceHtml }}
                     </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="at-info-date">
         {{ trade.whenCreated | date:'yyyy-MM-dd HH:mm' }}
-        <span><i class="marker icon"></i>山西农业大学</span>
+        <span><i class="marker icon"></i>{{ trade.user.address }}</span>
     </div>
     <i ng-click="fav(trade,$index)"  ng-class="{true:'heart large icon at-info-icon  at-info-icon-faved',false:'heart large icon at-info-icon '}[trade.fav == true]"></i>
 </div>

@@ -95,7 +95,7 @@ angular
                 controller: 'TradePostCtrl',
                 controllerAs: 'trade/post'
             })
-            .when('/trade/info', {      //  交易详情
+            .when('/trade/:id', {      //  交易详情
                 templateUrl: 'views/trade/info.html',
                 controller: 'TradeInfoCtrl',
                 controllerAs: 'trade/info'
@@ -110,7 +110,7 @@ angular
                 controller: 'QuestionPostCtrl',
                 controllerAs: 'question/post'
             })
-            .when('/question/info', {     //  问题详情
+            .when('/question/:id', {     //  问题详情
                 templateUrl: 'views/question/info.html',
                 controller: 'QuestionInfoCtrl',
                 controllerAs: 'question/info'
@@ -221,12 +221,26 @@ angular
     })
     .factory('Page', function () {
         var title = 'default';
+        var seo = 'default';
+        var curNav = 'index';
         return {
             title: function () {
                 return title;
             },
             setTitle: function (newTitle) {
                 title = newTitle;
+            },
+            seo: function () {
+                return seo;
+            },
+            setSeo: function (newSeo) {
+                seo = newSeo;
+            },
+            curNav: function () {
+                return curNav;
+            },
+            setNav: function (newNav) {
+                curNav = newNav;
             }
         };
     })
@@ -264,6 +278,44 @@ angular
                 return cloudUrl + input;
             else
                 return cloudUrl + 'default_avatar.png';
+        }
+
+    })
+    .filter('showResource', function (cloudUrl) {
+
+        return function (input) {
+            if (input !== null)
+                return cloudUrl + input;
+            else
+                return cloudUrl + 'default_avatar.png';
+        }
+
+    })
+    .filter('showStatus', function () {
+
+        return function (input) {
+            var status;
+            switch (input) {
+                case 'WAIT_AUDITED':
+                    status = '待审核';
+                    break;
+                case 'AUDITED':
+                    status = '审核通过';
+                    break;
+                case 'FAILED':
+                    status = '审核失败';
+                    break;
+                case 'WAIT_RESOLVE':
+                    status = '待解决';
+                    break;
+                case 'RESOLVED':
+                    status = '已解决';
+                    break;
+                default:
+                    status = '未知';
+                    break;
+            }
+            return status;
         }
 
     })

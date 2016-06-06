@@ -46,6 +46,11 @@ angular.module('aTechClientApp')
 
                 }, function (res) {
                     console.log("退出帐号失败");
+                    $cookieStore.remove("authToken");
+                    $cookieStore.remove("isLogin");
+                    $location.path('/');
+                    $scope.isLogin = false;
+                    $scope.$apply();
                 });
         };
     })
@@ -169,8 +174,6 @@ angular.module('aTechClientApp')
             'last': '尾页',
         }
     }
-
-
 );
 ;
 
