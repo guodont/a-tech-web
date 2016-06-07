@@ -10,12 +10,13 @@ a {
 }
 
 /*a:hover {*/
-    /*color: #009688 !important;*/
+/*color: #009688 !important;*/
 /*}*/
 
 hr {
     border: 1px dashed #ccc;
 }
+
 h1 {
     font-size: 20px !important;
 }
@@ -323,8 +324,8 @@ h1, h2, h3, h4, p, a, table, strong, input {
     height: 214.2px;
     background-color: rgba(0, 0, 0, 0.4) !important;
     z-index: 1 !important;
-    position:absolute;  
-    bottom:13px;
+    position: absolute;
+    bottom: 13px;
 }
 
 .at-friend {
@@ -422,6 +423,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .at-question-cont {
     padding: 15px;
 }
+
 .at-question-from {
     margin-bottom: 8px;
     color: gray !important;
@@ -458,14 +460,16 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .at-question-label-from {
     float: right;
 }
-#at-question-label-ok{
-	float: right;
-	margin-top: -132px;
-	margin-right: 15px;
+
+#at-question-label-ok {
+    float: right;
+    margin-top: -132px;
+    margin-right: 15px;
 }
-#at-question-label-from{
-	float: right;
-	margin-right:-35px;
+
+#at-question-label-from {
+    float: right;
+    margin-right: -35px;
 }
 
 #at-question-cui {
@@ -498,6 +502,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .at-cont-segment p {
     line-height: 24px;
 }
+
 .recommend {
     border-width: 2px 0px;
     width: 1120px;
@@ -550,15 +555,16 @@ h1, h2, h3, h4, p, a, table, strong, input {
 }
 
 .fz-18 {
-	font-size: 18px !important;
+    font-size: 18px !important;
 }
+
 /* move top */
 .at-fb-post {
     z-index: 999;
-	text-align:center;
-	margin-left:auto; 
-	margin-right:auto;
-	width: 140px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
     height: 45px;
     line-height: 45px;
     font-size: 21px;
@@ -576,8 +582,9 @@ h1, h2, h3, h4, p, a, table, strong, input {
 .at-fb-post:hover {
     color: white !important;
 }
-.function-box{
-	float: right;
+
+.function-box {
+    float: right;
 }
 
 .at-nav {
@@ -585,7 +592,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 }
 
-.at-nav li{
+.at-nav li {
     vertical-align: top;
     letter-spacing: normal;
     word-spacing: normal;
@@ -602,9 +609,9 @@ h1, h2, h3, h4, p, a, table, strong, input {
     background-color: #07756B;
 }
 
-.at-nav a{
+.at-nav a {
     color: white;
-    font-weight:600;
+    font-weight: 600;
     font-size: 16px;
     line-height: 42px;
     height: 40px;
@@ -613,4 +620,10 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 .description {
     margin-top: 8px;
+}
+
+.at-home-article .at-notice li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
