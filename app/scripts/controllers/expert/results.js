@@ -8,7 +8,26 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('ExpertResultsCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore) {
+    .controller('ExpertResultsCtrl', function ($http, $scope, apiUrl, ngNotify, Page, $routeParams,$location, Loading, $cookieStore) {
         console.log($routeParams.expertId);
+
+        Page.setSubNav('result');
+
+        $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
+
+
+        // 加载文章 TODO
+        $scope.loadArticles = function () {
+            $http.get(apiUrl + '/expert/' + $routeParams.expertId + '/results' + '?pageSize=15&page=' + $scope.curPage)
+                .error(function (data, status) {
+                    ngNotify.set("网络加载失败");
+                })
+                .success(function (data) {
+                    console.log(data);
+                    $scope.articles = data;
+                });
+        };
+
+        $scope.loadArticles();
 
     });

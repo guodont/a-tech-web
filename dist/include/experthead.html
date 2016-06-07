@@ -18,10 +18,10 @@
     </div>
     <div class="at-expert-nav">
         <div class="ui secondary pointing four  menu">
-            <a href="#/expert/{{curExpertId}}/articles" class="active item">TA的文章</a>
-            <a href="#/expert/{{curExpertId}}/questions" class="item">TA的问题</a>
-            <a href="#/expert/{{curExpertId}}/results" class="item">TA的成果</a>
-            <a href="#/expert/{{curExpertId}}/album" class="item">TA的相册</a>
+            <a href="#/expert/{{curExpertId}}/articles"  ng-class="{true:'active item',false:'item'}[Page.subNav() ==='article']">TA的文章</a>
+            <a href="#/expert/{{curExpertId}}/questions" ng-class="{true:'active item',false:'item'}[Page.subNav() ==='question']">TA的问题</a>
+            <a href="#/expert/{{curExpertId}}/results" ng-class="{true:'active item',false:'item'}[Page.subNav() ==='result']">TA的成果</a>
+            <a href="#/expert/{{curExpertId}}/album" ng-class="{true:'active item',false:'item'}[Page.subNav() ==='album']">TA的相册</a>
         </div>
     </div>
 </div>

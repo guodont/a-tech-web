@@ -20,4 +20,21 @@ angular.module('aTechClientApp')
         };
 
         $scope.getExpertInfo();
+
+
+        // 加载动态
+        $scope.loadTrends = function () {
+
+            $http.get(apiUrl + '/expert/' + $routeParams.expertId + '/trend')
+                .error(function (data, status) {
+                    ngNotify.set("网络加载失败");
+                })
+                .success(function (data) {
+                    console.log(data);
+                    $scope.trends = data;
+
+                });
+        };
+
+        $scope.loadTrends();
     });

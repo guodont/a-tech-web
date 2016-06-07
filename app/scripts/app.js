@@ -228,6 +228,7 @@ angular
         var title = 'default';
         var seo = 'default';
         var curNav = 'index';
+        var subNav = 'article';
         return {
             title: function () {
                 return title;
@@ -246,6 +247,12 @@ angular
             },
             setNav: function (newNav) {
                 curNav = newNav;
+            },
+            subNav: function () {
+                return subNav;
+            },
+            setSubNav: function (newNav) {
+                subNav = newNav;
             }
         };
     })
