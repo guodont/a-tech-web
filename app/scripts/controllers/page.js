@@ -13,6 +13,10 @@ angular.module('aTechClientApp')
 
         $scope.isLogin = $cookieStore.get("isLoggedIn") == 1 ? true : false;
 
+        $scope.isExpert = $cookieStore.get("isExpert") == 1 ? true : false;
+        
+        $scope.curUserId = $cookieStore.get("userId");
+
         $scope.loading = Loading;
 
         ngNotify.config({
@@ -48,6 +52,7 @@ angular.module('aTechClientApp')
                     console.log("退出帐号失败");
                     $cookieStore.remove("authToken");
                     $cookieStore.remove("isLogin");
+                    $cookieStore.remove("isExpert");
                     $location.path('/');
                     $scope.isLogin = false;
                     $scope.$apply();

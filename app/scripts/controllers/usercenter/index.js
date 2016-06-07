@@ -12,4 +12,5 @@ angular.module('aTechClientApp')
       
         $scope.curMenu = "index";
 
+
     });

@@ -8,7 +8,8 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('VideoInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore, $sce, cloudUrl) {
+    .controller('VideoInfoCtrl', function ($http, $scope, $location, apiUrl, ngNotify, $routeParams, Loading, $cookieStore, $sce, cloudUrl) {
+
         // 加载视频详细信息
         $scope.loadVideo = function () {
 
@@ -29,7 +30,7 @@ angular.module('aTechClientApp')
                 });
         };
 
-        $scope.trustSrc = function(url){
+        $scope.trustSrc = function (url) {
             return $sce.trustSrc(url);
         }
 

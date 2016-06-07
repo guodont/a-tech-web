@@ -162,8 +162,9 @@
                 <div class="ui three column grid">
                     <div class="column" ng-repeat="expert in experts">
                         <div class="ui at-expert">
-                            <a href="#/expert/{{ expert.user.id }}/articles"><img class="ui centered medium circular image at-expert-img"
-                                 src="{{ expert.user.avatar | showAvatar}}"></a>
+                            <a href="#/expert/{{ expert.user.id }}/articles"><img
+                                    class="ui centered medium circular image at-expert-img"
+                                    src="{{ expert.user.avatar | showAvatar}}"></a>
                             <h4 class="at-expert-name">
                                 <a href="#/expert/{{ expert.id }}/articles">{{ expert.user.realName }}</a>
                                 <p>{{ expert.company }}，{{ expert.duty }}</p>
@@ -444,86 +445,22 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">供应 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/trade">更多 </a>
                 </div>
             </div>
             <div class="ui list at-notice">
                 <div class="item">
                     <div class="ui comments">
-                        <div class="comment">
+                        <div class="comment" ng-repeat="trade in trades[0]">
                             <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                <img src="{{ trade.user.avatar | showAvatar}}">
                             </a>
                             <div class="content">
-                                <a class="author">Matt</a>
+                                <a class="author">{{ trade.user.name }}</a>
                                 <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
+                                    <span class="date">{{ trade.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
                                 </div>
-                                <div class="text">优质有机芽苗菜</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">枣子膨果水溶肥</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">［供应］保花保果素</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">木耳菜用大量元素水溶肥</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">四季豆施用有机水溶肥</div>
+                                <div class="text">{{ trade.title }}</div>
                             </div>
                         </div>
                     </div>
@@ -534,86 +471,22 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">需求 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/trade">更多 </a>
                 </div>
             </div>
             <div class="ui list at-notice">
                 <div class="item">
                     <div class="ui comments">
-                        <div class="comment">
+                        <div class="comment" ng-repeat="trade in trades[1]">
                             <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
+                                <img src="{{ trade.user.avatar | showAvatar}}">
                             </a>
                             <div class="content">
-                                <a class="author">Matt</a>
+                                <a class="author">{{ trade.user.name }}</a>
                                 <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
+                                    <span class="date">{{ trade.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
                                 </div>
-                                <div class="text">【求购】杨树膨化肥</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">【求购】求优质农资产品</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">求购玉米 高粱 棉粕 大米 小麦等</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text"> 求购：糯米玉米大米</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ui comments">
-                        <div class="comment">
-                            <a class="avatar">
-                                <img src="http://semantic-ui.com/images/avatar/small/matt.jpg">
-                            </a>
-                            <div class="content">
-                                <a class="author">Matt</a>
-                                <div class="metadata">
-                                    <span class="date">今天下午 5:42</span>
-                                </div>
-                                <div class="text">收购槐角</div>
+                                <div class="text">{{ trade.title }}</div>
                             </div>
                         </div>
                     </div>
@@ -637,11 +510,11 @@
     </div>
     <div class="ui grid bg-gray at-high-mod2">
         <div class="ui grid at-video-box">
-            <div class="four wide column at-video-cell" ng-repeat="video in videos" href="#/">
+            <a class="four wide column at-video-cell" ng-repeat="video in videos" href="#/video/{{ video.id }}">
                 <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
                 <p class="at-video-name">{{ video.name }}</p>
                 <div class="at-video-black"></div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

@@ -215,6 +215,11 @@ angular
                 controller: 'VideoInfoCtrl',
                 controllerAs: 'video/info'
             })
+            .when('/usercenter/postresult', {
+              templateUrl: 'views/usercenter/postresult.html',
+              controller: 'UsercenterPostresultCtrl',
+              controllerAs: 'usercenter/postresult'
+            })
             .otherwise({
                 redirectTo: '/'
             });

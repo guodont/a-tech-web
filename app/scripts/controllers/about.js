@@ -9,17 +9,19 @@
  */
 angular.module('aTechClientApp')
     .controller('AboutCtrl', function ($http, $scope, apiUrl, ngNotify, Loading, $location, Page, $cookieStore) {
-        
+
         $scope.curCategoryId = $location.search().category ? $location.search().category : '';
 
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
 
         // 设置标题
         Page.setTitle('关于我们|农科110');
+        Page.setSeo('关于我们|农科110');
+        Page.setNav('about');
 
         // 加载文章
         $scope.loadArticles = function () {
-            $http.get(apiUrl + '/articles' + '?pageSize=15&page=' + $scope.curPage )
+            $http.get(apiUrl + '/articles/' + $scope.curCategoryId + '?pageSize=15&page=' + $scope.curPage)
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败");
                 })
@@ -32,7 +34,7 @@ angular.module('aTechClientApp')
 
         // 加载分类
         $scope.loadCategories = function () {
-            $http.get(apiUrl + '/categories?' + 'parentId=1')
+            $http.get(apiUrl + '/categories?' + 'parentId=27')
                 .error(function (data, status) {
                     // ngNotify.set("网络加载失败");
                 })

@@ -1,32 +1,78 @@
 <div class="ui grid">
-  <div class="four wide column usercenter-nav">
-    <div ng-include="'../include/usernav.html'"></div>
-  </div>
-  <div class="twelve wid usercenter-right">
-    <div class="ui top attached tabular menu">
-      <a class="item active" data-tab="first">我的动态</a>
+    <div class="four wide column usercenter-nav">
+        <div ng-include="'../include/usernav.html'"></div>
     </div>
-    <div class="ui bottom attached tab segment active" data-tab="first">
-      <div class="column">
-        <form class="ui form" action="#/" method="get">
-          <div class="at-post-content">
-          <div class="field">
-            <div class="">
-              <textarea name="name" rows="8" cols="40"  placeholder="随便说点怎么吧"></textarea>
+    <div class="twelve wid usercenter-right">
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="first">我的动态</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+            <div class="column">
+                <form class="ui form">
+                    <div class="at-post-content">
+                        <div class="field">
+                            <div class="">
+                                <textarea name="name" ng-model="comment" rows="6" cols="40" placeholder="随便说点怎么吧"></textarea>
+                            </div>
+                        </div>
+                        <a class="ui button usercenter-trend-button "  ng-click="addTrend()">发布</a>
+                    </div>
+                </form>
             </div>
-          </div>
-          </div>
-          <button class="ui button usercenter-trend-button">发布</button>
-        </form>
-      </div>
+        </div>
+
+        <div class="ui segment feed">
+            <!--<div class="event">-->
+                <!--<div class="label">-->
+                    <!--<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></div>-->
+                <!--<div class="content">-->
+                    <!--<div class="summary">-->
+                        <!--<a>Helen Troy</a>-->
+                        <!--增加-->
+                        <!--<a>2 新的 illustrations</a>-->
+                        <!--<div class="date">4 天前</div>-->
+                    <!--</div>-->
+                    <!--<div class="extra images">-->
+                        <!--<a>-->
+                            <!--<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>-->
+                        <!--<a>-->
+                            <!--<img src="http://semantic-ui.com/images/avatar/small/matt.jpg"></a>-->
+                    <!--</div>-->
+                    <!--<div class="meta">-->
+                        <!--<a class="like"> <i class="like icon"></i>-->
+                            <!--1 Like-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="event" ng-repeat="trend in trends">
+                <div class="label">
+                    <img src="{{ trend.user.avatar | showAvatar}}"></div>
+                <div class="content">
+                    <div class="summary">
+                        <a>{{ trend.user.realName }}</a>
+                        发布了动态
+                        <div class="date">{{ trend.whenCreated | date:'yyyy-MM-dd HH:mm'}}</div>
+                    </div>
+                    <div class="extra text">
+                        {{ trend.content }}
+                    </div>
+                    <!--<div class="meta">-->
+                        <!--<a class="like">-->
+                            <!--<i class="like icon"></i>-->
+                            <!--5 Likes-->
+                        <!--</a>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <script>
-  $('.menu .item')
-  .tab()
-;
+    $('.menu .item')
+            .tab()
+    ;
 </script>
 <script type="text/javascript">
-$('.ui.dropdown').dropdown();
+    $('.ui.dropdown').dropdown();
 </script>

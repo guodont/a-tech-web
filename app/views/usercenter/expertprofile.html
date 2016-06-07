@@ -5,47 +5,50 @@
     <div class="twelve wid usercenter-right">
         <form class="ui form">
             <div class="field">
-                <label>所属分类</label>
-                <div class="ui left input at-signup-text">
-                    <select class="ui search dropdown usercenter-input2" name="category">
-                        <option value="0">分类1</option>
-                        <option value="1">分类2</option>
-                        <option value="2">分类3</option>
-                        <option value="3">分类4</option>
-                    </select>
+                <label>所属领域</label>
+                <input type="hiden" ng-hide="true" ng-model="categoryId" id="categoryId">
+                <div class="ui search selection dropdown  remote example">
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div ng-repeat="category in categories" class="item" data-value="{{ category.id }}">
+                            {{ category.name }}
+                        </div>
+                    </div>
+                    <div class="default text">选择领域</div>
                 </div>
             </div>
+            <!--categoryId-->
             <div class="field">
                 <label>职称</label>
-                <div class="ui left icon input at-signup-text usercenter-input2">
-                    <input type="text" placeholder="职称">
+                <div class="ui left input at-signup-text usercenter-input2">
+                    <input type="text" ng-model="professional" placeholder="职称">
                 </div>
             </div>
             <div class="field">
                 <label>职务</label>
-                <div class="ui left icon input at-signup-text usercenter-input2">
-                    <input type="text" placeholder="职务">
+                <div class="ui left input at-signup-text usercenter-input2">
+                    <input type="text" ng-model="duty" placeholder="职务">
                 </div>
             </div>
             <div class="field">
                 <label>简介</label>
-                <div class="ui left icon input at-signup-text usercenter-input2">
-                    <input type="text" placeholder="简介">
+                <div class="ui left input at-signup-text usercenter-input2">
+                    <textarea type="text" ng-model="introduction" placeholder="简介"></textarea>
                 </div>
             </div>
             <div class="field">
                 <label>服务项目</label>
-                <div class="ui left icon input at-signup-text usercenter-input2">
-                    <input type="text" placeholder="服务项目">
+                <div class="ui left input at-signup-text usercenter-input2">
+                    <input type="text" ng-model="service" placeholder="服务项目">
                 </div>
             </div>
             <div class="field">
                 <label>单位</label>
-                <div class="ui left icon input at-signup-text usercenter-input2">
-                    <input type="text" placeholder="单位">
+                <div class="ui left input at-signup-text usercenter-input2">
+                    <input type="text"  ng-model="company" placeholder="单位">
                 </div>
             </div>
-            <div class="ui green submit button">保存</div>
+            <div class="ui green submit button" ng-click="saveProfile()">保存</div>
     </div>
     </form>
 </div>

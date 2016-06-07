@@ -26,18 +26,14 @@ angular.module('aTechClientApp')
 
         // $scope.trades = [];
 
-        // 加载问题数据
+        // 加载交易数据
         $scope.loadTrades = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/trades' + '?pageSize=10&page=' + $scope.curPage,
+                url: apiUrl + '/trades' + '?pageSize=10&page=' + $scope.curPage + '&tradeType=' + $scope.curType,
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {
-                    // angular.forEach(res.data, function (item, index) {
-                    //     console.log(index);
-                    //     $scope.trades[item.id] = item;
-                    // })
                     $scope.trades = res.data;
                     console.log($scope.trades);
 

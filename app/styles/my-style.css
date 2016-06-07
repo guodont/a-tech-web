@@ -257,6 +257,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 .at-expert-name {
     text-align: center;
+    margin-top: 0px;
 }
 
 .at-expert-name p {
@@ -319,11 +320,11 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 .at-video-black {
     width: 260.75px;
-    height: 216.2px;
+    height: 214.2px;
     background-color: rgba(0, 0, 0, 0.4) !important;
     z-index: 1 !important;
-    position: relative;
-    top: -352px;
+    position:absolute;  
+    bottom:13px;
 }
 
 .at-friend {
@@ -608,4 +609,8 @@ h1, h2, h3, h4, p, a, table, strong, input {
     line-height: 42px;
     height: 40px;
     padding: 12px 30px;
+}
+
+.description {
+    margin-top: 8px;
 }

@@ -3,37 +3,36 @@
 		<div ng-include="'../include/usernav.html'"></div>
 	</div>
 	<div class="twelve wid usercenter-right">
-		<!-- <p>This is the usercenter/mytrade view.</p> -->
-		<div class="ui top attached tabular menu">
-		  <a class="item active" data-tab="first">已通过审核</a>
-		  <a class="item" data-tab="second">未通过审核</a>
-		  <a class="item" data-tab="third">待审核</a>
+
+		<div class="ui secondary pointing menu">
+			<a ng-class="{true:'item active',false:'item'}[curStatus == 'AUDITED']"
+			   href="#/usercenter/mytrade?status=AUDITED">已通过审核</a>
+			<a ng-class="{true:'item active',false:'item'}[curStatus == 'WAIT_AUDITED']"
+			   href="#/usercenter/mytrade?status=WAIT_AUDITED">待审核</a>
+			<a ng-class="{true:'item active',false:'item'}[curStatus == 'FAILED']"
+			   href="#/usercenter/mytrade?status=FAILED">未通过审核</a>
 		</div>
-		<div class="ui bottom attached tab segment active" data-tab="first">
+		<div class="at-info-main">
 			<div class="ui list">
-				<div class="item">出售苹果</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
+				<div class="item ui segment"  ng-repeat="trade in trades">
+					<div class="content at-question-cont">
+						<div>
+							<a class="ui teal tag label at-question-label-from">{{ trade.category.name }}</a>
+						</div>
+						<div>
+							<a class="at-question-title" href="#/trade/{{trade.id}}">{{ trade.title }}</a>
+						</div>
+
+						<div class="description">
+							<p>
+								{{ trade.description }}
+							</p>
+						</div>
+
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="ui bottom attached tab segment" data-tab="second">
-			<div class="ui list">
-				<div class="item">出售鸡蛋</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-			</div>
-		</div>
-		<div class="ui bottom attached tab segment" data-tab="third">
-			<div class="ui list">
-				<div class="item">出售树苗</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-			</div>
+			<observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
 		</div>
 	</div>
 </div>
-<script>
-	$('.menu .item')
-  .tab()
-;
-</script>

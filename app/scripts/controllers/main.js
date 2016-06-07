@@ -14,6 +14,10 @@ angular.module('aTechClientApp')
         Page.setSeo('农科110,山西农科110,山西,农业');
         Page.setNav('index');
 
+        $scope.trades = {
+            0:[],
+            1:[]
+        };
         $scope.getFloatAdvs = function () {
             console.log("获取轮播图展示数据");
             $http({
@@ -94,6 +98,33 @@ angular.module('aTechClientApp')
                     console.log("加载专家数据失败");
                 });
         };
+
+        // 加载交易数据
+        $scope.loadTrades = function () {
+            $http({
+                method: 'GET',
+                url: apiUrl + '/trades' + '?pageSize=5&page=1&tradeType=SUPPLY'
+            })
+                .then(function (res) {
+                    $scope.trades[0] = res.data;
+                }, function (res) {
+                    console.log("加载交易数据失败");
+                });
+        };
+
+        // 加载交易数据
+        $scope.loadTradesForSupply = function () {
+            $http({
+                method: 'GET',
+                url: apiUrl + '/trades' + '?pageSize=5&page=1&tradeType=DEMAND'
+            })
+                .then(function (res) {
+                    $scope.trades[1] = res.data;
+                }, function (res) {
+                    console.log("加载交易数据失败");
+                });
+        };
+
         // 获取轮播图数据
         $scope.getFloatAdvs();
         
@@ -109,5 +140,9 @@ angular.module('aTechClientApp')
         $scope.loadQueitions();
         
         $scope.loadExperts();
+        
+        $scope.loadTrades();
+        
+        $scope.loadTradesForSupply();
 
     });

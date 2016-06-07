@@ -3,36 +3,25 @@
 		<div ng-include="'../include/usernav.html'"></div>
 	</div>
 	<div class="twelve wid usercenter-right">
-		<div class="ui top attached tabular menu">
-		  <a class="item active" data-tab="first">已通过审核</a>
-		  <a class="item" data-tab="second">未通过审核</a>
-		  <a class="item" data-tab="third">待审核</a>
-		</div>
-		<div class="ui bottom attached tab segment active" data-tab="first">
-			<div class="ui list">
-				<div class="item">获得xxx奖</div>
-				<div class="item">杰出人物</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
+		<div class="ui items " ng-repeat="article in articles" >
+			<div class="ui items segment at-article-item ">
+				<div class="content">
+					<a class="header at-article-title" href="#/article/{{ article.id }}">{{ article.title }}</a>
+					<div class="time">
+						<span>{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }}</span>
+					</div>
+					<div class="description">
+						<p style="max-height: 181px;overflow: hidden; line-height: 25px;">
+							{{ article.content | replaceHtml}}
+						</p>
+					</div>
+					<div class="at-expert-tag">
+						<a class="ui red label">{{ article.category.name }}</a>
+						<a class="ui orange label">{{ article.tag }}</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="ui bottom attached tab segment" data-tab="second">
-			<div class="ui list">
-				<div class="item">获得xxx奖</div>
-				<div class="item">杰出人物</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-			</div>
-		</div>
-		<div class="ui bottom attached tab segment" data-tab="third">
-			<div class="ui list">
-				<div class="item">获得xxx奖</div>
-				<div class="item">杰出人物</div>
-				<div class="item">葡萄树上喷石硫合剂，怎么配浓度？</div>
-			</div>
-		</div>
+		<observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
 	</div>
 </div>
-<script>
-	$('.menu .item')
-  .tab()
-;
-</script>

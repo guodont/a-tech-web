@@ -9,7 +9,7 @@
  */
 angular.module('aTechClientApp')
     .controller('UsercenterMyarticleCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location) {
-      
+
         $scope.curMenu = "myarticle";
 
         $scope.curCategoryId = $location.search().category;
@@ -21,7 +21,7 @@ angular.module('aTechClientApp')
 
         // 加载文章 TODO
         $scope.loadArticles = function () {
-            $http.get(apiUrl + '/expert/1/articles' + '?pageSize=15&page=' + $scope.curPage )
+            $http.get(apiUrl + '/expert/' + $scope.curUserId + '/articles' + '?pageSize=15&page=' + $scope.curPage)
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败");
                 })

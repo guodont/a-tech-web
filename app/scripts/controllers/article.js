@@ -20,7 +20,7 @@ angular.module('aTechClientApp')
         Page.setNav('article');
         // 加载文章
         $scope.loadArticles = function () {
-            $http.get(apiUrl + '/articles' + '?pageSize=15&page=' + $scope.curPage )
+            $http.get(apiUrl + '/articles/' + $scope.curCategoryId + '?pageSize=15&page=' + $scope.curPage )
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败");
                 })

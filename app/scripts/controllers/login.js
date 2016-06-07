@@ -25,10 +25,38 @@ angular.module('aTechClientApp')
                     ngNotify.set("登录成功");
                     $cookieStore.put('isLoggedIn', 1);
                     $cookieStore.put('authToken', data.authToken);
-                    $scope.isLogin = false;
+                    $scope.isLogin = true;
                     // $scope.$apply();
-                    $location.path('#/usercenter/index');
+                    $scope.getUserProfile();
                 });
         };
+
+
+        // 获取用户资料
+        $scope.getUserProfile = function () {
+            $http({
+                method: 'GET',
+                url: apiUrl + '/curuser',
+                headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
+            })
+                .then(function (res) {
+                    console.log(res.data);
+                    var userProfile = res.data;
+
+                    if (userProfile.userType == 'EXPERT')
+                        $cookieStore.put('isExpert', 1);
+                    else
+                        $cookieStore.put('isExpert', 0);
+
+                    $cookieStore.put('userId', userProfile.id);
+                    $cookieStore.put('userName', userProfile.name);
+
+                    $location.path('#/usercenter/index');
+
+                }, function (res) {
+                    ngNotify.set("网络加载失败", 'error');
+                });
+        };
+
 
     });

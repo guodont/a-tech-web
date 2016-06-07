@@ -12,25 +12,25 @@
             <form class="ui form" ng-submit="addArticle()">
                 <div class="at-post-content">
                     <div class="field">
-                        <label>文章标题</label>
+                        <label>成果标题</label>
                         <div class="ui left input at-signup-text">
-                            <input type="text" ng-model="title" placeholder="文章标题">
+                            <input type="text" ng-model="title" placeholder="成果标题">
                         </div>
                     </div>
                     <div class="field">
-                        <label>文章内容</label>
+                        <label>成果描述</label>
                         <div class="ui left input at-signup-text">
-                            <textarea id="editor"  ng-model="content"  placeholder="在此编辑文章" style="width: 100% ;" autofocus></textarea>
+                            <textarea id="editor"  ng-model="content"  placeholder="在此编辑成果描述" style="width: 100% ;" autofocus></textarea>
                         </div>
                     </div>
                     <div class="field">
-                        <label>文章标签</label>
+                        <label>成果标签</label>
                         <div class="ui left input at-signup-text">
                             <input  ng-model="tag" type="text" placeholder="">
                         </div>
                     </div>
                     <div class="field">
-                        <label>文章分类</label>
+                        <label>成果分类</label>
                         <input type="hiden" ng-hide="true" ng-model="categoryId" id="categoryId">
                         <div class="ui search selection dropdown  remote example">
                             <i class="dropdown icon"></i>
@@ -43,13 +43,13 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label>文章配图(选择上传图片)</label>
+                        <label>成果配图(只能上传一张)</label>
                         <div class="upload-container" id="upload-container">
                             <input type="file" id="pickfiles" name="image">
                         </div>
                     </div>
                     <img style="max-width: 500px" src="{{ cateImage }}">
-                    <center><input type="submit" class="fluid ui green submit button" value="提交"></center>
+                    <center><input type="submit" class="fluid ui green submit button" value="发布"></center>
                 </div>
             </form>
         </div>

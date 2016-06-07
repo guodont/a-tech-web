@@ -3,37 +3,47 @@
 		<div ng-include="'../include/usernav.html'"></div>
 	</div>
 	<div class="twelve wid usercenter-right">
-		<div class="ui top attached tabular menu">
-		  <a class="item active" data-tab="first">消息提醒</a>
-		  <a class="item" data-tab="second">上次登录信息</a>
-		</div>
-		<div class="ui bottom attached tab segment active" data-tab="first">
-			<div class="ui list">
-				<div class="ui icon message"> <i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
-					</div>					
+		<div class="ui segment feed">
+			<div class="event" ng-repeat="message in messages">
+				<div class="label">
+					<img src="{{ message.user.avatar | showAvatar}}"></div>
+				<div class="content">
+					<div class="summary">
+						<a>{{ message.messageType }}</a>
+						{{ message.title }}
+						<div class="date">{{ message.whenCreated | date:'yyyy-MM-dd HH:mm'}}</div>
+					</div>
+					<div class="extra text">
+						{{ message.remark }}
+					</div>
+					<!--<div class="meta">-->
+					<!--<a class="like">-->
+					<!--<i class="like icon"></i>-->
+					<!--5 Likes-->
+					<!--</a>-->
+					<!--</div>-->
 				</div>
 			</div>
-			<div class="ui list">
-				<div class="ui icon message"> <i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
-					</div>					
-				</div>
-			</div><div class="ui list">
-				<div class="ui icon message"> <i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
-					</div>					
+			<div class="event">
+				<div class="label">
+					<img src="http://storage.workerhub.cn/default_avatar.png"></div>
+				<div class="content">
+					<div class="summary">
+						<a>[问题]</a>
+						专家 fanfan 回答了你的问题
+						<div class="date">2016-6-05 12:00</div>
+					</div>
+					<div class="extra text">
+						点击查看问题详情
+					</div>
+					<div class="meta">
+					<a class="like">
+					<i class="like icon"></i>
+					未读
+					</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="ui bottom attached tab segment" data-tab="second">
-			<p>上次登录时间：2016年5月5日</p>
 		</div>
 	</div>
 </div>
