@@ -21,5 +21,9 @@
     "angular-mocks": "^1.4.0"
   },
   "appPath": "app",
-  "moduleName": "aTechClientApp"
+  "moduleName": "aTechClientApp",
+  "resolutions": {
+    "angular": "~1.x",
+    "plupload": "^2.1.9"
+  }
 }
