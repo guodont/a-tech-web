@@ -8,15 +8,13 @@
                 <div class="field">
                     <label>手机号</label>
                     <div class="ui left icon input at-signup-text">
-                        <input type="text" placeholder="手机号码" ng-model="phone">
-                        <i class="phone icon"></i>
+                        <input type="text" placeholder="手机号码" ng-model="phone" id="phone"> <i class="phone icon"></i>
                     </div>
                 </div>
                 <div class="field">
                     <label>用户名</label>
                     <div class="ui left icon input at-signup-text">
-                        <input type="text" placeholder="用户名" ng-model="name">
-                        <i class="user icon"></i>
+                        <input type="text" placeholder="用户名" ng-model="name"> <i class="user icon"></i>
                     </div>
                 </div>
                 <div class="field">
@@ -33,9 +31,15 @@
                         <i class="lock icon"></i>
                     </div>
                 </div>
+                <div class="field">
+                    <label>手机验证码</label>
+                    <div class="ui action input">
+                        <input type="text" placeholder="获取短信验证码">
+                        <input id="btnSendCode" class="ui green  button" type="button" value="获取验证码" onclick="sendMessage()" />
+                    </div>
+                </div>
                 <center>
-                    <input class="ui green submit button" type="submit" value="立即注册">
-                </center>
+                    <input class="ui green submit button" type="submit" value="立即注册"></center>
             </form>
         </div>
     </div>

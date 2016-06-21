@@ -54,7 +54,7 @@ angular.module('aTechClientApp')
 
             $http({
                 method: 'POST',
-                url: apiUrl + '/question',
+                url: apiUrl + '/register first',
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")},
                 data: questionData
             })
