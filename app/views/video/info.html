@@ -13,7 +13,7 @@
 
     <div class="center" style="margin: auto">
         <video id="my-video"  src="{{resourceUrl | trustUrl}}"   class="video-js" style="margin: auto" controls preload="auto" width="800" height="400"
-               poster="MY_VIDEO_POSTER.jpg" data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'>
+               poster="{{ video.thumbnail | showResource}}" data-setup='{ "controls": true, "autoplay": false, "preload": "auto" }'>
             <source src="{{resourceUrl | trustUrl}}" id="video-source" type='video/mp4'>
             <!--<source src="MY_VIDEO.webm" type='video/webm'>-->
             <p class="vjs-no-js">

@@ -331,6 +331,34 @@ angular
         }
 
     })
+    .filter('showMessageType', function () {
+
+        return function (input) {
+            var status;
+            switch (input) {
+                case 'TRADE':
+                    status = '交易提醒';
+                    break;
+                case 'QUESTION':
+                    status = '问题提醒';
+                    break;
+                case 'SYSTEM':
+                    status = '系统消息';
+                    break;
+                case 'NOTICE':
+                    status = '公告通知';
+                    break;
+                case 'WECHAT':
+                    status = '微信消息';
+                    break;
+                default:
+                    status = '未知';
+                    break;
+            }
+            return status;
+        }
+
+    })
     .run(runBlock);
 ;
 function runBlock($http) {

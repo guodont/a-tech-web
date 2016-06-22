@@ -15,7 +15,7 @@
     <div class="ui items">
         <a class="item item-video" ng-repeat="video in videos" href="#/video/{{ video.id }}">
             <div class="ui small image">
-                <img src="http://semantic-ui.com/images/wireframe/image.png">
+                <img src="{{ video.thumbnail | showResource}}">
             </div>
             <div class="content">
                 <div class="header">{{ video.name }}</div>

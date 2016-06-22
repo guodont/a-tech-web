@@ -44,22 +44,22 @@
             </div>
             <div class="ui list at-notice">
                 <li class="item">
-                    <a href="#" >山西省农资商会招募农资生产厂家</a><span class="at-date">2016/6/5</span>
+                    <a href="#">山西省农资商会招募农资生产厂家</a><span class="at-date">2016/6/5</span>
                 </li>
                 <li class="item">
-                    <a href="#" >第二届山西科普惠农平价农资供应 “319”行动开始啦！</a><span class="at-date">2016/6/5</span>
+                    <a href="#">第二届山西科普惠农平价农资供应 “319”行动开始啦！</a><span class="at-date">2016/6/5</span>
                 </li>
                 <li class="item">
-                    <a href="#" >山西省科普惠农绿色通道工程服务站建设及运营管理规范</a><span class="at-date">2016/6/5</span>
+                    <a href="#">山西省科普惠农绿色通道工程服务站建设及运营管理规范</a><span class="at-date">2016/6/5</span>
                 </li>
                 <li class="item">
-                    <a href="#" >2015年科普惠农绿色通道工程服务站考核办法</a><span class="at-date">2016/6/5</span>
+                    <a href="#">2015年科普惠农绿色通道工程服务站考核办法</a><span class="at-date">2016/6/5</span>
                 </li>
                 <li class="item">
-                    <a href="#" >2015年科普惠农绿色通道工程示范基地考核办法规范规范规范</a><span class="at-date">2016/6/5</span>
+                    <a href="#">2015年科普惠农绿色通道工程示范基地考核办法规范规范规范</a><span class="at-date">2016/6/5</span>
                 </li>
                 <li class="item">
-                    <a href="#" >中科云媒站点管理制度</a><span class="at-date">2016/6/5</span>
+                    <a href="#">中科云媒站点管理制度</a><span class="at-date">2016/6/5</span>
                 </li>
 
             </div>
@@ -511,7 +511,7 @@
     <div class="ui grid bg-gray at-high-mod2">
         <div class="ui grid at-video-box">
             <a class="four wide column at-video-cell" ng-repeat="video in videos" href="#/video/{{ video.id }}">
-                <img class="ui image at-video" src="images/Fl201512241629035405.jpg">
+                <img class="ui image at-video" src="{{ video.thumbnail | showResource}}">
                 <p class="at-video-name">{{ video.name }}</p>
                 <div class="at-video-black"></div>
             </a>
@@ -522,13 +522,9 @@
 <!-- 友情链接 -->
 <div class="ui at-home-article">
     <a class="ui purple ribbon label fz-18">友情链接</a>
-    <div class="ui grid bg-gray at-low-mod">
-        <div class="row">
-            <div class="two wide column"></div>
-            <div class="fourteen wide column">
-                <a class="ui button at-friend" ng-repeat="link in links" href="{{ link.path }}">{{ link.name }}</a>
-            </div>
-            <div class="two wide column"></div>
+    <div class="ui grid bg-gray at-low-mod centered">
+            <div class="ui celled horizontal list center">
+                <a class="item" ng-repeat="link in links" href="{{ link.path }}">{{ link.name }}</a>
         </div>
     </div>
 </div>

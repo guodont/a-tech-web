@@ -231,7 +231,13 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 /*友情链接高度*/
 .at-low-mod {
+    padding-top: 50px !important;
     height: 120px;
+}
+
+.at-low-mod a{
+    color: #6a6a6a !important;
+    font-weight: 600;
 }
 
 /*视频列表高度*/
@@ -311,7 +317,8 @@ h1, h2, h3, h4, p, a, table, strong, input {
 
 .at-video-name {
     padding: 40px 30px;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 900;
     text-align: center;
     z-index: 2 !important;
     position: relative;
@@ -340,6 +347,8 @@ h1, h2, h3, h4, p, a, table, strong, input {
     color: #ffffff;
     text-align: center;
     padding-top: 50px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .at-post-content {
@@ -626,4 +635,13 @@ h1, h2, h3, h4, p, a, table, strong, input {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.ui.items > .item > .image {
+    overflow: hidden;
+}
+
+.video-js {
+    height: 400px !important;
+    width: 800px !important;
 }

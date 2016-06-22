@@ -13,7 +13,7 @@ angular.module('aTechClientApp')
         // 加载视频详细信息
         $scope.loadVideo = function () {
 
-            Loading.setLoading(true);
+            // Loading.setLoading(true);
 
             $http.get(apiUrl + '/video/' + $routeParams.id)
                 .error(function (data, status) {
@@ -25,7 +25,7 @@ angular.module('aTechClientApp')
                     $scope.video = data;
                     $scope.resourceUrl = cloudUrl + $scope.video.path;
                     console.log($scope.resourceUrl);
-                    Loading.setLoading(false);
+                    // Loading.setLoading(false);
 
                 });
         };

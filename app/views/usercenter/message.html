@@ -3,43 +3,32 @@
 		<div ng-include="'../include/usernav.html'"></div>
 	</div>
 	<div class="twelve wid usercenter-right">
-		<div class="ui top attached tabular menu">
-			<a class="item active" data-tab="first">消息提醒</a>
-		</div>
-		<div class="ui bottom attached tab segment active" data-tab="first">
-			<div class="ui list">
-				<div class="ui icon message"> <i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
+		<div class="ui segment feed">
+			<div class="event" ng-repeat="message in messages">
+				<div class="label">
+					<img src="{{ message.user.avatar | showAvatar}}"></div>
+				<div class="content">
+					<div class="summary">
+						<a>[{{ message.messageType | showMessageType }}]</a>
+						{{ message.title }}
+						<div class="date">{{ message.whenCreated | date:'yyyy-MM-dd HH:mm'}}</div>
 					</div>
-
-				</div>
-			</div>
-			<div class="ui list">
-				<div class="ui icon message"> <i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
+					<div class="extra text">
+						{{ message.remark }}
 					</div>
-
-				</div>
-			</div>
-			<div class="ui list">
-				<div class="ui icon message">
-					<i class="inbox icon"></i>
-					<div class="content">
-						<div class="header">高海龙回复了你的信息</div>
-						<p>每天用email接受最好的信息</p>
+					<div class="meta">
+						<a class="like" ng-if="message.markRead">
+							<i class="like icon"></i>
+							已读
+						</a>
+						<a class="like" ng-if="!message.markRead">
+							<i class="like red icon"></i>
+							未读
+						</a>
 					</div>
-
 				</div>
 			</div>
 		</div>
+		<observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
 	</div>
 </div>
-<script>
-	$('.menu .item')
-  .tab()
-;
-</script>
