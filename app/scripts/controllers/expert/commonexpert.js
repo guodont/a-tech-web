@@ -16,6 +16,8 @@ angular.module('aTechClientApp')
                 })
                 .success(function(data) {
                     $scope.curExpert = data;
+                    $scope.loadTrends();
+
                 });
         };
 
@@ -25,7 +27,7 @@ angular.module('aTechClientApp')
         // 加载动态
         $scope.loadTrends = function () {
 
-            $http.get(apiUrl + '/expert/' + $routeParams.expertId + '/trend')
+            $http.get(apiUrl + '/expert/' + $scope.curExpert.user.id + '/trend')
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败");
                 })
@@ -36,5 +38,4 @@ angular.module('aTechClientApp')
                 });
         };
 
-        $scope.loadTrends();
     });

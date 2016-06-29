@@ -50,7 +50,8 @@ angular.module('aTechClientApp')
                     content: editor.getValue(),
                     tag: $scope.tag,
                     image: $scope.imageData,
-                    categoryId: $scope.categoryId
+                    categoryId: $scope.categoryId,
+                    type: 'article'
                 }
             })
                 .then(function (res) {

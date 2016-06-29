@@ -15,8 +15,34 @@ angular.module('aTechClientApp')
         Page.setNav('index');
 
         $scope.trades = {
-            0:[],
-            1:[]
+            0: [],
+            1: []
+        };
+
+        $scope.articles = {
+            0: [],
+            1: [],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+            7: [],
+            8: [],
+            9: [],
+            10: [],
+            11: [],
+            12: [],
+            13: [],
+            14: [],
+            15: [],
+            16: [],
+            17: [],
+            18: [],
+            19: [],
+            20: [],
+            21: [],
+            22: []
         };
         $scope.getFloatAdvs = function () {
             console.log("获取轮播图展示数据");
@@ -125,9 +151,64 @@ angular.module('aTechClientApp')
                 });
         };
 
+        // 加载文章
+        $scope.loadArticles = function (curCategoryId, id, size) {
+            $http.get(apiUrl + '/articles/' + curCategoryId + '?pageSize=' + size + '&page=1')
+                .error(function (data, status) {
+                    console.log(id + ":文章加载失败");
+                })
+                .success(function (data) {
+                    console.log(id + ":文章加载成功");
+                    $scope.articles[id] = data;
+                });
+        };
+
+
+        // 公告通知
+        $scope.loadArticles(26, 0, 6);
+
+        // 工作动态
+        $scope.loadArticles(50, 1, 9);
+
+        // 山西农业
+        $scope.loadArticles(7, 2, 5);
+
+        // 畜禽养殖
+        $scope.loadArticles(14, 3, 9);
+
+        // 特种养殖
+        $scope.loadArticles(15, 4, 9);
+
+        // 水产养殖
+        $scope.loadArticles(16, 5, 9);
+
+        // 科技前沿
+        $scope.loadArticles(10, 6, 9);
+
+        // 成果快报
+        $scope.loadArticles(11, 7, 9);
+
+        // 科技兴农
+        $scope.loadArticles(12, 8, 5);
+
+        // 农作物
+        $scope.loadArticles(17, 9, 5);
+
+        // 果树
+        $scope.loadArticles(18, 10, 5);
+
+        // 蔬菜
+        $scope.loadArticles(19, 11, 5);
+
+        // 瓜类
+        $scope.loadArticles(20, 12, 5);
+
+
+
+
         // 获取轮播图数据
         $scope.getFloatAdvs();
-        
+
         // 获取友情链接
         $scope.getFriendLinks();
 
@@ -136,13 +217,13 @@ angular.module('aTechClientApp')
 
         // 获取视频数据
         $scope.loadVideos('');
-        
+
         $scope.loadQueitions();
-        
+
         $scope.loadExperts();
-        
+
         $scope.loadTrades();
-        
+
         $scope.loadTradesForSupply();
 
     });

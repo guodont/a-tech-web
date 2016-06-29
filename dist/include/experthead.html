@@ -1,6 +1,6 @@
 <div ng-controller="CommonExpertCtrl">
     <div class="ui segment at-expert-top">
-        <button class="ui red floated button"><i class="question icon"></i> 向他提问</button>
+        <a class="ui red floated button" href="#/question/post?expertId={{ curExpert.user.id }}"><i class="question icon"></i> 向他提问</a>
         <img class="ui centered medium circular image" id="at-expert-img-head" src="{{ curExpert.user.avatar | showAvatar }}">
 
         <div class="at-expert-info">

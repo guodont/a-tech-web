@@ -4,12 +4,19 @@
         <div class="slider-container">
             <div class="slider-wrapper">
                 <!-- 需要上传xxx*xxx格式的图片 -->
-                <div class="slide" ng-repeat="floatAdv in floatAdvs">
-                    <a href="">
-                        <img ng-src="{{ floatAdv.image | showResource}}" alt="">
-                    </a>
-                    <a href=""><strong>{{ floatAdv.name }}</strong></a>
-                    <div class="black-nav"></div>
+                <!--<div class="slide" ng-repeat="floatAdv in floatAdvs">-->
+                    <!--<a href="">-->
+                        <!--<img ng-src="{{ floatAdv.image | showResource}}" alt="">-->
+                    <!--</a>-->
+                    <!--<a href=""><strong>{{ floatAdv.name }}</strong></a>-->
+                    <!--<div class="black-nav"></div>-->
+                <!--</div>-->
+                <div class="slide" ng-repeat="floatAdv in floatAdvs"><a href="{{ floatAdv.url }}"><img src="{{ floatAdv.image | showResource}}" alt=""></a> <a href=""><strong>{{ floatAdv.name }}</strong></a> <div class="black-nav"></div></div>
+                <div class="slide">
+                </div>
+                <div class="slide">
+                </div>
+                <div class="slide">
                 </div>
             </div>
         </div>
@@ -39,82 +46,39 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">通知公告 </a>
                 <div class="right menu">
+                    <a class="ui item" href="#/article?category=26&curParentId=0">更多</a>
+                </div>
+            </div>
+            <div class="ui list at-notice">
+                <li class="item"  ng-repeat="article in articles[0]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">工作动态 </a>
+                <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <div class="ui list at-notice">
-                <li class="item">
-                    <a href="#">山西省农资商会招募农资生产厂家</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">第二届山西科普惠农平价农资供应 “319”行动开始啦！</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">山西省科普惠农绿色通道工程服务站建设及运营管理规范</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">2015年科普惠农绿色通道工程服务站考核办法</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">2015年科普惠农绿色通道工程示范基地考核办法规范规范规范</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">中科云媒站点管理制度</a><span class="at-date">2016/6/5</span>
-                </li>
-
-            </div>
-        </div>
-        <div class="column bg-gray">
-            <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">现代农业 </a>
-                <div class="right menu">
-                    <a class="ui item">更多 </a>
-                </div>
-            </div>
-            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-            <div class="ui list">
-                <li class="item">
-                    <a href="#">泰国——开发出少水型稻米新品种</a>
-                    <span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">澳大利亚推出新品种苹果Bravo</a>
-                    <span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">基因技术可延长香蕉保鲜期</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">英国“地下生长”蔬菜将上市</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">日研究称天然植物激素可防治虫害</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[1]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">二级分类 </a>
+                <a class="item active" style="border-color:#009688">山西农业 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
-            <div class="ui list">
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
+            <div class="ui list at-notice">
+                <li class="item"  ng-repeat="article in articles[2]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a>
                 </li>
             </div>
         </div>
@@ -187,22 +151,9 @@
                     <a class="ui item">更多 </a>
                 </div>
             </div>
-            <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">小尾寒羊疾病的综合防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">饲养奶牛有新招</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">种公猪的日常管理“五要”</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">春季应该加强猪痢疾的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">如何防治羊传染性结膜炎</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[3]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
@@ -215,20 +166,8 @@
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">鸽子常见病的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">肉驴饲养实用问答</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">养殖肉驴品种及催肥方法</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">黄粉虫用途广饲喂管理要跟上</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">庭院养狍技术</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[4]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
@@ -241,20 +180,8 @@
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[5]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
@@ -262,83 +189,47 @@
 </div>
 <!-- 养殖技术 -->
 <div class="ui at-home-article">
-    <a class="ui green ribbon label fz-18">科普惠农</a>
+    <a class="ui green ribbon label fz-18">现代农业</a>
     <div class="ui equal width grid">
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">畜禽养殖 </a>
+                <a class="item active" style="border-color:#009688">科技前沿 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
-            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <!--<img class="ui at-wrap image" src="images/20160405093320656214.jpg">-->
             <div class="ui list">
-                <li class="item">
-                    <a href="#">小尾寒羊疾病的综合防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">饲养奶牛有新招</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">种公猪的日常管理“五要”</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">春季应该加强猪痢疾的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">如何防治羊传染性结膜炎</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[6]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">特种养殖 </a>
+                <a class="item active" style="border-color:#009688">成果快报 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
-            <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
+            <!--<img class="ui at-wrap image" src="images/20160405093320656214.jpg">-->
             <div class="ui list">
-                <li class="item">
-                    <a href="#">鸽子常见病的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">肉驴饲养实用问答</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">养殖肉驴品种及催肥方法</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">黄粉虫用途广饲喂管理要跟上</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">庭院养狍技术</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[7]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">水产养殖 </a>
+                <a class="item active" style="border-color:#009688">科技兴农 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[8]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
@@ -346,83 +237,47 @@
 </div>
 <!-- 养殖技术 -->
 <div class="ui at-home-article">
-    <a class="ui blue ribbon label fz-18">科学信息</a>
+    <a class="ui blue ribbon label fz-18">种植技术</a>
     <div class="ui equal width grid">
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">畜禽养殖 </a>
+                <a class="item active" style="border-color:#009688">农作物 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">小尾寒羊疾病的综合防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">饲养奶牛有新招</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">种公猪的日常管理“五要”</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">春季应该加强猪痢疾的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">如何防治羊传染性结膜炎</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[9]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">特种养殖 </a>
+                <a class="item active" style="border-color:#009688">果树 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">鸽子常见病的防治</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">肉驴饲养实用问答</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">养殖肉驴品种及催肥方法</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">黄粉虫用途广饲喂管理要跟上</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">庭院养狍技术</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[10]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">水产养殖 </a>
+                <a class="item active" style="border-color:#009688">蔬菜 </a>
                 <div class="right menu">
                     <a class="ui item">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
-                </li>
-                <li class="item">
-                    <a href="#">测试文章001</a><span class="at-date">2016/6/5</span>
+                <li class="item"  ng-repeat="article in articles[11]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
         </div>
@@ -524,7 +379,7 @@
     <a class="ui purple ribbon label fz-18">友情链接</a>
     <div class="ui grid bg-gray at-low-mod centered">
             <div class="ui celled horizontal list center">
-                <a class="item" ng-repeat="link in links" href="{{ link.path }}">{{ link.name }}</a>
+                <a class="item" ng-repeat="link in links" href="http://{{ link.url }}">{{ link.name }}</a>
         </div>
     </div>
 </div>

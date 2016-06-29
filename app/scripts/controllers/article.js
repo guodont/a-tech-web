@@ -11,6 +11,8 @@ angular.module('aTechClientApp')
     .controller('ArticleCtrl', function ($http, $scope, $location, apiUrl, ngNotify, Loading, Page) {
 
         $scope.curCategoryId = $location.search().category ? $location.search().category : '';
+        
+        $scope.curParentId = $location.search().curParentId ? $location.search().curParentId : '';
 
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
 
@@ -33,7 +35,7 @@ angular.module('aTechClientApp')
 
         // 加载分类
         $scope.loadCategories = function () {
-            $http.get(apiUrl + '/categories?' + 'parentId=1')
+            $http.get(apiUrl + '/categories?' + 'parentId=' + $scope.curParentId)
                 .error(function (data, status) {
                     // ngNotify.set("网络加载失败");
                 })

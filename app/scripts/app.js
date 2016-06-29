@@ -364,16 +364,21 @@ angular
 function runBlock($http) {
     $http.defaults.headers.get = {
         // "Access-Control-Allow-Origin": "*",
-        // "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Accept",
+        // "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Accept,X-AUTH-TOKEN,VERIFY_UUID",
         // "Access-Control-Allow-Methods": "PUT,POST,GET,DELETE,OPTIONS",
+        // 'Access-Control-Expose-Headers': '*',
         'Content-Type': 'application/json;charset=utf-8',
         'Accept': 'application/json'
     };
     $http.defaults.headers.post = {
+        // 'Access-Control-Expose-Headers': '*',
+        // "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Accept,X-AUTH-TOKEN,VERIFY_UUID",
         'Content-Type': 'application/json;charset=utf-8',
         'Accept': 'application/json'
     };
     $http.defaults.headers.put = {
+        // 'Access-Control-Expose-Headers': '*',
+        // "Access-Control-Allow-Headers": "X-Requested-With,Content-Type,Accept,X-AUTH-TOKEN,VERIFY_UUID",
         'Content-Type': 'application/json;charset=utf-8',
         'Accept': 'application/json'
     };

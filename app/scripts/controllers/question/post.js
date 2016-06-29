@@ -16,12 +16,19 @@ angular.module('aTechClientApp')
         $scope.imageData = '';
         $scope.categories = null;
 
+        $scope.expertId = $location.search().expertId ? $location.search().expertId : '';
+
+        if ($scope.expertId != '')
+            $scope.desc = '向专家提问';
+        else
+            $scope.desc = '请认真填写您所遇到的问题，我们将尽快指派专家给您回复';
+
         $('.ui.dropdown')
             .dropdown({
                 // action: 'hide',
                 onChange: function (value, text, $selectedItem) {
                     console.log(value);
-                    $('#categoryId').attr("value",value);
+                    $('#categoryId').attr("value", value);
                     $scope.categoryId = value;
                 }
             })
@@ -31,16 +38,16 @@ angular.module('aTechClientApp')
         $scope.loadQueitionCategories = function () {
             $http.get(apiUrl + '/categories?categoryType=QUESTION&parentId=')
                 .error(function (data, status) {
-                    ngNotify.set("网络加载失败",'error');
+                    ngNotify.set("网络加载失败", 'error');
                 })
                 .success(function (data) {
                     console.log(data);
                     $scope.categories = data;
                 });
         };
-        
+
         $scope.loadQueitionCategories();
-        
+
         $scope.createQuestion = function () {
 
             Loading.setLoading(true);
@@ -49,7 +56,8 @@ angular.module('aTechClientApp')
                 categoryId: $scope.categoryId,
                 title: $scope.title,
                 content: $scope.content,
-                image: $scope.imageData
+                image: $scope.imageData,
+                expertId: $scope.expertId
             };
 
             $http({
@@ -60,10 +68,10 @@ angular.module('aTechClientApp')
             })
                 .then(function (res) {
                     Loading.setLoading(false);
-                    ngNotify.set("问题提交成功",'success');
+                    ngNotify.set("问题提交成功", 'success');
                     $location.path('/question');
                 }, function (res) {
-                    ngNotify.set("问题提交失败",'error');
+                    ngNotify.set("问题提交失败", 'error');
                     Loading.setLoading(false);
                 });
 
@@ -75,12 +83,12 @@ angular.module('aTechClientApp')
             // 在初始化时，uptoken, uptoken_url, uptoken_func 三个参数中必须有一个被设置
             // 切如果提供了多个，其优先级为 uptoken > uptoken_url > uptoken_func
             // 其中 uptoken 是直接提供上传凭证，uptoken_url 是提供了获取上传凭证的地址，如果需要定制获取 uptoken 的过程则可以设置 uptoken_func
-            uptoken : 'K8eqr1qikcsa2OXUkg_gMxIX16cCPR9U8yULRKDr:0lRtm6OOLj5aapBeYC1r4E8enO4=:eyJzY29wZSI6Im5rMTEwLWltYWdlcyIsImRlYWRsaW5lIjoxNDY0MjY3NjU1LCJzYXZlS2V5IjoicWluaXVfY2xvdWRfc3RvcmFnZV8xNDY0MjY0MDU1IiwibWltZUxpbWl0IjoiaW1hZ2VcLyoifQ==', // uptoken 是上传凭证，由其他程序生成
+            uptoken: 'K8eqr1qikcsa2OXUkg_gMxIX16cCPR9U8yULRKDr:0lRtm6OOLj5aapBeYC1r4E8enO4=:eyJzY29wZSI6Im5rMTEwLWltYWdlcyIsImRlYWRsaW5lIjoxNDY0MjY3NjU1LCJzYXZlS2V5IjoicWluaXVfY2xvdWRfc3RvcmFnZV8xNDY0MjY0MDU1IiwibWltZUxpbWl0IjoiaW1hZ2VcLyoifQ==', // uptoken 是上传凭证，由其他程序生成
             // TODO
             // uptoken_url: 'http://cloud.workerhub.cn//api/quick_start/simple_image_example_token.php',         // Ajax 请求 uptoken 的 Url，**强烈建议设置**（服务端提供）
             // uptoken_func: function(file){    // 在需要获取 uptoken 时，该方法会被调用
             //    do something
-               // return uptoken;
+            // return uptoken;
             // },
             get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的 uptoken
             // downtoken_url: '/downtoken',
@@ -97,36 +105,36 @@ angular.module('aTechClientApp')
             chunk_size: '4mb',                  // 分块上传时，每块的体积
             auto_start: true,                   // 选择文件后自动上传，若关闭需要自己绑定事件触发上传,
             init: {
-                'FilesAdded': function(up, files) {
-                    plupload.each(files, function(file) {
+                'FilesAdded': function (up, files) {
+                    plupload.each(files, function (file) {
                         // 文件添加进队列后,处理相关的事情
                     });
                 },
-                'BeforeUpload': function(up, file) {
+                'BeforeUpload': function (up, file) {
                     // 每个文件上传前,处理相关的事情
                     console.log("每个文件上传前,处理相关的事情");
                 },
-                'UploadProgress': function(up, file) {
+                'UploadProgress': function (up, file) {
                     // 每个文件上传时,处理相关的事情
                     console.log("上传中" + up);
                 },
-                'FileUploaded': function(up, file, info) {
+                'FileUploaded': function (up, file, info) {
                     console.log(info);
                     var domain = up.getOption('domain');
                     var res = JSON.parse(info);
-                    var sourceLink = domain +  res.key; //获取上传成功后的文件的Url
+                    var sourceLink = domain + res.key; //获取上传成功后的文件的Url
                     $scope.images.push(sourceLink);
                     $scope.imageData += res.key + ',';
                     $scope.$apply();
                 },
-                'Error': function(up, err, errTip) {
+                'Error': function (up, err, errTip) {
                     //上传出错时,处理相关的事情
                     console.log(errTip);
                 },
-                'UploadComplete': function() {
+                'UploadComplete': function () {
                     //队列文件处理完毕后,处理相关的事情
                 },
-                'Key': function(up, file) {
+                'Key': function (up, file) {
                     // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
                     // 该配置必须要在 unique_names: false , save_key: false 时才生效
                     var key = "";

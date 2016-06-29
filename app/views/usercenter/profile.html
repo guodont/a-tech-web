@@ -13,29 +13,6 @@
     <div class="twelve wid usercenter-right">
         <!-- <p>用户资料设置</p> -->
         <form class="ui form">
-            <div class="field profile-userheadset">
-                <label class="at-fl">头像设置</label>
-                <div class="ui grid">
-                    <div class="three column row">
-                        <div class="column">
-                            <h4>当前头像</h4>
-                            <img ng-src="{{myCroppedImage}}" class="profile-userhead" src="../image/elliot.jpg"/>
-                            <div class="upload-container" id="upload-container" style="display: none">
-                                <input type="file" ng-model="newAvatar" id="pickfiles">
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h4>设置新头像</h4>
-                            <input type="file" ng-model="newFile" id="fileInput"
-                                   class="ui button profile-userhead-upbutton"/>
-                            <div id="imgInput" class="cropArea profile-userhead-upimg">
-                                <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
-                            </div>
-                            <div class="ui button">保存头像</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="field">
                 <label>用户名</label>
                 <div class="ui left icon input at-signup-text usercenter-input1">

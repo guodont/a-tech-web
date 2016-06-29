@@ -46,8 +46,9 @@
 <!-- Add your site or application content here -->
 <div class="at-headbar">
     <div class="ui at-container">
+            <a class="item left" href="#">欢迎来到农科110官方网站!</a>
         <div class="ui horizontal list right floated">
-            <a class="item" href="#">2016年4月15日 星期五</a>
+            <!--<a class="item" href="#">2016年4月15日 星期五</a>-->
             <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
             <a class="item" ng-show="!isLogin" href="#/login">登录</a>
             <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
@@ -64,15 +65,15 @@
                     <a href="#/"><img src="images/logo1.png"></a>
                 </div>
             </div>
-            <div class="right floated column">
-                <div class="ui search at-search">
-                    <div class="ui icon input">
-                        <input class="prompt" type="text" placeholder="搜索您想要的">
-                        <i class="search icon"></i>
-                    </div>
-                    <div class="results"></div>
-                </div>
-            </div>
+            <!--<div class="right floated column">-->
+                <!--<div class="ui search at-search">-->
+                    <!--<div class="ui icon input">-->
+                        <!--<input class="prompt" type="text" placeholder="搜索您想要的">-->
+                        <!--<i class="search icon"></i>-->
+                    <!--</div>-->
+                    <!--<div class="results"></div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
@@ -81,13 +82,13 @@
     <div class="ui at-container">
         <ul class="at-nav">
             <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']"><a href="#/">首页</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']"><a href="#/article">农业要闻</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']"><a href="#/article?category=7&curParentId=1">农业要闻</a></li>
             <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']"><a href="#/expert">专家在线</a></li>
             <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']"><a href="#/question" >技术咨询</a></li>
             <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']"><a href="#/trade">供需信息</a></li>
             <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']"><a href="#/video">视频专区</a></li>
             <li><a href="http://www.sxjk365.com/" target="_blank">健康365</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']"><a href="#/about">关于我们</a></li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']"><a href="#/about?category=50">关于我们</a></li>
         </ul>
     </div>
 </div>
