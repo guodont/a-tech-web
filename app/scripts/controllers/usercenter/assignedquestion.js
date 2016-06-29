@@ -28,7 +28,7 @@ angular.module('aTechClientApp')
         $scope.loadQueitions = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/my/questions?status=' + $scope.curStatus +'&pageSize=10&page=' + $scope.curPage,
+                url: apiUrl + '/expert/'+ $scope.curUserId +'/questions?status=' + $scope.curStatus +'&pageSize=10&page=' + $scope.curPage,
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {

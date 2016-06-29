@@ -8,8 +8,8 @@
     <h2 class="ui header centered">{{ article.title }}</h2>
     <hr id="deshed ">
     <div class="sub header at-cont-author centered">
-        日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;作者:{{
-        article.admin.name }}&nbsp;&nbsp;&nbsp;文章来源:农产品交易网
+        日期:{{ article.whenCreated | date:'yyyy-MM-dd HH:mm' }} &nbsp;&nbsp;&nbsp;
+        <span ng-show="article.admin != null">作者:{{ article.admin.name }}</span>  <span ng-show="article.user != null">作者:{{ article.user.realName }}</span> &nbsp;&nbsp;&nbsp;文章来源:农科110
         <div class="function-box">
             <a href="javascript:void(0);" ng-click="upFontSize()" title="调大字体" id="jia"><i class="large add square icon"></i></a>
             <a href="javascript:void(0);" ng-click="downFontSize()" title="调小字体" id="jian"><i class="large minus square icon"></i></a>

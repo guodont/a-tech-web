@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('PageCtrl', function ($scope, Page, Loading, $cookieStore, ngNotify, $location, $http, apiUrl) {
+    .controller('PageCtrl', function ($scope, $rootScope, Page, Loading, $cookieStore, ngNotify, $location, $http, apiUrl) {
         $scope.Page = Page;
 
         $scope.isLogin = $cookieStore.get("isLoggedIn") == 1 ? true : false;
@@ -29,6 +29,11 @@ angular.module('aTechClientApp')
             html: false
         });
 
+        $rootScope.isLogin = function () {
+            $scope.isLogin = true;
+        };
+
+        
         $scope.logout = function () {
 
             console.log("退出登录操作");
@@ -43,19 +48,21 @@ angular.module('aTechClientApp')
                     console.log("成功退出帐号");
                     $cookieStore.remove("authToken");
                     $cookieStore.remove("isLogin");
+                    $cookieStore.remove("isLoggedIn");
                     $location.path('/');
                     $scope.isLogin = false;
-                    $scope.$apply();
+                    // $scope.$apply();
                     // $location.location.reload()
 
                 }, function (res) {
                     console.log("退出帐号失败");
                     $cookieStore.remove("authToken");
                     $cookieStore.remove("isLogin");
+                    $cookieStore.remove("isLoggedIn");
                     $cookieStore.remove("isExpert");
                     $location.path('/');
                     $scope.isLogin = false;
-                    $scope.$apply();
+                    // $scope.$apply();
                 });
         };
     })

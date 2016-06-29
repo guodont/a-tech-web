@@ -3,29 +3,27 @@
     <div class="ui four column grid">
         <div class="row" style="margin-top:15px;">
             <div class="ten wide column">
-                <div class="ui items segment" >
-                    <div class="item at-article-item" ng-repeat="article in articles">
-                        <div class="content">
-                            <a class="header">{{ article.title }}</a>
-                            <div class="time">
-                                <span>{{ article.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
-                            </div>
-                            <div class="description">
-                                <p>
-                                    {{ article.content | replaceHtml}}
-                                </p>
-                            </div>
-                            <!--<div class="at-article-img">-->
-                            <!--<img src="/images/yeoman.png"/>-->
-                            <!--</div>-->
-                            <div class="at-expert-tag">
-                                <a class="ui red label">{{ article.category.name }}</a>
-                                <a class="ui orange label">{{ article.tag }}</a>
+                    <div class="ui list">
+                        <div class="item ui segment" ng-repeat="question in questions">
+                            <div class="content at-question-cont">
+                                <div>
+                                    <a class="ui teal tag label at-question-label-from">{{ question.category.name }}</a>
+                                </div>
+                                <div>
+                                    <a class="at-question-title" href="#/question/{{question.id}}">{{ question.title
+                                        }}</a>
+                                </div>
+
+                                <div class="description">
+                                    <p>
+                                        {{ question.content }}
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
-
+                    <observe totalitems="204" listsizes="5" itemsperpage="10"></observe>
             </div>
             <div class="six wide column" ng-controller="CommonExpertCtrl">
                 <div class="ui segment feed">

@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('LoginCtrl', function ($scope, $http, $cookieStore, $location, ngNotify, apiUrl) {
+    .controller('LoginCtrl', function ($scope, $http, $cookieStore, $location, ngNotify, apiUrl,$rootScope) {
 
         $scope.login2 = function () {
 
@@ -26,6 +26,7 @@ angular.module('aTechClientApp')
                     $cookieStore.put('isLoggedIn', 1);
                     $cookieStore.put('authToken', data.authToken);
                     $scope.isLogin = true;
+                    $rootScope.isLogin();
                     // $scope.$apply();
                     $scope.getUserProfile();
                 });
@@ -52,6 +53,8 @@ angular.module('aTechClientApp')
                     $cookieStore.put('userName', userProfile.name);
 
                     $location.path('#/usercenter/index');
+
+                    $scope.isLogin = true;
 
                 }, function (res) {
                     ngNotify.set("网络加载失败", 'error');

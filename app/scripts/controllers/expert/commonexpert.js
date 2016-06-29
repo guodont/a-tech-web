@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('aTechClientApp')
-    .controller('CommonExpertCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore) {
+    .controller('CommonExpertCtrl', function ($http, $scope,$rootScope, apiUrl, ngNotify, $routeParams, Loading, $cookieStore) {
 
         console.log('获取专家信息');
 
@@ -16,6 +16,7 @@ angular.module('aTechClientApp')
                 })
                 .success(function(data) {
                     $scope.curExpert = data;
+                    $rootScope.curExpert = data;
                     $scope.loadTrends();
 
                 });

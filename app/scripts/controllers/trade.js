@@ -43,22 +43,22 @@ angular.module('aTechClientApp')
                 });
         };
 
-        // 加载分类
-        $scope.loadCategories = function () {
-            $http.get(apiUrl + '/categories?' + 'parentId=1')
-                .error(function (data, status) {
-                    // ngNotify.set("网络加载失败");
-                })
-                .success(function (data) {
-                    console.log(data);
-                    $scope.categories = data;
-
-                });
-        };
+        // // 加载分类
+        // $scope.loadCategories = function () {
+        //     $http.get(apiUrl + '/categories?' + 'parentId=1')
+        //         .error(function (data, status) {
+        //             // ngNotify.set("网络加载失败");
+        //         })
+        //         .success(function (data) {
+        //             console.log(data);
+        //             $scope.categories = data;
+        //
+        //         });
+        // };
 
         // Loading.setLoading(true);
 
-        $scope.loadCategories();
+        // $scope.loadCategories();
 
         $scope.loadTrades();
 
