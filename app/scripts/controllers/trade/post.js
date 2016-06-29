@@ -39,7 +39,7 @@ angular.module('aTechClientApp')
 
         // 加载交易分类数据
         $scope.loadTradeCategories = function () {
-            $http.get(apiUrl + '/categories')
+            $http.get(apiUrl + '/categories?categoryType=TRADE&parentId=')
                 .error(function (data, status) {
                     ngNotify.set("网络加载失败",'error');
                 })
