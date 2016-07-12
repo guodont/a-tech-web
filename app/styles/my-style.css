@@ -176,6 +176,7 @@ h1, h2, h3, h4, p, a, table, strong, input {
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border: none;
+    overflow: hidden;
 }
 
 .at-home-article {

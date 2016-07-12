@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('QuestionInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams) {
+    .controller('QuestionInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams, Page) {
 
         console.log('获取问题信息');
 
@@ -24,8 +24,11 @@ angular.module('aTechClientApp')
                 })
                 .success(function (data) {
                     $scope.curQuestion = data;
+                    Page.setTitle($scope.curQuestion.title);
+
                     if ($scope.curQuestion.answer !== null) {
                         $scope.hasAnswer = true;
+                        $scope.images = $scope.curQuestion.images.split(',');
                     }
                 });
         };

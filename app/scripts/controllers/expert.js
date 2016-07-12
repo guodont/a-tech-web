@@ -22,7 +22,7 @@ angular.module('aTechClientApp')
         $scope.loadExperts = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/experts' + '?pageSize=10&page=' + $scope.curPage,
+                url: apiUrl + '/experts' + '?pageSize=12&page=' + $scope.curPage,
                 headers: {'X-AUTH-TOKEN': $cookieStore.get("authToken")}
             })
                 .then(function (res) {

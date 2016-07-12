@@ -11,8 +11,10 @@ angular.module('aTechClientApp')
     .controller('ArticleCtrl', function ($http, $scope, $location, apiUrl, ngNotify, Loading, Page) {
 
         $scope.curCategoryId = $location.search().category ? $location.search().category : '';
-        
+
         $scope.curParentId = $location.search().curParentId ? $location.search().curParentId : '';
+
+        $scope.keyWord = $location.search().keyWord ? $location.search().keyWord : '';
 
         $scope.curPage = $location.search().currentPage ? $location.search().currentPage : 1;
 
@@ -22,15 +24,31 @@ angular.module('aTechClientApp')
         Page.setNav('article');
         // 加载文章
         $scope.loadArticles = function () {
-            $http.get(apiUrl + '/articles/' + $scope.curCategoryId + '?pageSize=15&page=' + $scope.curPage )
-                .error(function (data, status) {
-                    ngNotify.set("网络加载失败");
-                })
-                .success(function (data) {
-                    console.log(data);
-                    $scope.articles = data;
-                    Loading.setLoading(false);
-                });
+
+
+            if ($scope.keyWord != '') {
+
+                $http.get(apiUrl + '/articles/search/' + $scope.keyWord + '?pageSize=15&page=' + $scope.curPage)
+                    .error(function (data, status) {
+                        ngNotify.set("网络加载失败");
+                    })
+                    .success(function (data) {
+                        console.log(data);
+                        $scope.articles = data;
+                        Loading.setLoading(false);
+                    });
+            } else {
+                $http.get(apiUrl + '/articles/' + $scope.curCategoryId + '?pageSize=15&page=' + $scope.curPage)
+                    .error(function (data, status) {
+                        ngNotify.set("网络加载失败");
+                    })
+                    .success(function (data) {
+                        console.log(data);
+                        $scope.articles = data;
+                        Loading.setLoading(false);
+                    });
+            }
+
         };
 
         // 加载分类

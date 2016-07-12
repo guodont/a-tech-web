@@ -65,15 +65,18 @@
                     <a href="#/"><img src="images/logo1.png"></a>
                 </div>
             </div>
-            <!--<div class="right floated column">-->
-                <!--<div class="ui search at-search">-->
-                    <!--<div class="ui icon input">-->
-                        <!--<input class="prompt" type="text" placeholder="搜索您想要的">-->
-                        <!--<i class="search icon"></i>-->
-                    <!--</div>-->
-                    <!--<div class="results"></div>-->
-                <!--</div>-->
-            <!--</div>-->
+            <div class="right floated column">
+                <div class="ui search at-search">
+                    <div class="ui icon input">
+                        <form ng-submit="search()">
+                        <input class="prompt" name="keyWord" ng-model="keyWord" type="text" placeholder="搜索文章">
+                            <input type="submit" style="display: none"/>
+                        </form>
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

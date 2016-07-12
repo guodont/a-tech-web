@@ -16,6 +16,10 @@
                         <p class="at-question-title">{{ curTrade.title }}</p>
                     </div>
 
+                    <div class="ui small images" style="margin-top: 15px;">
+                        <img   ng-show="image != ''" ng-repeat="image in images" src="http://storage.workerhub.cn/{{ image }}">
+                    </div>
+
                     <div class="description">
                         <p>
                             {{ curTrade.description }}

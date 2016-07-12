@@ -8,7 +8,7 @@
  * Controller of the aTechClientApp
  */
 angular.module('aTechClientApp')
-    .controller('TradeInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams) {
+    .controller('TradeInfoCtrl', function ($http, $scope, apiUrl, ngNotify, $routeParams,Page) {
 
         console.log('获取交易信息');
 
@@ -23,6 +23,10 @@ angular.module('aTechClientApp')
                 })
                 .success(function(data) {
                     $scope.curTrade = data;
+                    Page.setTitle($scope.curTrade.title);
+
+                    $scope.images = $scope.curTrade.images.split(',');
+
                 });
         };
 
