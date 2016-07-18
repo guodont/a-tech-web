@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="aTechClientApp" ng-controller="PageCtrl">
 <head>
+
     <meta charset="utf-8">
     <title>{{ Page.title() }}</title>
     <meta name="description" content="{{ Page.seo() }}">
@@ -31,24 +32,40 @@
     <link rel="stylesheet" href="styles/usermore.css">
     <link rel="stylesheet" href="styles/usercenter.css">
     <link rel="stylesheet" href="styles/expert.css">
-    
+
     <!-- endbuild -->
 
-    <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet">
-
-</head>
+    <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet"></head>
 <body ng-app="aTechClientApp">
-<!--[if lte IE 8]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<!-- Add your site or application content here -->
-<div class="at-headbar">
-    <div class="ui at-container">
+    <!--[if lte IE 8]>
+    <p class="browsehappy">
+        You are using an <strong>outdated</strong>
+        browser. Please
+        <a href="http://browsehappy.com/">
+            upgrade
+    your browser
+        </a>
+        to improve your experience.
+    </p>
+    <![endif]-->
+<script>
+function removeElement(id)
+{
+document.getElementById(id).style.display="none";
+}
+</script>
+<div class="top-banner" id="abc">
+        <div class="w">
+            <img src="//img10.360buyimg.com/da/jfs/t2692/285/3278549214/68765/3b3e71b6/57872bfbN2ab67cc3.jpg"></div>
+    </div>
+    <p href="#" onclick="removeElement('abc')"style="position: absolute; right: 5px; top: 5px; display: block; width: 19px; height: 19px; background: url(&quot;//img11.360buyimg.com/da/jfs/t1000/283/179661858/1201/c7c60274/5507956eN735de046.png&quot;) 0px 0px no-repeat;"></p>
+    <!-- Add your site or application content here -->
+    <div class="at-headbar">
+        <div class="ui at-container">
             <a class="item left" href="#">欢迎来到农科110官方网站!</a>
-        <div class="ui horizontal list right floated">
-            <!--<a class="item" href="#">2016年4月15日 星期五</a>-->
+            <div class="ui horizontal list right floated">
+                <!--<a class="item" href="#">2016年4月15日 星期五</a>
+            -->
             <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
             <a class="item" ng-show="!isLogin" href="#/login">登录</a>
             <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
@@ -62,17 +79,21 @@
         <div class="four column row">
             <div class="left floated column">
                 <div class="ui at-container at-logo">
-                    <a href="#/"><img src="images/logo1.png"></a>
+                    <a href="#/">
+                        <img src="images/logo1.png"></a>
+                    <a href="#/">
+                        <img src="image/app.png"></a>
+                    <a href="#/">
+                        <img src="image/wx.png"></a>
                 </div>
             </div>
             <div class="right floated column">
                 <div class="ui search at-search">
                     <div class="ui icon input">
                         <form ng-submit="search()">
-                        <input class="prompt" name="keyWord" ng-model="keyWord" type="text" placeholder="搜索文章">
+                            <input class="prompt" name="keyWord" ng-model="keyWord" type="text" placeholder="搜索文章">
                             <input type="submit" style="display: none"/>
-                        </form>
-                        <i class="search icon"></i>
+                        </form> <i class="search icon"></i>
                     </div>
                     <div class="results"></div>
                 </div>
@@ -81,29 +102,45 @@
     </div>
 </div>
 <div class="ui at-nav-container">
-    <!-- 导航 -->
-    <div class="ui at-container">
-        <ul class="at-nav">
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']"><a href="#/">首页</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']"><a href="#/article?category=7&curParentId=1">农业要闻</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']"><a href="#/expert">专家在线</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']"><a href="#/question" >技术咨询</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']"><a href="#/trade">供需信息</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']"><a href="#/video">视频专区</a></li>
-            <li><a href="http://www.sxjk365.com/" target="_blank">健康365</a></li>
-            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']"><a href="#/about?category=50">关于我们</a></li>
-        </ul>
-    </div>
+<!-- 导航 -->
+<div class="ui at-container">
+    <ul class="at-nav">
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']">
+            <a href="#/">首页</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']">
+            <a href="#/article?category=7&curParentId=1">农业要闻</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']">
+            <a href="#/expert">专家在线</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']">
+            <a href="#/question" >技术咨询</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']">
+            <a href="#/trade">供需信息</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']">
+            <a href="#/video">视频专区</a>
+        </li>
+        <li>
+            <a href="http://www.sxjk365.com/" target="_blank">健康365</a>
+        </li>
+        <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']">
+            <a href="#/about?category=50">关于我们</a>
+        </li>
+    </ul>
+</div>
 </div>
 
 <div class="ui at-container">
-    <div class="ui active  inverted dimmer" ng-hide="!loading.isLoading()">
-        <div class="ui large text  loader" ng-hide="!loading.isLoading()">加载中...</div>
-    </div>
-    <div ng-view=""></div>
+<div class="ui active  inverted dimmer" ng-hide="!loading.isLoading()">
+    <div class="ui large text  loader" ng-hide="!loading.isLoading()">加载中...</div>
+</div>
+<div ng-view=""></div>
 </div>
 <div class="at-footer">
-    <span>山西科技报刊总社版权所有 晋ICP备08000801号</span>
+<span>山西科技报刊总社版权所有 晋ICP备08000801号</span>
 </div>
 
 <!-- build:js(.) scripts/vendor.js -->
@@ -128,9 +165,10 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<!--<script src="bower_components/plupload/js/moxie.js"></script>-->
-<!--<script src="bower_components/plupload/js/plupload.dev.js"></script>-->
-
+<!--<script src="bower_components/plupload/js/moxie.js"></script>
+-->
+<!--<script src="bower_components/plupload/js/plupload.dev.js"></script>
+-->
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/page.js"></script>
@@ -141,7 +179,7 @@
 <script src="scripts/controllers/registerfirststep.js"></script>
 <script src="scripts/controllers/registersecondstep.js"></script>
 <!-- move-top-->
-    <script src="scripts/controllers/move-top.js"></script>
+<script src="scripts/controllers/move-top.js"></script>
 <script src="scripts/controllers/usercenter/profile.js"></script>
 <script src="scripts/controllers/usercenter/changepassword.js"></script>
 <script src="scripts/controllers/usercenter/myquestion.js"></script>
@@ -176,7 +214,6 @@
 <script src="scripts/controllers/video/info.js"></script>
 <script src="scripts/controllers/expert/commonexpert.js"></script>
 <!-- endbuild -->
-
 
 <!-- build:js({.tmp,app}) styles/style.js -->
 <script src="styles/moxie.min.js"></script>
