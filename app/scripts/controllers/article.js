@@ -27,8 +27,8 @@ angular.module('aTechClientApp')
 
 
             if ($scope.keyWord != '') {
-
-                $http.get(apiUrl + '/articles/search/' + $scope.keyWord + '?pageSize=15&page=' + $scope.curPage)
+                
+                $http.get(apiUrl + '/articles/search?keyWord=' + $scope.keyWord + '&pageSize=15&page=' + $scope.curPage)
                     .error(function (data, status) {
                         ngNotify.set("网络加载失败");
                     })
