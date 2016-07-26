@@ -34,7 +34,7 @@ angular.module('aTechClientApp')
         };
 
         $scope.search = function () {
-            $location.url('/article?&curParentId=0&keyWord'+ $scope.keyWord);
+            $location.url('/article?&curParentId=0&keyWord='+ $scope.keyWord);
         };
         
         $scope.logout = function () {
