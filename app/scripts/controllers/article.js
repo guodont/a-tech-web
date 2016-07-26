@@ -35,7 +35,7 @@ angular.module('aTechClientApp')
                     .success(function (data) {
                         console.log(data);
                         $scope.articles = data;
-                        Loading.setLoading(false);
+                        // Loading.setLoading(false);
                     });
             } else {
                 $http.get(apiUrl + '/articles/' + $scope.curCategoryId + '?pageSize=15&page=' + $scope.curPage)
@@ -45,7 +45,7 @@ angular.module('aTechClientApp')
                     .success(function (data) {
                         console.log(data);
                         $scope.articles = data;
-                        Loading.setLoading(false);
+                        // Loading.setLoading(false);
                     });
             }
 
@@ -63,9 +63,11 @@ angular.module('aTechClientApp')
                 });
         };
 
-        Loading.setLoading(true);
+        // Loading.setLoading(true);
 
-        $scope.loadCategories();
+        if ($scope.keyWord == '') {
+            $scope.loadCategories();
+        }
 
         $scope.loadArticles();
 
