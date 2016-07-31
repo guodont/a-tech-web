@@ -28,7 +28,7 @@ angular.module('aTechClientApp')
                 .then(function (res) {
                     $scope.experts = res.data;
                     console.log($scope.experts);
-                    Loading.setLoading(false);
+                    // Loading.setLoading(false);
                 }, function (res) {
                     ngNotify.set("网络加载失败", 'error');
                 });
@@ -48,7 +48,7 @@ angular.module('aTechClientApp')
                 });
         };
 
-        Loading.setLoading(true);
+        // Loading.setLoading(true);
 
         $scope.loadCategories();
 

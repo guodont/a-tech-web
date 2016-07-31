@@ -6,7 +6,7 @@
 			<div class="ui items segment" >
 				<div class="item at-article-item" ng-repeat="article in articles">
 					<div class="content">
-						<a class="header">{{ article.title }}</a>
+						<a class="header" href="#/article/{{ article.id }}">{{ article.title }}</a>
 						<div class="time">
 							<span>{{ article.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
 						</div>

@@ -59,7 +59,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">工作动态 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/about?category=50">更多 </a>
                 </div>
             </div>
             <div class="ui list at-notice">
@@ -72,7 +72,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">山西农业 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=7&curParentId=1">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
@@ -148,7 +148,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">畜禽养殖 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=14&curParentId=4">更多 </a>
                 </div>
             </div>
             <div class="ui list">
@@ -161,7 +161,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">特种养殖 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=15&curParentId=4">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
@@ -175,7 +175,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">水产养殖 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=16&curParentId=4">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
@@ -195,7 +195,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">科技前沿 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=10&curParentId=2">更多 </a>
                 </div>
             </div>
             <!--<img class="ui at-wrap image" src="images/20160405093320656214.jpg">-->
@@ -209,7 +209,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">成果快报 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=11&curParentId=2">更多 </a>
                 </div>
             </div>
             <!--<img class="ui at-wrap image" src="images/20160405093320656214.jpg">-->
@@ -223,7 +223,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">科技兴农 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=12&curParentId=2">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160405093320656214.jpg">
@@ -243,7 +243,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">农作物 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=17&curParentId=5">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
@@ -257,12 +257,12 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">果树 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=18&curParentId=5">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
             <div class="ui list">
-                <li class="item"  ng-repeat="article in articles[10]">
+                <li class=  "item"  ng-repeat="article in articles[10]">
                     <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
@@ -271,7 +271,7 @@
             <div class="ui secondary pointing menu">
                 <a class="item active" style="border-color:#009688">蔬菜 </a>
                 <div class="right menu">
-                    <a class="ui item">更多 </a>
+                    <a class="ui item" href="#/article?category=19&curParentId=5">更多 </a>
                 </div>
             </div>
             <img class="ui at-wrap image" src="images/20160229090628521340.jpg">
@@ -315,7 +315,7 @@
                                 <div class="metadata">
                                     <span class="date">{{ trade.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
                                 </div>
-                                <div class="text">{{ trade.title }}</div>
+                                <div class="text"><a href="#/trade/{{trade.id}}">{{ trade.title }}</a></div>
                             </div>
                         </div>
                     </div>
@@ -341,7 +341,7 @@
                                 <div class="metadata">
                                     <span class="date">{{ trade.whenCreated | date:'yyyy-MM-dd HH:mm'}}</span>
                                 </div>
-                                <div class="text">{{ trade.title }}</div>
+                                <div class="text"><a href="#/trade/{{trade.id}}">{{ trade.title }}</a></div>
                             </div>
                         </div>
                     </div>
