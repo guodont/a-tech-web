@@ -203,6 +203,29 @@ angular.module('aTechClientApp')
         // 瓜类
         $scope.loadArticles(20, 12, 5);
 
+        //农药
+        $scope.loadArticles(36, 13, 9);
+
+        //肥料
+        $scope.loadArticles(37, 14, 9);
+
+        //种子
+        $scope.loadArticles(38, 15, 9);
+
+        //畜产品加工
+        $scope.loadArticles(46, 16, 9);
+
+        //果品加工
+        $scope.loadArticles(47, 17, 9);
+
+        //蔬菜加工
+        $scope.loadArticles(48, 18, 9);
+
+        //农事专题
+        $scope.loadArticles(25, 19, 9);
+
+
+
 
 
 

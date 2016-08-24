@@ -187,7 +187,7 @@
         </div>
     </div>
 </div>
-<!-- 养殖技术 -->
+<!-- 现代农业 -->
 <div class="ui at-home-article">
     <a class="ui green ribbon label fz-18">现代农业</a>
     <div class="ui equal width grid">
@@ -235,7 +235,7 @@
         </div>
     </div>
 </div>
-<!-- 养殖技术 -->
+<!-- 种植技术 -->
 <div class="ui at-home-article">
     <a class="ui blue ribbon label fz-18">种植技术</a>
     <div class="ui equal width grid">
@@ -346,6 +346,102 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 农资广场 -->
+<div class="ui at-home-article">
+    <a class="ui blue ribbon label fz-18">农资广场</a>
+    <div class="ui equal width grid">
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">农药 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=36&curParentId=22">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[13]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">肥料 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=37&curParentId=22">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class=  "item"  ng-repeat="article in articles[14]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">种子 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=38&curParentId=22">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[15]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 农产加工-->
+<div class="ui at-home-article">
+    <a class="ui blue ribbon label fz-18">农产加工</a>
+    <div class="ui equal width grid">
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">畜产品加工 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=46&curParentId=24">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[16]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">果品加工 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=47&curParentId=24">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class=  "item"  ng-repeat="article in articles[17]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">农事专题 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=25&curParentId=19">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[19]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
             </div>
         </div>
     </div>
