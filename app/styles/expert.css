@@ -25,9 +25,9 @@
 	margin-top:20px; 
 	width: 100px;
     height: 100px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
+    /*-moz-border-radius: 50px;*/
+    /*-webkit-border-radius: 50px;*/
+    /*border-radius: 50px;*/
 }
 .at-expert-info .info{
 	text-indent:2em;

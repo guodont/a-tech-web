@@ -42,7 +42,10 @@ angular.module('aTechClientApp')
             19: [],
             20: [],
             21: [],
-            22: []
+            22: [],
+            23: [],
+            24: [],
+            25: [],
         };
         $scope.getFloatAdvs = function () {
             console.log("获取轮播图展示数据");
@@ -223,6 +226,24 @@ angular.module('aTechClientApp')
 
         //农事专题
         $scope.loadArticles(25, 19, 9);
+
+        //农副行情
+        $scope.loadArticles(45, 20, 8);
+
+        //赚钱有招
+        $scope.loadArticles(43, 21, 8);
+
+        //信息广场
+        $scope.loadArticles(42, 22, 8);
+
+        //产品大全
+        $scope.loadArticles(87, 23, 8);
+
+        //政策动态
+        $scope.loadArticles(88, 24, 8);
+
+        //技能培训
+        $scope.loadArticles(89, 25, 8);
 
 
 
