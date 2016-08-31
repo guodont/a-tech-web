@@ -5,7 +5,7 @@
 <div class="ui secondary pointing menu">
 	<!--<a href="#/article?category=" ng-class="{true:'item active',false:'item'}[curCategoryId=='']">全部</a>-->
 	<div  ng-repeat="category in categories">
-		<a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/article?category={{ category.id }}">{{ category.name }}</a>
+		<a ng-class="{true:'item active',false:'item'}[category.id == curCategoryId]" href="#/article?category={{ category.id }}&curParentId={{ category.pid }}">{{ category.name }}</a>
 	</div>
 </div>
 <div class="ui items " ng-repeat="article in articles" >

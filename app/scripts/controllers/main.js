@@ -118,7 +118,7 @@ angular.module('aTechClientApp')
         $scope.loadExperts = function () {
             $http({
                 method: 'GET',
-                url: apiUrl + '/experts' + '?pageSize=6&page=1'
+                url: apiUrl + '/experts' + '?pageSize=6&page=1&categoryId='
             })
                 .then(function (res) {
                     $scope.experts = res.data;
