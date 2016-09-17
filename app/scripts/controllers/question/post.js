@@ -12,6 +12,12 @@ angular.module('aTechClientApp')
 
         Page.setTitle('我要提问-农科110');
 
+        if ($cookieStore.get("isLoggedIn") !== 1) {
+            ngNotify.set("登录后提问", 'error');
+
+            $location.path('/login');
+        }
+
         $scope.images = [];
         $scope.imageData = '';
         $scope.categories = null;
@@ -97,7 +103,7 @@ angular.module('aTechClientApp')
             var uploader = Qiniu.uploader({
                 runtimes: 'html5,flash,html4',      // 上传模式,依次退化
                 browse_button: 'pickfiles',         // 上传选择的点选按钮，**必需**
-                uptoken:  $scope.uploadToken,
+                uptoken: $scope.uploadToken,
                 get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的 uptoken
                 unique_names: true,              // 默认 false，key 为文件名。若开启该选项，JS-SDK 会为每个文件自动生成key（文件名）
                 save_key: false,                  // 默认 false。若在服务端生成 uptoken 的上传策略中指定了 `sava_key`，则开启，SDK在前端将不对key进行任何处理

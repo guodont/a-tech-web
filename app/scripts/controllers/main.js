@@ -47,6 +47,8 @@ angular.module('aTechClientApp')
             24: [],
             25: [],
             26: [],
+            27: [],
+            28: [],
         };
         $scope.getFloatAdvs = function () {
             console.log("获取轮播图展示数据");
@@ -156,8 +158,8 @@ angular.module('aTechClientApp')
         };
 
         // 加载文章
-        $scope.loadArticles = function (curCategoryId, id, size) {
-            $http.get(apiUrl + '/articles/' + curCategoryId + '?pageSize=' + size + '&page=1')
+        $scope.loadArticles = function (curCategoryId, id, size, page = 1) {
+            $http.get(apiUrl + '/articles/' + curCategoryId + '?pageSize=' + size + '&page=' + page)
                 .error(function (data, status) {
                     console.log(id + ":文章加载失败");
                 })
@@ -250,6 +252,12 @@ angular.module('aTechClientApp')
 
         //农事专题
         $scope.loadArticles(25, 26, 8);
+        
+        //农事专题
+        $scope.loadArticles(25, 27, 8,2);
+        
+        //农事专题
+        $scope.loadArticles(25, 28, 8,3);
 
 
 

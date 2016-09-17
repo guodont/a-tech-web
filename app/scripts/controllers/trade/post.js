@@ -11,6 +11,12 @@ angular.module('aTechClientApp')
     .controller('TradePostCtrl', function ($scope, Page, $cookieStore, apiUrl, $http, ngNotify, $location, Loading, cloudUrl) {
 
         Page.setTitle('发布供需信息-农科110');
+        
+        if ($cookieStore.get("isLoggedIn") !== 1) {
+            ngNotify.set("登录后发布交易", 'error');
+            $location.path('/login');
+
+        }
 
         $scope.images = [];
         $scope.imageData = '';
@@ -21,7 +27,7 @@ angular.module('aTechClientApp')
                 // action: 'hide',
                 onChange: function (value, text, $selectedItem) {
                     console.log(value);
-                    $('#categoryId').attr("value",value);
+                    $('#categoryId').attr("value", value);
                     $scope.categoryId = value;
                 }
             })
@@ -31,7 +37,7 @@ angular.module('aTechClientApp')
                 // action: 'hide',
                 onChange: function (value, text, $selectedItem) {
                     console.log(value);
-                    $('#tradeType').attr("value",value);
+                    $('#tradeType').attr("value", value);
                     $scope.tradeType = value;
                 }
             })
@@ -41,7 +47,7 @@ angular.module('aTechClientApp')
         $scope.loadTradeCategories = function () {
             $http.get(apiUrl + '/categories?categoryType=TRADE&parentId=')
                 .error(function (data, status) {
-                    ngNotify.set("网络加载失败",'error');
+                    ngNotify.set("网络加载失败", 'error');
                 })
                 .success(function (data) {
                     console.log(data);
@@ -72,10 +78,10 @@ angular.module('aTechClientApp')
             })
                 .then(function (res) {
                     Loading.setLoading(false);
-                    ngNotify.set("问题提交成功",'success');
+                    ngNotify.set("问题提交成功", 'success');
                     $location.path('/trade');
                 }, function (res) {
-                    ngNotify.set("问题提交失败",'error');
+                    ngNotify.set("问题提交失败", 'error');
                     Loading.setLoading(false);
                 });
 
@@ -101,7 +107,7 @@ angular.module('aTechClientApp')
             var uploader = Qiniu.uploader({
                 runtimes: 'html5,flash,html4',      // 上传模式,依次退化
                 browse_button: 'pickfiles',         // 上传选择的点选按钮，**必需**
-                uptoken : $scope.uploadToken,
+                uptoken: $scope.uploadToken,
                 get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的 uptoken
                 unique_names: true,              // 默认 false，key 为文件名。若开启该选项，JS-SDK 会为每个文件自动生成key（文件名）
                 save_key: false,                  // 默认 false。若在服务端生成 uptoken 的上传策略中指定了 `sava_key`，则开启，SDK在前端将不对key进行任何处理
@@ -115,36 +121,36 @@ angular.module('aTechClientApp')
                 chunk_size: '4mb',                  // 分块上传时，每块的体积
                 auto_start: true,                   // 选择文件后自动上传，若关闭需要自己绑定事件触发上传,
                 init: {
-                    'FilesAdded': function(up, files) {
-                        plupload.each(files, function(file) {
+                    'FilesAdded': function (up, files) {
+                        plupload.each(files, function (file) {
                             // 文件添加进队列后,处理相关的事情
                         });
                     },
-                    'BeforeUpload': function(up, file) {
+                    'BeforeUpload': function (up, file) {
                         // 每个文件上传前,处理相关的事情
                         console.log("每个文件上传前,处理相关的事情");
                     },
-                    'UploadProgress': function(up, file) {
+                    'UploadProgress': function (up, file) {
                         // 每个文件上传时,处理相关的事情
                         console.log("上传中" + up);
                     },
-                    'FileUploaded': function(up, file, info) {
+                    'FileUploaded': function (up, file, info) {
                         console.log(info);
                         var domain = up.getOption('domain');
                         var res = JSON.parse(info);
-                        var sourceLink = domain +  res.key; //获取上传成功后的文件的Url
+                        var sourceLink = domain + res.key; //获取上传成功后的文件的Url
                         $scope.images.push(sourceLink);
                         $scope.imageData += res.key + ',';
                         $scope.$apply();
                     },
-                    'Error': function(up, err, errTip) {
+                    'Error': function (up, err, errTip) {
                         //上传出错时,处理相关的事情
                         console.log(errTip);
                     },
-                    'UploadComplete': function() {
+                    'UploadComplete': function () {
                         //队列文件处理完毕后,处理相关的事情
                     },
-                    'Key': function(up, file) {
+                    'Key': function (up, file) {
                         // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
                         // 该配置必须要在 unique_names: false , save_key: false 时才生效
                         var key = "";

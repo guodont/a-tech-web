@@ -548,7 +548,7 @@
     <div class="ui equal width grid">
         <div class="column bg-gray">
             <div class="ui secondary pointing menu">
-                <a class="item active" style="border-color:#009688">农事专题 </a>
+                <a class="item active" style="border-color:#009688">农事专题-1 </a>
                 <div class="right menu">
                     <a class="ui item" href="#/article?category=25&curParentId=">更多 </a>
                 </div>
@@ -556,6 +556,34 @@
             <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
             <div class="ui list">
                 <li class="item"  ng-repeat="article in articles[26]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">农事专题-2</a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=25&curParentId=">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[27]">
+                    <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
+                </li>
+            </div>
+        </div>
+        <div class="column bg-gray">
+            <div class="ui secondary pointing menu">
+                <a class="item active" style="border-color:#009688">农事专题-3 </a>
+                <div class="right menu">
+                    <a class="ui item" href="#/article?category=25&curParentId=">更多 </a>
+                </div>
+            </div>
+            <!--<img class="ui at-wrap image" src="images/20160229090628521340.jpg">-->
+            <div class="ui list">
+                <li class="item"  ng-repeat="article in articles[28]">
                     <a href="#/article/{{ article.id }}">{{ article.title }}</a><span class="at-date">{{ article.whenCreated | date:'yyyy-MM-dd' }}</span>
                 </li>
             </div>
