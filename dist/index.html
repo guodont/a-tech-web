@@ -1,4 +1,23 @@
-<!doctype html> <html ng-app="aTechClientApp" ng-controller="PageCtrl"> <head> <meta charset="utf-8"> <title>{{ Page.title() }}</title> <meta name="description" content="{{ Page.seo() }}"> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.3e4eb5cf.css"> <link rel="stylesheet" href="styles/bower.d41d8cd9.css"> <link rel="stylesheet" href="styles/main.52bd7eac.css"> <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet"> </head> <body ng-app="aTechClientApp"> <!--[if lte IE 8]>
+<!doctype html>
+<html ng-app="aTechClientApp" ng-controller="PageCtrl">
+<head>
+
+    <meta charset="utf-8">
+    <title>{{ Page.title() }}</title>
+    <meta name="description" content="{{ Page.seo() }}">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/vendor.3e4eb5cf.css">
+
+    <link rel="stylesheet" href="styles/bower.d41d8cd9.css">
+
+    <link rel="stylesheet" href="styles/main.52bd7eac.css">
+
+    <link href="//cdn.bootcss.com/video.js/5.8.0/video-js.css" rel="stylesheet">
+</head>
+<body ng-app="aTechClientApp">
+<!--[if lte IE 8]>
 <p class="browsehappy">
     You are using an <strong>outdated</strong>
     browser. Please
@@ -8,13 +27,109 @@
     </a>
     to improve your experience.
 </p>
-<![endif]--> <div class="at-headbar"> <div class="ui at-container"> <a class="item left" href="#">欢迎来到农科110官方网站!</a> <div class="ui horizontal list right floated"> <!--<a class="item" href="#">2016年4月15日 星期五</a>
-        --> <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a> <a class="item" ng-show="!isLogin" href="#/login">登录</a> <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a> <a class="item" ng-show="isLogin" ng-click="logout()">退出当前帐号</a> </div> </div> </div> <div class="ui at-container"> <!-- logo --> <div class="ui grid"> <div class="two column row"> <div class="left floated column"> <div class="ui at-container at-logo"> <a href="#/"> <img src="images/logo1.44e44ede.png"></a> </div> </div> <div class="right floated column"> <div class="ui search at-search"> <div class="ui icon input"> <form ng-submit="search()"> <input class="prompt" name="keyWord" ng-model="keyWord" type="text" placeholder="搜索文章"> <input type="submit" style="display: none"> </form> <i class="search icon"></i> </div> <div class="results"></div> </div> <!--<img class="right" src="image/app.png" style="width: 90px;height: 90px;"/>--> <!--<img class="right" src="image/wx.png" style="width: 90px;height: 90px;"/>--> </div> </div> </div> </div> <div class="ui at-nav-container"> <!-- 导航 --> <div class="ui at-container"> <ul class="at-nav"> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']"> <a href="#/">首页</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']"> <a href="#/article?category=7&curParentId=1">农业要闻</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']"> <a href="#/expert">专家在线</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']"> <a href="#/question">技术咨询</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']"> <a href="#/trade">供需信息</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']"> <a href="#/video">视频专区</a> </li> <li> <a href="http://www.sxjk365.com/" target="_blank">健康365</a> </li> <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']"> <a href="#/about?category=50">关于我们</a> </li> </ul> </div> </div> <div class="ui at-container"> <div class="ui active inverted dimmer" ng-hide="!loading.isLoading()"> <div class="ui large text loader" ng-hide="!loading.isLoading()">加载中...</div> </div> <div ng-view=""></div> </div> <div class="at-footer"> <span>山西科技报刊总社版权所有 晋ICP备08000801号</span> </div> <script src="scripts/vendor.a64cb6e9.js"></script> <!--<script src="bower_components/plupload/js/moxie.js"></script>
---> <!--<script src="bower_components/plupload/js/plupload.dev.js"></script>
---> <script src="scripts/scripts.c6438a67.js"></script> <script src="styles/style.js"></script> <!--Google统计--> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<![endif]-->
+<div class="at-headbar">
+    <div class="ui at-container">
+        <a class="item left" href="#">欢迎来到农科110官方网站!</a>
+        <div class="ui horizontal list right floated">
+            <!--<a class="item" href="#">2016年4月15日 星期五</a>
+        -->
+            <a class="item" ng-show="!isLogin" href="#/registerFirstStep">注册</a>
+            <a class="item" ng-show="!isLogin" href="#/login">登录</a>
+            <a class="item" ng-show="isLogin" href="#/usercenter/index">个人中心</a>
+            <a class="item" ng-show="isLogin" ng-click="logout()">退出当前帐号</a>
+            <a class="item" href="http://old.sxnk110.com/nk110/index.asp">>>>旧版网站入口<<<</a>
+        </div>
+    </div>
+</div>
+<div class="ui at-container">
+    <!-- logo -->
+    <div class="ui grid">
+        <div class="two column row">
+            <div class="left floated column">
+                <div class="ui at-container at-logo">
+                    <a href="#/">
+                        <img src="images/logo1.44e44ede.png"></a>
+                </div>
+            </div>
+            <div class="right floated column">
+                <div class="ui search at-search">
+                    <div class="ui icon input">
+                        <form ng-submit="search()">
+                            <input class="prompt" name="keyWord" ng-model="keyWord" type="text" placeholder="搜索文章">
+                            <input type="submit" style="display: none"/>
+                        </form>
+                        <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <!--<img class="right" src="image/app.png" style="width: 90px;height: 90px;"/>-->
+                <!--<img class="right" src="image/wx.png" style="width: 90px;height: 90px;"/>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui at-nav-container">
+    <!-- 导航 -->
+    <div class="ui at-container">
+        <ul class="at-nav">
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='index']">
+                <a href="#/">首页</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='article']">
+                <a href="#/article?category=7&curParentId=1">农业要闻</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='expert']">
+                <a href="#/expert">专家在线</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='question']">
+                <a href="#/question">技术咨询</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='trade']">
+                <a href="#/trade">供需信息</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='video']">
+                <a href="#/video">视频专区</a>
+            </li>
+            <li>
+                <a href="http://www.sxjk365.com/" target="_blank">健康365</a>
+            </li>
+            <li ng-class="{true:'activity',false:''}[Page.curNav() ==='about']">
+                <a href="#/about?category=50">关于我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="ui at-container">
+    <div class="ui active  inverted dimmer" ng-hide="!loading.isLoading()">
+        <div class="ui large text  loader" ng-hide="!loading.isLoading()">加载中...</div>
+    </div>
+    <div ng-view=""></div>
+</div>
+<div class="at-footer">
+    <span>山西科技报刊总社版权所有 晋ICP备08000801号</span>
+</div>
+
+<script src="scripts/vendor.a64cb6e9.js"></script>
+
+<!--<script src="bower_components/plupload/js/moxie.js"></script>
+-->
+<!--<script src="bower_components/plupload/js/plupload.dev.js"></script>
+-->
+<script src="scripts/scripts.c6438a67.js"></script>
+
+<script src="styles/style.js"></script>
+<!--Google统计-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-83804429-1', 'auto');
-    ga('send', 'pageview');</script> </body> </html>
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
